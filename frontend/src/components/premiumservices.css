@@ -1,0 +1,649 @@
+/* =====================================
+   PREMIUM SERVICES SECTION
+   GlowHaven Luxury Pink Theme
+===================================== */
+
+
+.premium-services {
+
+    width: 100%;
+
+    padding: 120px 8%;
+
+    background:
+        linear-gradient(180deg,
+            #fff8f6,
+            #fdecef);
+
+}
+
+
+
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+
+.premium-services-header {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 70px;
+
+}
+
+
+
+.premium-services-header span {
+
+
+    display: inline-block;
+
+
+    color: #b76e79;
+
+
+    font-size: 13px;
+
+
+    letter-spacing: 4px;
+
+
+    font-weight: 600;
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+
+
+.premium-services-header h2 {
+
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+
+    font-size:
+        clamp(45px, 5vw, 70px);
+
+
+    line-height: 0.95;
+
+
+    font-weight: 500;
+
+
+    color: #3b2029;
+
+
+    margin-bottom: 25px;
+
+
+}
+
+
+
+
+
+.premium-services-header p {
+
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+
+    font-size: 17px;
+
+
+    color: #70555d;
+
+
+    line-height: 1.8;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   SERVICE GRID
+===================================== */
+
+
+.premium-service-grid {
+
+
+    display: grid;
+
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+
+    gap: 35px;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   CARD
+===================================== */
+
+
+.premium-service-card {
+
+
+    background:
+        rgba(255, 255, 255, .75);
+
+
+    border-radius: 32px;
+
+
+    overflow: hidden;
+
+
+    backdrop-filter: blur(15px);
+
+
+    border:
+        1px solid rgba(255, 255, 255, .8);
+
+
+    box-shadow:
+
+        0 25px 60px rgba(183, 110, 121, .15);
+
+
+    transition: .5s ease;
+
+
+}
+
+
+
+
+
+.premium-service-card:hover {
+
+
+    transform:
+        translateY(-15px);
+
+
+    box-shadow:
+
+        0 35px 80px rgba(183, 110, 121, .25);
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   IMAGE
+===================================== */
+
+
+.premium-service-image {
+
+
+    height: 360px;
+
+
+    position: relative;
+
+
+    overflow: hidden;
+
+
+}
+
+
+
+
+
+.premium-service-image img {
+
+
+    width: 100%;
+
+
+    height: 100%;
+
+
+    object-fit: cover;
+
+
+    transition:
+        transform .8s ease;
+
+
+}
+
+
+
+
+
+.premium-service-card:hover .premium-service-image img {
+
+
+    transform:
+        scale(1.08);
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   RATING BADGE
+===================================== */
+
+
+.rating-badge {
+
+
+    position: absolute;
+
+
+    top: 25px;
+
+
+    right: 25px;
+
+
+
+    background:
+        rgba(255, 255, 255, .9);
+
+
+
+    color: #b76e79;
+
+
+    padding:
+
+        10px 18px;
+
+
+
+    border-radius: 50px;
+
+
+    font-weight: 600;
+
+
+    font-size: 14px;
+
+
+    box-shadow:
+
+        0 10px 30px rgba(0, 0, 0, .15);
+
+
+}
+
+
+
+.rating-badge span {
+
+
+    margin-left: 5px;
+
+
+    color: #8b747a;
+
+
+    font-weight: 400;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   CONTENT
+===================================== */
+
+
+.premium-service-content {
+
+
+    padding: 35px;
+
+
+}
+
+
+
+.premium-service-content h3 {
+
+
+    font-family:
+
+        "Cormorant Garamond",
+        serif;
+
+
+    font-size: 34px;
+
+
+    color: #3b2029;
+
+
+    margin-bottom: 15px;
+
+
+    font-weight: 600;
+
+
+}
+
+
+
+
+.premium-service-content p {
+
+
+    color: #70555d;
+
+
+    font-size: 15px;
+
+
+    line-height: 1.8;
+
+
+    min-height: 85px;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   PRODUCT BOX
+===================================== */
+
+
+.product-box {
+
+
+    margin-top: 25px;
+
+
+    padding: 18px;
+
+
+    border-radius: 18px;
+
+
+    background:
+
+        #fff2f5;
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    gap: 8px;
+
+
+}
+
+
+
+.product-box span {
+
+
+    font-size: 11px;
+
+
+    letter-spacing: 2px;
+
+
+    color: #b76e79;
+
+
+    font-weight: 600;
+
+
+}
+
+
+
+.product-box strong {
+
+
+    font-size: 15px;
+
+
+    color: #4a3038;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+
+.service-footer {
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    justify-content: space-between;
+
+
+    margin-top: 30px;
+
+
+}
+
+
+
+.service-footer h4 {
+
+
+    font-size: 28px;
+
+
+    color: #b76e79;
+
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+
+}
+
+
+
+
+
+.service-footer button {
+
+
+    border: none;
+
+
+    background:
+
+        linear-gradient(135deg,
+            #d88aa0,
+            #b76e79);
+
+
+    color: white;
+
+
+    padding:
+
+        12px 25px;
+
+
+    border-radius: 40px;
+
+
+    cursor: pointer;
+
+
+    font-size: 14px;
+
+
+    transition: .3s;
+
+
+}
+
+
+
+
+
+.service-footer button:hover {
+
+
+    transform:
+        translateY(-3px);
+
+
+    box-shadow:
+
+        0 10px 25px rgba(183, 110, 121, .35);
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+
+
+@media(max-width:1100px) {
+
+
+    .premium-service-grid {
+
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:700px) {
+
+
+    .premium-services {
+
+
+        padding: 80px 5%;
+
+
+    }
+
+
+
+    .premium-service-grid {
+
+
+        grid-template-columns: 1fr;
+
+
+    }
+
+
+
+
+    .premium-service-image {
+
+
+        height: 320px;
+
+
+    }
+
+
+
+
+    .premium-service-content {
+
+
+        padding: 28px;
+
+
+    }
+
+
+
+}

@@ -1,0 +1,595 @@
+/* =====================================
+   WHAT TO EXPECT - LUXE EXPERIENCE
+===================================== */
+
+
+.expect-section {
+
+    width: 100%;
+
+    padding: 120px 80px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+
+    background:
+
+        linear-gradient(135deg,
+            #fff8fb,
+            #ffffff);
+
+
+    overflow: hidden;
+
+}
+
+
+
+
+/* =====================================
+   IMAGE GALLERY
+===================================== */
+
+
+.expect-gallery {
+
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+
+}
+
+
+
+.expect-image-wrapper {
+
+
+    width: 100%;
+
+    max-width: 550px;
+
+    height: 650px;
+
+
+    position: relative;
+
+
+    overflow: hidden;
+
+
+    border-radius:
+
+        220px 220px 35px 35px;
+
+
+    box-shadow:
+
+        0 30px 70px rgba(236, 72, 153, .15);
+
+
+    border:
+
+        1px solid rgba(236, 72, 153, .15);
+
+
+}
+
+
+
+.expect-image {
+
+
+    position: absolute;
+
+
+    inset: 0;
+
+
+    width: 100%;
+
+
+    height: 100%;
+
+
+    object-fit: cover;
+
+
+    opacity: 0;
+
+
+    transform: scale(1.08);
+
+
+    transition:
+
+        opacity .8s ease,
+        transform 1s ease;
+
+
+}
+
+
+
+
+.expect-image.active {
+
+
+    opacity: 1;
+
+
+    transform: scale(1);
+
+
+}
+
+
+
+
+/* =====================================
+   SLIDER BUTTONS
+===================================== */
+
+
+.slider-buttons {
+
+
+    position: absolute;
+
+
+    bottom: 35px;
+
+
+    right: 40px;
+
+
+    display: flex;
+
+
+    gap: 15px;
+
+
+}
+
+
+
+.slider-buttons button {
+
+
+    width: 48px;
+
+
+    height: 48px;
+
+
+    border-radius: 50%;
+
+
+    border: none;
+
+
+    cursor: pointer;
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    justify-content: center;
+
+
+    font-size: 22px;
+
+
+    color: white;
+
+
+    background:
+
+
+        linear-gradient(135deg,
+
+            #672546,
+
+            #DB2777);
+
+
+    box-shadow:
+
+        0 10px 25px rgba(219, 39, 119, .3);
+
+
+    transition: .35s ease;
+
+
+}
+
+
+
+.slider-buttons button:hover {
+
+
+    transform:
+
+        translateY(-5px);
+
+
+    background:
+
+        linear-gradient(135deg,
+
+            #DB2777,
+
+            #672546);
+
+
+}
+
+
+
+
+
+/* =====================================
+   CONTENT
+===================================== */
+
+
+.expect-content {
+
+
+    max-width: 520px;
+
+
+}
+
+
+
+.expect-label {
+
+
+    display: block;
+
+
+    margin-bottom: 25px;
+
+
+    color: #EC4899;
+
+
+    font-size: 12px;
+
+
+    letter-spacing: 4px;
+
+
+    text-transform: uppercase;
+
+
+    font-weight: 600;
+
+
+}
+
+
+
+.expect-content h2 {
+
+
+    margin: 0 0 30px;
+
+
+    font-family:
+
+        "Playfair Display",
+        serif;
+
+
+    font-size:
+
+        clamp(2.8rem, 4vw, 4rem);
+
+
+    line-height: 1.2;
+
+
+    color: #1F2937;
+
+
+}
+
+
+
+
+.expect-content h2 span {
+
+
+    font-style: italic;
+
+
+    color: #EC4899;
+
+
+    font-weight: 400;
+
+
+}
+
+
+
+
+.expect-content p {
+
+
+    font-family:
+
+        "Poppins",
+        sans-serif;
+
+
+    color: #6B7280;
+
+
+    font-size: 1rem;
+
+
+    line-height: 1.9;
+
+
+    margin-bottom: 35px;
+
+
+}
+
+
+
+
+/* LIST */
+
+
+.expect-content ul {
+
+
+    list-style: none;
+
+
+    padding: 0;
+
+    margin: 0;
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    gap: 18px;
+
+
+}
+
+
+
+.expect-content li {
+
+
+    position: relative;
+
+
+    padding-left: 35px;
+
+
+    font-family:
+
+        "Poppins",
+        sans-serif;
+
+
+    font-size: 1rem;
+
+
+    color: #374151;
+
+
+}
+
+
+
+.expect-content li::before {
+
+
+    content: "";
+
+
+    position: absolute;
+
+
+    left: 0;
+
+
+    top: 8px;
+
+
+    width: 12px;
+
+
+    height: 12px;
+
+
+    border-radius: 50%;
+
+
+    background: #EC4899;
+
+
+}
+
+
+
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+
+@media(max-width:1000px) {
+
+
+    .expect-section {
+
+
+        grid-template-columns: 1fr;
+
+
+        padding: 90px 35px;
+
+
+        gap: 60px;
+
+
+    }
+
+
+
+    .expect-gallery {
+
+
+        order: 1;
+
+
+    }
+
+
+
+    .expect-content {
+
+
+        order: 2;
+
+
+        text-align: center;
+
+
+        margin: auto;
+
+
+    }
+
+
+
+    .expect-content ul {
+
+
+        align-items: center;
+
+
+    }
+
+
+
+    .expect-content li {
+
+
+        padding-left: 0;
+
+
+    }
+
+
+
+    .expect-content li::before {
+
+
+        display: none;
+
+
+    }
+
+
+
+}
+
+
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+
+@media(max-width:600px) {
+
+
+    .expect-section {
+
+
+        padding: 70px 20px;
+
+
+    }
+
+
+
+    .expect-image-wrapper {
+
+
+        height: 450px;
+
+
+        border-radius:
+
+            150px 150px 25px 25px;
+
+
+    }
+
+
+
+    .slider-buttons {
+
+
+        bottom: 20px;
+
+
+        right: 20px;
+
+
+    }
+
+
+
+    .slider-buttons button {
+
+
+        width: 42px;
+
+
+        height: 42px;
+
+
+    }
+
+
+
+    .expect-content h2 {
+
+
+        font-size: 2.5rem;
+
+
+    }
+
+
+}

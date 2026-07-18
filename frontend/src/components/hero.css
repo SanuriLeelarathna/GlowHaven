@@ -1,0 +1,541 @@
+/* =====================================
+   LUXE SALON HERO SECTION
+===================================== */
+
+
+.hero-section {
+
+    min-height: 100vh;
+
+    padding-top: 100px;
+
+    background:
+        linear-gradient(135deg,
+            #fff8fb 0%,
+            #ffffff 100%);
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+/* MAIN CONTAINER */
+
+.hero-container {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 40px 80px;
+
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+
+
+/* =====================================
+ LEFT CONTENT
+===================================== */
+
+
+.hero-content {
+
+    animation:
+        fadeUp .9s ease forwards;
+
+}
+
+
+
+.hero-title {
+
+
+    margin: 0 0 30px;
+
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+
+    font-size:
+        clamp(3rem, 5vw, 5rem);
+
+
+    line-height: 1.15;
+
+
+    letter-spacing: 1px;
+
+
+    color: #1F2937;
+
+
+}
+
+
+
+.hero-title span {
+
+
+    font-style: italic;
+
+
+    color: #EC4899;
+
+
+    font-weight: 400;
+
+
+}
+
+
+
+.hero-description {
+
+
+    max-width: 500px;
+
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+
+    font-size: 1.05rem;
+
+
+    line-height: 1.8;
+
+
+    color: #4B5563;
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+.hero-sub-description {
+
+
+    max-width: 450px;
+
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+
+    font-size: .95rem;
+
+
+    line-height: 1.8;
+
+
+    color: #9CA3AF;
+
+
+    margin-bottom: 40px;
+
+
+}
+
+
+
+/* =====================================
+ BUTTON
+===================================== */
+
+
+.hero-button {
+
+
+    display: inline-flex;
+
+
+    align-items: center;
+
+
+    justify-content: center;
+
+
+    padding: 15px 38px;
+
+
+    border-radius: 50px;
+
+
+    background:
+        linear-gradient(135deg,
+            #EC4899,
+            #DB2777);
+
+
+    color: white;
+
+
+    text-decoration: none;
+
+
+    text-transform: uppercase;
+
+
+    letter-spacing: 2px;
+
+
+    font-size: 13px;
+
+
+    font-weight: 600;
+
+
+    box-shadow:
+
+        0 15px 30px rgba(236, 72, 153, .25);
+
+
+    transition: .4s ease;
+
+
+}
+
+
+
+.hero-button:hover {
+
+
+    transform:
+        translateY(-5px);
+
+
+    box-shadow:
+
+        0 20px 40px rgba(236, 72, 153, .35);
+
+
+}
+
+
+
+/* =====================================
+ IMAGE SIDE
+===================================== */
+
+
+.hero-image-wrapper {
+
+
+    display: flex;
+
+
+    justify-content: center;
+
+
+    animation:
+        fadeRight 1s ease forwards;
+
+
+}
+
+
+
+.image-frame {
+
+
+    width: 100%;
+
+
+    max-width: 600px;
+
+
+    height: 720px;
+
+
+    overflow: hidden;
+
+
+    border-radius:
+
+        220px 220px 30px 30px;
+
+
+    position: relative;
+
+
+    box-shadow:
+
+        0 30px 60px rgba(0, 0, 0, .12);
+
+
+}
+
+
+
+
+.image-frame::after {
+
+
+    content: "";
+
+
+    position: absolute;
+
+
+    inset: 0;
+
+
+    background:
+
+        linear-gradient(180deg,
+
+            transparent 60%,
+
+            rgba(0, 0, 0, .15));
+
+
+}
+
+
+
+
+.image-frame img {
+
+
+    width: 100%;
+
+
+    height: 100%;
+
+
+    object-fit: cover;
+
+
+    transition:
+        transform .8s ease;
+
+
+}
+
+
+
+.image-frame:hover img {
+
+
+    transform:
+        scale(1.08);
+
+
+}
+
+
+
+
+/* =====================================
+ ANIMATIONS
+===================================== */
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+
+}
+
+
+
+@keyframes fadeRight {
+
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(50px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+
+}
+
+
+
+
+/* =====================================
+ TABLET
+===================================== */
+
+
+@media(max-width:1000px) {
+
+
+    .hero-container {
+
+
+        grid-template-columns: 1fr;
+
+
+        padding: 50px 30px;
+
+
+        text-align: center;
+
+
+    }
+
+
+
+    .hero-content {
+
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+
+    }
+
+
+
+    .hero-description,
+    .hero-sub-description {
+
+
+        max-width: 90%;
+
+
+    }
+
+
+
+    .image-frame {
+
+
+        height: 600px;
+
+
+    }
+
+
+
+}
+
+
+
+
+/* =====================================
+ MOBILE
+===================================== */
+
+
+@media(max-width:600px) {
+
+
+    .hero-section {
+
+
+        padding-top: 90px;
+
+
+    }
+
+
+
+    .hero-container {
+
+
+        padding: 30px 20px;
+
+
+    }
+
+
+
+    .hero-title {
+
+
+        font-size: 2.8rem;
+
+
+    }
+
+
+
+    .image-frame {
+
+
+        height: 450px;
+
+
+        border-radius:
+
+            150px 150px 25px 25px;
+
+
+    }
+
+
+
+    .hero-button {
+
+
+        padding: 13px 30px;
+
+
+    }
+
+
+
+}

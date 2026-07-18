@@ -1,0 +1,3277 @@
+/* =====================================================
+   GLOW HAVEN - STAFF PAGE
+   Luxury Editorial Salon Design
+===================================================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+
+
+/* =====================================================
+   GLOBAL PAGE VARIABLES
+===================================================== */
+
+
+.schedule-page {
+
+
+  --ivory:
+    #fffaf7;
+
+
+  --cream:
+    #f8eee9;
+
+
+  --rose:
+    #d9a3b2;
+
+
+  --soft-pink:
+    #f3dce2;
+
+
+  --champagne:
+    #c9a45c;
+
+
+  --gold-light:
+    #e2c98b;
+
+
+  --dark:
+    #262020;
+
+
+  --text-gray:
+    #7c7272;
+
+
+  background:
+    var(--ivory);
+
+
+  color:
+    var(--dark);
+
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+
+  overflow:
+    hidden;
+
+}
+
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+
+.staff-page-hero {
+
+
+  height:
+    88vh;
+
+
+  min-height:
+    650px;
+
+
+  position:
+    relative;
+
+
+  display:
+    flex;
+
+
+  justify-content:
+    center;
+
+
+  align-items:
+    center;
+
+
+  background:
+
+
+    linear-gradient(rgba(255, 250, 247, .55),
+      rgba(255, 250, 247, .75)),
+
+
+    url("../assets/staff1.png");
+
+
+  background-size:
+    cover;
+
+
+  background-position:
+    center;
+
+
+
+}
+
+
+
+.hero-overlay {
+
+
+  position:
+    absolute;
+
+
+  inset:
+    0;
+
+
+  background:
+
+
+    radial-gradient(circle,
+      transparent 20%,
+      rgba(255, 250, 247, .65));
+
+
+}
+
+
+
+.hero-content {
+
+
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  text-align:
+    center;
+
+
+  max-width:
+    850px;
+
+
+  padding:
+    30px;
+
+
+
+}
+
+
+
+.hero-tag {
+
+
+  display:
+    block;
+
+
+  margin-bottom:
+    25px;
+
+
+  font-size:
+    11px;
+
+
+  letter-spacing:
+    5px;
+
+
+  text-transform:
+    uppercase;
+
+
+  color:
+    var(--champagne);
+
+
+  font-weight:
+    500;
+
+
+
+}
+
+
+
+.hero-title {
+
+
+  margin:
+    0;
+
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+
+  font-size:
+    clamp(3.2rem,
+      6vw,
+      5.5rem);
+
+
+  font-weight:
+    400;
+
+
+  line-height:
+    .95;
+
+
+  letter-spacing:
+    2px;
+
+
+  color:
+    var(--dark);
+
+
+
+}
+
+
+
+.serif-italic {
+
+
+  font-style:
+    italic;
+
+
+  color:
+    var(--champagne);
+
+
+
+}
+
+
+
+.hero-subtitle-text {
+
+
+  max-width:
+    560px;
+
+
+  margin:
+    35px auto;
+
+
+  color:
+    var(--text-gray);
+
+
+  font-size:
+    15px;
+
+
+  font-weight:
+    300;
+
+
+  line-height:
+    2;
+
+
+
+}
+
+
+
+/* Luxury Button */
+
+
+.btn-oval {
+
+
+  position:
+    relative;
+
+
+  display:
+    inline-flex;
+
+
+  align-items:
+    center;
+
+
+  justify-content:
+    center;
+
+
+  padding:
+    15px 45px;
+
+
+  border-radius:
+    50px;
+
+
+  border:
+    1px solid var(--champagne);
+
+
+  background:
+    transparent;
+
+
+  color:
+    var(--dark);
+
+
+  font-size:
+    11px;
+
+
+  letter-spacing:
+    3px;
+
+
+  text-transform:
+    uppercase;
+
+
+  cursor:
+    pointer;
+
+
+  transition:
+    .4s ease;
+
+
+
+}
+
+
+
+.btn-oval:hover {
+
+
+  background:
+    var(--champagne);
+
+
+  color:
+    white;
+
+
+  transform:
+    translateY(-3px);
+
+
+
+}
+
+
+
+/* =====================================================
+   OWNER SECTION
+===================================================== */
+
+
+.owner-section {
+
+
+  padding:
+    120px 8%;
+
+
+  background:
+    white;
+
+
+
+}
+
+
+
+.owner-container {
+
+
+  max-width:
+    1100px;
+
+
+  margin:
+    auto;
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+
+  gap:
+    90px;
+
+
+  align-items:
+    center;
+
+
+
+}
+
+
+
+/* Image */
+
+
+.owner-img-wrapper {
+
+
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+
+}
+
+
+
+.owner-img-wrapper::before {
+
+
+  content:
+    "";
+
+
+  position:
+    absolute;
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  top:
+    18px;
+
+
+  left:
+    -18px;
+
+
+  border:
+    1px solid var(--champagne);
+
+
+
+}
+
+
+
+.owner-img {
+
+
+  width:
+    100%;
+
+
+  max-width:
+    420px;
+
+
+  position:
+    relative;
+
+
+  z-index:
+    2;
+
+
+  object-fit:
+    cover;
+
+
+
+}
+
+
+
+/* Text */
+
+
+.owner-tag {
+
+
+  font-size:
+    11px;
+
+
+  text-transform:
+    uppercase;
+
+
+  letter-spacing:
+    5px;
+
+
+  color:
+    var(--champagne);
+
+
+
+}
+
+
+
+.owner-title {
+
+
+  margin:
+    20px 0 30px;
+
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+
+  font-size:
+    55px;
+
+
+  font-weight:
+    400;
+
+
+  letter-spacing:
+    2px;
+
+
+
+}
+
+
+
+.owner-description {
+
+
+  color:
+    var(--text-gray);
+
+
+  font-size:
+    15px;
+
+
+  line-height:
+    2;
+
+
+
+}
+
+
+
+.owner-tagline {
+
+
+  margin-top:
+    35px;
+
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+
+  font-size:
+    30px;
+
+
+  font-style:
+    italic;
+
+
+  color:
+    var(--champagne);
+
+
+
+}
+
+/* =====================================================
+   TEAM SECTION
+===================================================== */
+
+
+.team-grid-section {
+
+
+  position:
+    relative;
+
+
+  padding:
+    120px 7% 150px;
+
+
+  background:
+    var(--ivory);
+
+
+
+}
+
+
+
+.team-section-header {
+
+
+  text-align:
+    center;
+
+
+  margin-bottom:
+    70px;
+
+
+
+}
+
+
+
+.team-subtitle {
+
+
+  display:
+    block;
+
+
+  font-size:
+    11px;
+
+
+  letter-spacing:
+    5px;
+
+
+  text-transform:
+    uppercase;
+
+
+  color:
+    var(--champagne);
+
+
+  margin-bottom:
+    20px;
+
+
+
+}
+
+
+
+.team-title {
+
+
+  margin:
+    0;
+
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+
+  font-size:
+    clamp(2.5rem,
+      4vw,
+      4rem);
+
+
+  font-weight:
+    400;
+
+
+  letter-spacing:
+    2px;
+
+
+  color:
+    var(--dark);
+
+
+
+}
+
+
+
+
+/* =====================================================
+   STAFF GRID
+   Editorial Layout
+===================================================== */
+
+
+.talented-luxury-grid {
+
+
+  max-width:
+    1150px;
+
+
+  margin:
+    auto;
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+
+  gap:
+    55px 45px;
+
+
+
+}
+
+
+
+/* =====================================================
+   PROFESSIONAL CARD
+===================================================== */
+
+
+.professional-card {
+
+
+  background:
+    transparent;
+
+
+  text-align:
+    center;
+
+
+  transition:
+    .4s ease;
+
+
+
+}
+
+
+
+/* Image Wrapper */
+
+
+.card-image-wrapper {
+
+
+  position:
+    relative;
+
+
+  width:
+    100%;
+
+
+  aspect-ratio:
+    3 / 4;
+
+
+  overflow:
+    hidden;
+
+
+  margin-bottom:
+    30px;
+
+
+  background:
+    var(--cream);
+
+
+
+}
+
+
+
+.card-image-wrapper img {
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  object-fit:
+    cover;
+
+
+  filter:
+    grayscale(25%);
+
+
+  transition:
+    .7s ease;
+
+
+
+}
+
+
+
+
+/* Gold frame effect */
+
+
+.card-image-wrapper::after {
+
+
+  content:
+    "";
+
+
+  position:
+    absolute;
+
+
+  inset:
+    14px;
+
+
+  border:
+    1px solid rgba(201, 164, 92, .55);
+
+
+  opacity:
+    0;
+
+
+  transform:
+    scale(.95);
+
+
+  transition:
+    .5s ease;
+
+
+
+}
+
+
+
+
+/* Hover */
+
+
+.professional-card:hover .card-image-wrapper img {
+
+
+  transform:
+    scale(1.08);
+
+
+  filter:
+    grayscale(0);
+
+
+
+}
+
+
+
+.professional-card:hover .card-image-wrapper::after {
+
+
+  opacity:
+    1;
+
+
+  transform:
+    scale(1);
+
+
+
+}
+
+
+
+
+/* =====================================================
+   STAFF TEXT
+===================================================== */
+
+
+.card-name {
+
+
+  margin:
+    0 0 8px;
+
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+
+  font-size:
+    32px;
+
+
+  font-weight:
+    500;
+
+
+  letter-spacing:
+    1px;
+
+
+  color:
+    var(--dark);
+
+
+
+}
+
+
+
+.card-role {
+
+
+  display:
+    block;
+
+
+  font-size:
+    11px;
+
+
+  text-transform:
+    uppercase;
+
+
+  letter-spacing:
+    3px;
+
+
+  color:
+    var(--champagne);
+
+
+  margin-bottom:
+    18px;
+
+
+
+}
+
+
+
+.card-bio {
+
+
+  max-width:
+    280px;
+
+
+  margin:
+    0 auto;
+
+
+  font-size:
+    13px;
+
+
+  line-height:
+    1.9;
+
+
+  color:
+    var(--text-gray);
+
+
+  font-weight:
+    300;
+
+
+
+}
+
+
+
+/* =====================================================
+   CARD ACTIONS
+===================================================== */
+
+
+.card-actions {
+
+
+  margin-top:
+    25px;
+
+
+  display:
+    flex;
+
+
+  justify-content:
+    center;
+
+
+  gap:
+    25px;
+
+
+
+}
+
+
+
+.read-more-link,
+.book-now-link {
+
+
+  position:
+    relative;
+
+
+  border:
+    none;
+
+
+  background:
+    transparent;
+
+
+  cursor:
+    pointer;
+
+
+  padding:
+    5px 0;
+
+
+  font-size:
+    11px;
+
+
+  letter-spacing:
+    2px;
+
+
+  text-transform:
+    uppercase;
+
+
+  color:
+    var(--dark);
+
+
+
+}
+
+
+
+/* underline animation */
+
+
+.read-more-link::after,
+.book-now-link::after {
+
+
+  content:
+    "";
+
+
+  position:
+    absolute;
+
+
+  left:
+    0;
+
+
+  bottom:
+    -5px;
+
+
+  width:
+    0;
+
+
+  height:
+    1px;
+
+
+  background:
+    var(--champagne);
+
+
+  transition:
+    .4s ease;
+
+
+
+}
+
+
+
+.read-more-link:hover::after,
+.book-now-link:hover::after {
+
+
+  width:
+    100%;
+
+
+
+}
+
+
+
+.book-now-link {
+
+
+  color:
+    var(--champagne);
+
+
+
+}
+
+
+
+/* =====================================================
+   STAR ORNAMENT
+===================================================== */
+
+
+.star-ornament-wrapper {
+
+
+  display:
+    flex;
+
+
+  justify-content:
+    center;
+
+
+  margin-top:
+    100px;
+
+
+
+}
+
+
+
+.star-ornament {
+
+
+  width:
+    25px;
+
+
+  height:
+    25px;
+
+
+  color:
+    var(--champagne);
+
+
+  animation:
+    rotateStar 8s linear infinite;
+
+
+
+}
+
+
+
+@keyframes rotateStar {
+
+
+  from {
+
+    transform:
+      rotate(0deg);
+
+  }
+
+
+  to {
+
+    transform:
+      rotate(360deg);
+
+  }
+
+
+}
+
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+
+.loading-placeholder {
+
+
+  text-align:
+    center;
+
+
+  padding:
+    60px;
+
+
+  font-size:
+    14px;
+
+
+  color:
+    var(--text-gray);
+
+
+  letter-spacing:
+    2px;
+
+
+
+}
+
+/* =====================================================
+   BOOKING MODAL OVERLAY
+===================================================== */
+
+
+.datetime-popup-overlay {
+
+
+  position:
+    fixed;
+
+
+  inset:
+    0;
+
+
+  z-index:
+    999;
+
+
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  justify-content:
+    center;
+
+
+  padding:
+    30px;
+
+
+  background:
+
+    rgba(30, 20, 20, .45);
+
+
+  backdrop-filter:
+    blur(12px);
+
+
+
+}
+
+
+
+
+/* =====================================================
+   MAIN POPUP CARD
+===================================================== */
+
+
+.datetime-popup-card {
+
+
+  width:
+    min(950px, 95vw);
+
+
+  max-height:
+    90vh;
+
+
+  overflow-y:
+    auto;
+
+
+  background:
+    rgba(255, 250, 247, .96);
+
+
+  border:
+    1px solid rgba(201, 164, 92, .35);
+
+
+  box-shadow:
+
+    0 30px 80px rgba(0, 0, 0, .18);
+
+
+  padding:
+    45px;
+
+
+  position:
+    relative;
+
+
+  animation:
+    popupFade .5s ease;
+
+
+
+}
+
+
+
+.wide-modal {
+
+
+  width:
+    min(1100px, 95vw);
+
+
+
+}
+
+
+
+.wide-confirmation-modal {
+
+
+  width:
+    min(1000px, 95vw);
+
+
+
+}
+
+
+
+
+@keyframes popupFade {
+
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(30px);
+
+  }
+
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+
+  }
+
+
+}
+
+
+
+
+/* =====================================================
+   POPUP HEADER
+===================================================== */
+
+
+.popup-header {
+
+
+  display:
+    flex;
+
+
+  justify-content:
+    space-between;
+
+
+  align-items:
+    flex-start;
+
+
+  margin-bottom:
+    35px;
+
+
+  border-bottom:
+    1px solid rgba(201, 164, 92, .25);
+
+
+  padding-bottom:
+    25px;
+
+
+
+}
+
+
+
+.step-count {
+
+
+  font-size:
+    10px;
+
+
+  letter-spacing:
+    4px;
+
+
+  color:
+    var(--champagne);
+
+
+  text-transform:
+    uppercase;
+
+
+
+}
+
+
+
+.popup-header h3 {
+
+
+  margin:
+    10px 0 0;
+
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+
+  font-size:
+    38px;
+
+
+  font-weight:
+    400;
+
+
+  color:
+    var(--dark);
+
+
+
+}
+
+
+
+.popup-close-btn {
+
+
+  border:
+    none;
+
+
+  background:
+    transparent;
+
+
+  font-size:
+    20px;
+
+
+  cursor:
+    pointer;
+
+
+  color:
+    var(--dark);
+
+
+  transition:
+    .3s;
+
+
+
+}
+
+
+
+.popup-close-btn:hover {
+
+
+  color:
+    var(--champagne);
+
+
+  transform:
+    rotate(90deg);
+
+
+
+}
+
+
+
+
+/* =====================================================
+   SUMMARY PILL
+===================================================== */
+
+
+.selected-summary-pill-bar {
+
+
+  display:
+    flex;
+
+
+  flex-wrap:
+    wrap;
+
+
+  gap:
+    15px;
+
+
+  margin-bottom:
+    35px;
+
+
+
+}
+
+
+
+.selected-summary-pill-bar span {
+
+
+  background:
+    white;
+
+
+  border:
+    1px solid rgba(201, 164, 92, .3);
+
+
+  padding:
+    12px 20px;
+
+
+  border-radius:
+    50px;
+
+
+  font-size:
+    13px;
+
+
+  color:
+    var(--text-gray);
+
+
+
+}
+
+
+
+.selected-summary-pill-bar strong {
+
+
+  color:
+    var(--dark);
+
+
+
+}
+
+
+
+
+/* =====================================================
+   SERVICE SELECTION CARDS
+===================================================== */
+
+
+.horizontal-service-cards-container {
+
+
+  display:
+    flex;
+
+
+  flex-direction:
+    column;
+
+
+  gap:
+    20px;
+
+
+
+}
+
+
+
+.horizontal-service-card {
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    120px 1fr auto;
+
+
+  align-items:
+    center;
+
+
+  gap:
+    25px;
+
+
+  padding:
+    18px;
+
+
+  background:
+    white;
+
+
+  border:
+    1px solid rgba(201, 164, 92, .25);
+
+
+  transition:
+    .4s;
+
+
+
+}
+
+
+
+.horizontal-service-card:hover {
+
+
+  transform:
+    translateY(-4px);
+
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, .08);
+
+
+
+}
+
+
+
+
+.h-card-img-wrapper {
+
+
+  width:
+    120px;
+
+
+  height:
+    100px;
+
+
+  overflow:
+    hidden;
+
+
+
+}
+
+
+
+.h-card-img-wrapper img {
+
+
+  width:
+    100%;
+
+
+  height:
+    100%;
+
+
+  object-fit:
+    cover;
+
+
+  transition:
+    .5s;
+
+
+
+}
+
+
+
+.horizontal-service-card:hover img {
+
+
+  transform:
+    scale(1.08);
+
+
+
+}
+
+
+
+
+.h-card-info h3 {
+
+
+  margin:
+    0 0 10px;
+
+
+  font-family:
+    "Cormorant Garamond";
+
+
+  font-size:
+    28px;
+
+
+  font-weight:
+    500;
+
+
+
+}
+
+
+
+.h-card-desc {
+
+
+  font-size:
+    13px;
+
+
+  line-height:
+    1.8;
+
+
+  color:
+    var(--text-gray);
+
+
+
+}
+
+
+
+/* Detail Pills */
+
+
+.h-card-details {
+
+
+  display:
+    flex;
+
+
+  gap:
+    10px;
+
+
+  margin-top:
+    15px;
+
+
+
+}
+
+
+
+.detail-pill {
+
+
+  padding:
+    8px 15px;
+
+
+  border-radius:
+    50px;
+
+
+  background:
+    var(--cream);
+
+
+  font-size:
+    12px;
+
+
+
+}
+
+
+
+
+/* Select button */
+
+
+.h-card-book-btn {
+
+
+  border:
+    1px solid var(--champagne);
+
+
+  background:
+    transparent;
+
+
+  padding:
+    12px 25px;
+
+
+  border-radius:
+    50px;
+
+
+  cursor:
+    pointer;
+
+
+  font-size:
+    11px;
+
+
+  letter-spacing:
+    2px;
+
+
+  transition:
+    .4s;
+
+
+
+}
+
+
+
+.h-card-book-btn:hover,
+.selected-btn {
+
+
+  background:
+    var(--champagne);
+
+
+  color:
+    white;
+
+
+
+}
+
+
+
+
+/* =====================================================
+   DATE TIME SECTION
+===================================================== */
+
+
+.popup-body h4 {
+
+
+  margin:
+    30px 0 20px;
+
+
+  font-family:
+    "Cormorant Garamond";
+
+
+  font-size:
+    28px;
+
+
+  font-weight:
+    400;
+
+
+
+}
+
+
+
+.horizontal-date-scroll {
+
+
+  display:
+    flex;
+
+
+  gap:
+    15px;
+
+
+  overflow-x:
+    auto;
+
+
+  padding-bottom:
+    10px;
+
+
+
+}
+
+
+
+.date-selection-card {
+
+
+  min-width:
+    110px;
+
+
+  padding:
+    18px;
+
+
+  border:
+    1px solid rgba(201, 164, 92, .3);
+
+
+  background:
+    white;
+
+
+  cursor:
+    pointer;
+
+
+  transition:
+    .3s;
+
+
+
+}
+
+
+
+.date-selection-card:hover,
+.date-selection-card.selected {
+
+
+  background:
+    var(--champagne);
+
+
+  color:
+    white;
+
+
+
+}
+
+
+
+.card-day {
+
+
+  display:
+    block;
+
+
+  font-size:
+    11px;
+
+
+  letter-spacing:
+    2px;
+
+
+}
+
+
+
+.card-date {
+
+
+  display:
+    block;
+
+
+  font-family:
+    "Cormorant Garamond";
+
+
+  font-size:
+    24px;
+
+
+  margin:
+    8px 0;
+
+
+
+}
+
+
+
+.card-avail {
+
+
+  font-size:
+    11px;
+
+
+  opacity:
+    .8;
+
+
+
+}
+
+
+
+/* Time grid */
+
+
+.times-grid {
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+
+  gap:
+    12px;
+
+
+
+}
+
+
+
+.times-grid button {
+
+
+  padding:
+    12px;
+
+
+  border:
+    1px solid rgba(201, 164, 92, .3);
+
+
+  background:
+    white;
+
+
+  cursor:
+    pointer;
+
+
+  transition:
+    .3s;
+
+
+
+}
+
+
+
+.times-grid button:hover,
+.selected-time {
+
+
+  background:
+    var(--champagne);
+
+
+  color:
+    white;
+
+
+
+}
+
+
+
+.disabled-time-slot {
+
+
+  opacity:
+    .35;
+
+
+  cursor:
+    not-allowed;
+
+
+
+}
+
+/* =====================================================
+   POPUP FOOTER BUTTONS
+===================================================== */
+
+
+.popup-footer {
+
+
+  display:
+    flex;
+
+
+  justify-content:
+    space-between;
+
+
+  align-items:
+    center;
+
+
+  margin-top:
+    35px;
+
+
+  padding-top:
+    25px;
+
+
+  border-top:
+    1px solid rgba(201, 164, 92, .25);
+
+
+
+}
+
+
+
+.popup-back-btn {
+
+
+  background:
+    transparent;
+
+
+  border:
+    none;
+
+
+  color:
+    var(--text-gray);
+
+
+  cursor:
+    pointer;
+
+
+  font-size:
+    12px;
+
+
+  letter-spacing:
+    2px;
+
+
+  transition:
+    .3s;
+
+
+
+}
+
+
+
+.popup-back-btn:hover {
+
+
+  color:
+    var(--champagne);
+
+
+
+}
+
+
+
+
+.popup-confirm-btn,
+.confirm-appointment-submit-btn {
+
+
+  border:
+    1px solid var(--champagne);
+
+
+  background:
+    var(--champagne);
+
+
+  color:
+    white;
+
+
+  padding:
+    14px 35px;
+
+
+  border-radius:
+    50px;
+
+
+  cursor:
+    pointer;
+
+
+  font-size:
+    11px;
+
+
+  letter-spacing:
+    2px;
+
+
+  text-transform:
+    uppercase;
+
+
+  transition:
+    .4s;
+
+
+
+}
+
+
+
+.popup-confirm-btn:hover,
+.confirm-appointment-submit-btn:hover {
+
+
+  background:
+    #b28b45;
+
+
+  transform:
+    translateY(-3px);
+
+
+
+}
+
+
+
+.popup-confirm-btn:disabled {
+
+
+  opacity:
+    .4;
+
+
+  cursor:
+    not-allowed;
+
+
+
+}
+
+
+
+/* =====================================================
+   CONFIRMATION RECEIPT
+===================================================== */
+
+
+.luxury-confirmation-grid {
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    1fr 1fr;
+
+
+  gap:
+    40px;
+
+
+
+}
+
+
+
+/* Service Summary */
+
+
+.confirm-service-summary {
+
+
+  background:
+    white;
+
+
+  padding:
+    25px;
+
+
+  border:
+    1px solid rgba(201, 164, 92, .25);
+
+
+
+}
+
+
+
+.confirm-service-img {
+
+
+  width:
+    100%;
+
+
+  height:
+    260px;
+
+
+  object-fit:
+    cover;
+
+
+
+}
+
+
+
+.confirm-service-text h3 {
+
+
+  margin-top:
+    25px;
+
+
+  font-family:
+    "Cormorant Garamond";
+
+
+  font-size:
+    34px;
+
+
+  font-weight:
+    400;
+
+
+
+}
+
+
+
+.confirm-service-text p {
+
+
+  color:
+    var(--text-gray);
+
+
+  line-height:
+    1.8;
+
+
+  font-size:
+    14px;
+
+
+
+}
+
+
+
+.confirm-badge {
+
+
+  display:
+    inline-block;
+
+
+  margin-top:
+    15px;
+
+
+  padding:
+    8px 20px;
+
+
+  border-radius:
+    50px;
+
+
+  background:
+    var(--cream);
+
+
+  color:
+    var(--champagne);
+
+
+  font-size:
+    11px;
+
+
+  letter-spacing:
+    2px;
+
+
+
+}
+
+
+
+
+
+/* Receipt */
+
+
+.confirm-receipt-area {
+
+
+  background:
+    #fff;
+
+
+  padding:
+    35px;
+
+
+  border:
+    1px solid rgba(201, 164, 92, .25);
+
+
+
+}
+
+
+
+.confirm-receipt-area h3 {
+
+
+  margin:
+    0 0 25px;
+
+
+  font-family:
+    "Cormorant Garamond";
+
+
+  font-size:
+    32px;
+
+
+  font-weight:
+    400;
+
+
+
+}
+
+
+
+.receipt-divider {
+
+
+  height:
+    1px;
+
+
+  background:
+    rgba(201, 164, 92, .3);
+
+
+  margin:
+    20px 0;
+
+
+
+}
+
+
+
+.receipt-row {
+
+
+  display:
+    flex;
+
+
+  justify-content:
+    space-between;
+
+
+  padding:
+    14px 0;
+
+
+  font-size:
+    14px;
+
+
+
+}
+
+
+
+.receipt-label {
+
+
+  color:
+    var(--text-gray);
+
+
+
+}
+
+
+
+.receipt-value {
+
+
+  font-weight:
+    500;
+
+
+  color:
+    var(--dark);
+
+
+
+}
+
+
+
+.total-amount-row .receipt-value {
+
+
+  color:
+    var(--champagne);
+
+
+  font-size:
+    20px;
+
+
+
+}
+
+
+
+
+/* =====================================================
+   CALENDAR MODAL
+===================================================== */
+
+
+.calendar-modal-overlay {
+
+
+  position:
+    fixed;
+
+
+  inset:
+    0;
+
+
+  z-index:
+    1100;
+
+
+  display:
+    flex;
+
+
+  align-items:
+    center;
+
+
+  justify-content:
+    center;
+
+
+  background:
+    rgba(20, 15, 15, .45);
+
+
+  backdrop-filter:
+    blur(10px);
+
+
+
+}
+
+
+
+.calendar-modal-card {
+
+
+  width:
+    min(520px, 90vw);
+
+
+  background:
+    var(--ivory);
+
+
+  padding:
+    35px;
+
+
+  border:
+    1px solid rgba(201, 164, 92, .35);
+
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, .2);
+
+
+
+}
+
+
+
+.calendar-modal-header {
+
+
+  display:
+    flex;
+
+
+  justify-content:
+    space-between;
+
+
+  align-items:
+    center;
+
+
+  margin-bottom:
+    25px;
+
+
+
+}
+
+
+
+.calendar-modal-header h3 {
+
+
+  font-family:
+    "Cormorant Garamond";
+
+
+  font-size:
+    32px;
+
+
+  font-weight:
+    400;
+
+
+
+}
+
+
+
+.calendar-close-btn {
+
+
+  border:
+    none;
+
+
+  background:
+    transparent;
+
+
+  cursor:
+    pointer;
+
+
+  font-size:
+    20px;
+
+
+
+}
+
+
+
+/* Calendar Navigation */
+
+
+.calendar-nav {
+
+
+  display:
+    flex;
+
+
+  justify-content:
+    space-between;
+
+
+  align-items:
+    center;
+
+
+  margin-bottom:
+    25px;
+
+
+
+}
+
+
+
+.cal-nav-arrow {
+
+
+  width:
+    35px;
+
+
+  height:
+    35px;
+
+
+  border-radius:
+    50%;
+
+
+  border:
+    1px solid var(--champagne);
+
+
+  background:
+    transparent;
+
+
+  cursor:
+    pointer;
+
+
+
+}
+
+
+
+.cal-month-year {
+
+
+  font-family:
+    "Cormorant Garamond";
+
+
+  font-size:
+    26px;
+
+
+
+}
+
+
+
+.calendar-weekdays,
+.calendar-days-grid {
+
+
+  display:
+    grid;
+
+
+  grid-template-columns:
+    repeat(7, 1fr);
+
+
+  gap:
+    8px;
+
+
+
+}
+
+
+
+.calendar-weekdays div {
+
+
+  text-align:
+    center;
+
+
+  font-size:
+    11px;
+
+
+  color:
+    var(--champagne);
+
+
+
+}
+
+
+
+.calendar-day-btn {
+
+
+  aspect-ratio:
+    1;
+
+
+  border:
+    1px solid rgba(201, 164, 92, .25);
+
+
+  background:
+    white;
+
+
+  cursor:
+    pointer;
+
+
+
+}
+
+
+
+.calendar-day-btn:hover,
+.calendar-day-btn.selected,
+.calendar-day-btn.today {
+
+
+  background:
+    var(--champagne);
+
+
+  color:
+    white;
+
+
+
+}
+
+
+
+.calendar-day-btn.disabled {
+
+
+  opacity:
+    .3;
+
+
+  cursor:
+    not-allowed;
+
+
+
+}
+
+
+
+
+/* =====================================================
+   PROFILE MODAL
+===================================================== */
+
+
+.profile-details-card {
+
+
+  text-align:
+    center;
+
+
+
+}
+
+
+
+.profile-modal-avatar {
+
+
+  width:
+    150px;
+
+
+  height:
+    150px;
+
+
+  border-radius:
+    50%;
+
+
+  object-fit:
+    cover;
+
+
+  border:
+    2px solid var(--champagne);
+
+
+
+}
+
+
+
+.profile-modal-content h4 {
+
+
+  margin:
+    25px 0 5px;
+
+
+  font-family:
+    "Cormorant Garamond";
+
+
+  font-size:
+    35px;
+
+
+  font-weight:
+    400;
+
+
+
+}
+
+
+
+.profile-role {
+
+
+  color:
+    var(--champagne);
+
+
+  letter-spacing:
+    2px;
+
+
+  text-transform:
+    uppercase;
+
+
+  font-size:
+    11px;
+
+
+
+}
+
+
+
+.profile-bio {
+
+
+  margin:
+    25px auto;
+
+
+  max-width:
+    350px;
+
+
+  color:
+    var(--text-gray);
+
+
+  line-height:
+    1.8;
+
+
+
+}
+
+
+
+.profile-meta-info {
+
+
+  display:
+    flex;
+
+
+  flex-direction:
+    column;
+
+
+  gap:
+    12px;
+
+
+  font-size:
+    14px;
+
+
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+
+@media(max-width:900px) {
+
+
+  .owner-container,
+  .luxury-confirmation-grid {
+
+
+    grid-template-columns:
+      1fr;
+
+
+  }
+
+
+
+  .talented-luxury-grid {
+
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+
+  }
+
+
+}
+
+
+
+
+@media(max-width:600px) {
+
+
+  .staff-page-hero {
+
+
+    height:
+      75vh;
+
+
+  }
+
+
+
+  .hero-title {
+
+
+    font-size:
+      3rem;
+
+
+  }
+
+
+
+  .owner-section,
+  .team-grid-section {
+
+
+    padding:
+      80px 20px;
+
+
+  }
+
+
+
+  .talented-luxury-grid {
+
+
+    grid-template-columns:
+      1fr;
+
+
+    gap:
+      50px;
+
+
+  }
+
+
+
+  .owner-title {
+
+
+    font-size:
+      42px;
+
+
+  }
+
+
+
+  .datetime-popup-card {
+
+
+    padding:
+      25px;
+
+
+  }
+
+
+
+  .popup-header h3 {
+
+
+    font-size:
+      28px;
+
+
+  }
+
+
+
+  .horizontal-service-card {
+
+
+    grid-template-columns:
+      1fr;
+
+
+    text-align:
+      center;
+
+
+  }
+
+
+
+  .h-card-img-wrapper {
+
+
+    width:
+      100%;
+
+
+    height:
+      220px;
+
+
+  }
+
+
+
+  .times-grid {
+
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+
+  }
+
+
+
+  .popup-footer {
+
+
+    flex-direction:
+      column;
+
+
+    gap:
+      20px;
+
+
+  }
+
+
+
+}

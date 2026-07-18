@@ -1,0 +1,2844 @@
+/* =====================================================
+   BOOKING SERVICE PAGE
+   PREMIUM PINK LUXURY THEME
+===================================================== */
+
+
+:root {
+
+    --pink-primary: #d96b9b;
+    --pink-dark: #8f3158;
+    --pink-deep: #6b2343;
+
+    --pink-soft: #f8dce8;
+    --pink-light: #fff5fa;
+
+    --white: #ffffff;
+
+    --gold: #d4af37;
+
+    --text-dark: #3b2430;
+    --text-light: #777;
+
+    --shadow-soft:
+        0 20px 50px rgba(217, 107, 155, 0.18);
+
+    --shadow-card:
+        0 15px 35px rgba(143, 49, 88, 0.15);
+
+}
+
+
+
+/* =====================================================
+   PAGE BASE
+===================================================== */
+
+
+.booking-service-page {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(180deg,
+            #ffffff,
+            var(--pink-light));
+
+    color: var(--text-dark);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+}
+
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+
+.services-hero {
+
+    min-height:
+        85vh;
+
+
+    background-size:
+        cover;
+
+
+    background-position:
+        center;
+
+
+    display:
+        flex;
+
+
+    align-items:
+        center;
+
+
+    justify-content:
+        center;
+
+
+    position:
+        relative;
+
+
+}
+
+
+
+
+.services-hero::before {
+
+
+    content: "";
+
+
+    position: absolute;
+
+
+    inset: 0;
+
+
+    background: transparent linear-gradient(90deg,
+            rgba(95, 63, 84, 0.849),
+            rgba(255, 255, 255, 0.347));
+}
+
+
+
+
+.services-hero-overlay {
+
+
+    position:
+        relative;
+
+
+    z-index:
+        2;
+
+
+    max-width:
+        850px;
+
+
+    text-align:
+        center;
+
+
+    padding:
+        40px 25px;
+
+
+    animation:
+        fadeUp 1.2s ease;
+
+
+
+}
+
+
+
+
+
+.hero-subtitle {
+
+
+    display:
+        inline-block;
+
+
+    padding:
+        10px 28px;
+
+
+    border-radius:
+        50px;
+
+
+    background:
+        rgba(217, 107, 155, .12);
+
+
+    color:
+        var(--pink-dark);
+
+
+    letter-spacing:
+        3px;
+
+
+    text-transform:
+        uppercase;
+
+
+    font-size:
+        12px;
+
+
+    font-weight:
+        600;
+
+
+    margin-bottom:
+        25px;
+
+
+
+}
+
+
+
+
+.services-hero h1 {
+
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+
+    font-size:
+        clamp(2.8rem, 5vw, 4.8rem);
+
+
+    line-height:
+        1.15;
+
+
+    font-weight:
+        500;
+
+
+    color:
+        var(--text-dark);
+
+
+    margin:
+        0 0 25px;
+
+
+
+}
+
+
+
+
+.services-hero h1 span {
+
+
+    color:
+        var(--pink-primary);
+
+
+    font-style:
+        italic;
+
+
+}
+
+
+
+
+
+.services-hero p {
+
+
+    max-width:
+        650px;
+
+
+    margin:
+        auto;
+
+
+    font-size:
+        1.05rem;
+
+
+    line-height:
+        1.9;
+
+
+    color:
+        var(--text-light);
+
+
+    font-weight:
+        300;
+
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   PAMPER CTA SECTION
+===================================================== */
+
+
+.pamper-cta-section {
+
+
+    width:
+        90%;
+
+
+    max-width:
+        1250px;
+
+
+    margin:
+        100px auto;
+
+
+    padding:
+        70px;
+
+
+    display:
+        grid;
+
+
+    grid-template-columns:
+        1fr 1fr;
+
+
+    gap:
+        60px;
+
+
+    align-items:
+        center;
+
+
+    background:
+        linear-gradient(135deg,
+            #ffffff,
+            #f9d9e8);
+
+
+    border-radius:
+        40px;
+
+
+    box-shadow:
+        var(--shadow-soft);
+
+
+
+}
+
+
+
+
+
+
+.pamper-cta-text h1 {
+
+
+    margin:
+        0;
+
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+
+    font-size:
+        3.5rem;
+
+
+    font-weight:
+        400;
+
+
+    color:
+        var(--text-dark);
+
+
+
+}
+
+
+
+
+
+.pamper-cta-text h1 em {
+
+
+    color:
+        var(--pink-primary);
+
+
+}
+
+
+
+
+
+.pamper-cta-text h2 {
+
+
+    margin:
+        -5px 0 25px;
+
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+
+    font-size:
+        3rem;
+
+
+    color:
+        var(--pink-dark);
+
+
+
+}
+
+
+
+
+
+.pamper-cta-text p {
+
+
+    font-size:
+        1rem;
+
+
+    line-height:
+        1.9;
+
+
+    color:
+        var(--text-light);
+
+
+    max-width:
+        500px;
+
+
+
+}
+
+
+
+
+
+
+
+/* CTA BUTTON */
+
+
+.pamper-cta-btn {
+
+
+    margin-top:
+        30px;
+
+
+    padding:
+        15px 40px;
+
+
+    border:
+        none;
+
+
+    border-radius:
+        50px;
+
+
+    cursor:
+        pointer;
+
+
+    color:
+        white;
+
+
+    background:
+        linear-gradient(135deg,
+            var(--pink-dark),
+            var(--pink-primary));
+
+
+    font-size:
+        12px;
+
+
+    letter-spacing:
+        2px;
+
+
+    text-transform:
+        uppercase;
+
+
+    font-weight:
+        600;
+
+
+    transition:
+        .4s ease;
+
+
+
+}
+
+
+
+
+.pamper-cta-btn:hover {
+
+
+    transform:
+        translateY(-5px);
+
+
+    box-shadow:
+        0 15px 35px rgba(217, 107, 155, .35);
+
+
+
+}
+
+
+
+
+
+
+
+/* VIDEO */
+
+
+.pamper-cta-media {
+
+
+    height:
+        450px;
+
+
+    border-radius:
+        35px;
+
+
+    overflow:
+        hidden;
+
+
+    box-shadow:
+        var(--shadow-card);
+
+
+
+}
+
+
+
+.pamper-cta-media video {
+
+
+    width:
+        100%;
+
+
+    height:
+        100%;
+
+
+    object-fit:
+        cover;
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   SERVICE MENU SECTION
+===================================================== */
+
+
+.page-subtitle {
+
+
+    max-width:
+        750px;
+
+
+    margin:
+        60px auto 30px;
+
+
+    text-align:
+        center;
+
+
+    color:
+        var(--text-light);
+
+
+    line-height:
+        1.8;
+
+
+    font-size:
+        1rem;
+
+
+}
+
+
+
+
+.service-booking-list-section {
+
+
+    width:
+        90%;
+
+
+    max-width:
+        1250px;
+
+
+    margin:
+        50px auto 120px;
+
+
+}
+
+
+
+
+.menu-eyebrow {
+
+
+    text-align:
+        center;
+
+
+    text-transform:
+        uppercase;
+
+
+    letter-spacing:
+        4px;
+
+
+    font-size:
+        12px;
+
+
+    font-weight:
+        600;
+
+
+    color:
+        var(--pink-primary);
+
+
+    margin-bottom:
+        35px;
+
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   CATEGORY TABS
+===================================================== */
+
+
+.category-tab-bar {
+
+
+    display:
+        flex;
+
+
+    justify-content:
+        center;
+
+
+    flex-wrap:
+        wrap;
+
+
+    gap:
+        15px;
+
+
+    margin-bottom:
+        50px;
+
+
+
+}
+
+
+
+
+
+.category-tab-bar button {
+
+
+    padding:
+        12px 32px;
+
+
+    border-radius:
+        50px;
+
+
+    border:
+        1px solid rgba(217, 107, 155, .25);
+
+
+    background:
+        white;
+
+
+    color:
+        var(--pink-dark);
+
+
+    font-size:
+        13px;
+
+
+    letter-spacing:
+        1px;
+
+
+    cursor:
+        pointer;
+
+
+    transition:
+        .35s ease;
+
+
+
+}
+
+
+
+
+
+.category-tab-bar button:hover {
+
+
+    background:
+        var(--pink-soft);
+
+
+    transform:
+        translateY(-3px);
+
+
+
+}
+
+
+
+
+
+.category-tab-bar button.active {
+
+
+    background:
+        linear-gradient(135deg,
+            var(--pink-dark),
+            var(--pink-primary));
+
+
+    color:
+        white;
+
+
+    border-color:
+        transparent;
+
+
+    box-shadow:
+        0 10px 25px rgba(217, 107, 155, .3);
+
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   SERVICE CARD GRID
+===================================================== */
+
+
+.service-card-grid {
+
+
+    display:
+        grid;
+
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+
+    gap:
+        35px;
+
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   SERVICE CARD
+===================================================== */
+
+
+.service-booking-card {
+
+
+    background:
+        white;
+
+
+    border-radius:
+        30px;
+
+
+    overflow:
+        hidden;
+
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .08);
+
+
+    transition:
+        .45s ease;
+
+
+    position:
+        relative;
+
+
+
+}
+
+
+
+
+
+.service-booking-card:hover {
+
+
+    transform:
+        translateY(-12px);
+
+
+    box-shadow:
+        0 25px 60px rgba(217, 107, 155, .2);
+
+
+
+}
+
+
+
+
+
+
+/* IMAGE */
+
+
+.service-card-image-box {
+
+
+    height:
+        280px;
+
+
+    overflow:
+        hidden;
+
+
+    position:
+        relative;
+
+
+
+}
+
+
+
+
+
+.service-card-image-box img {
+
+
+    width:
+        100%;
+
+
+    height:
+        100%;
+
+
+    object-fit:
+        cover;
+
+
+    transition:
+        .6s ease;
+
+
+
+}
+
+
+
+
+
+.service-booking-card:hover .service-card-image-box img {
+
+
+    transform:
+        scale(1.08);
+
+
+
+}
+
+
+
+
+
+
+/* CONTENT */
+
+
+.service-card-content {
+
+
+    padding:
+        30px 30px 20px;
+
+
+
+}
+
+
+
+
+
+.service-card-content h3 {
+
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+
+    font-size:
+        1.8rem;
+
+
+    font-weight:
+        500;
+
+
+    color:
+        var(--text-dark);
+
+
+    margin:
+        0 0 15px;
+
+
+
+}
+
+
+
+
+
+.service-card-content p {
+
+
+    font-size:
+        .95rem;
+
+
+    line-height:
+        1.8;
+
+
+    color:
+        var(--text-light);
+
+
+    min-height:
+        70px;
+
+
+
+}
+
+
+
+
+
+
+/* FOOTER */
+
+
+.service-card-footer {
+
+
+    display:
+        flex;
+
+
+    justify-content:
+        space-between;
+
+
+    align-items:
+        center;
+
+
+    padding:
+        0 30px 30px;
+
+
+
+}
+
+
+
+
+
+.service-card-footer span {
+
+
+    font-size:
+        1.2rem;
+
+
+    font-weight:
+        600;
+
+
+    color:
+        var(--pink-dark);
+
+
+
+}
+
+
+
+
+
+.service-card-footer button {
+
+
+    padding:
+        12px 25px;
+
+
+    border:
+        none;
+
+
+    border-radius:
+        50px;
+
+
+    cursor:
+        pointer;
+
+
+    background:
+        linear-gradient(135deg,
+            var(--pink-dark),
+            var(--pink-primary));
+
+
+    color:
+        white;
+
+
+    font-size:
+        12px;
+
+
+    text-transform:
+        uppercase;
+
+
+    letter-spacing:
+        1.5px;
+
+
+    transition:
+        .35s ease;
+
+
+
+}
+
+
+
+
+
+.service-card-footer button:hover {
+
+
+    transform:
+        translateY(-3px);
+
+
+    box-shadow:
+        0 12px 25px rgba(217, 107, 155, .35);
+
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   LOADING / EMPTY
+===================================================== */
+
+
+.loading-placeholder {
+
+
+    text-align:
+        center;
+
+
+    padding:
+        60px;
+
+
+    background:
+        white;
+
+
+    border-radius:
+        25px;
+
+
+    color:
+        var(--pink-dark);
+
+
+    box-shadow:
+        var(--shadow-soft);
+
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+
+@media(max-width:1000px) {
+
+
+    .service-card-grid {
+
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+
+    }
+
+
+
+}
+
+
+
+
+
+@media(max-width:700px) {
+
+
+    .service-card-grid {
+
+
+        grid-template-columns:
+            1fr;
+
+
+    }
+
+
+
+    .category-tab-bar button {
+
+
+        width:
+            100%;
+
+
+    }
+
+
+
+}
+
+/* =====================================================
+   BOOKING POPUP OVERLAY
+===================================================== */
+
+
+.datetime-popup-overlay,
+.calendar-modal-overlay {
+
+
+    position:
+        fixed;
+
+
+    inset:
+        0;
+
+
+    background:
+        rgba(45, 15, 30, .45);
+
+
+    backdrop-filter:
+        blur(8px);
+
+
+    display:
+        flex;
+
+
+    align-items:
+        center;
+
+
+    justify-content:
+        center;
+
+
+    z-index:
+        9999;
+
+
+    padding:
+        20px;
+
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   POPUP CARD
+===================================================== */
+
+
+.datetime-popup-card {
+
+
+    width:
+        min(950px, 95%);
+
+
+    max-height:
+        90vh;
+
+
+    overflow-y:
+        auto;
+
+
+    background:
+        linear-gradient(180deg,
+            #ffffff,
+            #fff5fa);
+
+
+    border-radius:
+        35px;
+
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, .25);
+
+
+    animation:
+        popupScale .4s ease;
+
+
+
+}
+
+
+
+.wide-modal,
+.wide-confirmation-modal {
+
+
+    width:
+        min(1100px, 95%);
+
+
+}
+
+
+
+
+
+
+@keyframes popupScale {
+
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(.9) translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1) translateY(0);
+
+    }
+
+}
+
+
+
+
+
+
+/* =====================================================
+   POPUP HEADER
+===================================================== */
+
+
+.popup-header {
+
+
+    padding:
+        35px 40px;
+
+
+    display:
+        flex;
+
+
+    justify-content:
+        space-between;
+
+
+    align-items:
+        center;
+
+
+    border-bottom:
+        1px solid rgba(217, 107, 155, .15);
+
+
+
+}
+
+
+
+
+.step-count {
+
+
+    font-size:
+        11px;
+
+
+    letter-spacing:
+        3px;
+
+
+    color:
+        var(--pink-primary);
+
+
+    font-weight:
+        600;
+
+
+
+}
+
+
+
+
+.popup-header h3 {
+
+
+    margin:
+        8px 0 0;
+
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+
+    font-size:
+        2rem;
+
+
+    color:
+        var(--text-dark);
+
+
+
+}
+
+
+
+
+
+.popup-close-btn {
+
+
+    width:
+        42px;
+
+
+    height:
+        42px;
+
+
+    border-radius:
+        50%;
+
+
+    border:
+        none;
+
+
+    background:
+        var(--pink-soft);
+
+
+    color:
+        var(--pink-dark);
+
+
+    cursor:
+        pointer;
+
+
+    font-size:
+        18px;
+
+
+    transition:
+        .3s;
+
+
+
+}
+
+
+
+.popup-close-btn:hover {
+
+
+    background:
+        var(--pink-primary);
+
+
+    color:
+        white;
+
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   POPUP BODY
+===================================================== */
+
+
+.popup-body {
+
+
+    padding:
+        35px 40px;
+
+
+
+}
+
+
+
+
+
+
+/* SUMMARY PILLS */
+
+
+.selected-summary-pill-bar {
+
+
+    display:
+        flex;
+
+
+    flex-wrap:
+        wrap;
+
+
+    gap:
+        15px;
+
+
+    margin-bottom:
+        35px;
+
+
+
+}
+
+
+
+
+.selected-summary-pill-bar span {
+
+
+    background:
+        white;
+
+
+    padding:
+        12px 20px;
+
+
+    border-radius:
+        50px;
+
+
+    font-size:
+        13px;
+
+
+    color:
+        var(--text-light);
+
+
+    box-shadow:
+        0 8px 20px rgba(217, 107, 155, .12);
+
+
+
+}
+
+
+
+
+.selected-summary-pill-bar strong {
+
+
+    color:
+        var(--pink-dark);
+
+
+
+}
+
+
+
+
+
+
+.popup-body h4 {
+
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+
+    font-size:
+        1.5rem;
+
+
+    margin:
+        25px 0;
+
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   DATE SELECTION
+===================================================== */
+
+
+.horizontal-date-scroll {
+
+
+    display:
+        flex;
+
+
+    gap:
+        15px;
+
+
+    overflow-x:
+        auto;
+
+
+    padding:
+        10px 0 20px;
+
+
+
+}
+
+
+
+
+
+.date-selection-card {
+
+
+    min-width:
+        130px;
+
+
+    padding:
+        20px;
+
+
+    border-radius:
+        25px;
+
+
+    border:
+        1px solid rgba(217, 107, 155, .2);
+
+
+    background:
+        white;
+
+
+    cursor:
+        pointer;
+
+
+    transition:
+        .35s ease;
+
+
+    display:
+        flex;
+
+
+    flex-direction:
+        column;
+
+
+    gap:
+        8px;
+
+
+    text-align:
+        center;
+
+
+
+}
+
+
+
+
+.card-day {
+
+
+    color:
+        var(--pink-primary);
+
+
+    font-size:
+        12px;
+
+
+    text-transform:
+        uppercase;
+
+
+    letter-spacing:
+        1px;
+
+
+
+}
+
+
+
+.card-date {
+
+
+    font-size:
+        16px;
+
+
+    font-weight:
+        600;
+
+
+
+}
+
+
+
+.card-avail {
+
+
+    font-size:
+        11px;
+
+
+    color:
+        #999;
+
+
+
+}
+
+
+
+
+
+.date-selection-card:hover,
+.date-selection-card.selected {
+
+
+    background:
+        linear-gradient(135deg,
+            var(--pink-dark),
+            var(--pink-primary));
+
+
+    color:
+        white;
+
+
+    transform:
+        translateY(-5px);
+
+
+
+}
+
+
+
+
+
+.date-selection-card.selected .card-day,
+.date-selection-card.selected .card-avail {
+
+
+    color:
+        #ffe6ef;
+
+
+
+}
+
+
+
+
+
+
+.selected-date-confirm-pill {
+
+
+    margin:
+        20px 0;
+
+
+    padding:
+        14px 25px;
+
+
+    border-radius:
+        50px;
+
+
+    background:
+        #fff0f7;
+
+
+    color:
+        var(--pink-dark);
+
+
+    display:
+        inline-block;
+
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   TIME GRID
+===================================================== */
+
+
+.times-grid {
+
+
+    display:
+        grid;
+
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+
+    gap:
+        15px;
+
+
+
+}
+
+
+
+
+
+.times-grid button {
+
+
+    padding:
+        14px;
+
+
+    border-radius:
+        18px;
+
+
+    border:
+        1px solid rgba(217, 107, 155, .25);
+
+
+    background:
+        white;
+
+
+    cursor:
+        pointer;
+
+
+    color:
+        var(--text-dark);
+
+
+    transition:
+        .3s;
+
+
+
+}
+
+
+
+
+
+.times-grid button:hover {
+
+
+    border-color:
+        var(--pink-primary);
+
+
+}
+
+
+
+
+.times-grid .selected-time {
+
+
+    background:
+        linear-gradient(135deg,
+            var(--gold),
+            #e9c65b);
+
+
+    color:
+        white;
+
+
+    border:
+        none;
+
+
+}
+
+
+
+
+
+.disabled-time-slot {
+
+
+    opacity:
+        .35;
+
+
+    cursor:
+        not-allowed !important;
+
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   POPUP FOOTER
+===================================================== */
+
+
+.popup-footer {
+
+
+    padding:
+        25px 40px;
+
+
+    display:
+        flex;
+
+
+    align-items:
+        center;
+
+
+    gap:
+        20px;
+
+
+    border-top:
+        1px solid rgba(217, 107, 155, .15);
+
+
+
+}
+
+
+
+.space-between {
+
+
+    justify-content:
+        space-between;
+
+
+
+}
+
+
+
+
+
+.popup-back-btn {
+
+
+    background:
+        transparent;
+
+
+    border:
+        1px solid var(--pink-primary);
+
+
+    color:
+        var(--pink-dark);
+
+
+    padding:
+        14px 30px;
+
+
+    border-radius:
+        50px;
+
+
+    cursor:
+        pointer;
+
+
+
+}
+
+
+
+
+
+.popup-confirm-btn,
+.confirm-appointment-submit-btn {
+
+
+    background:
+        linear-gradient(135deg,
+            var(--pink-dark),
+            var(--pink-primary));
+
+
+    color:
+        white;
+
+
+    border:
+        none;
+
+
+    padding:
+        14px 35px;
+
+
+    border-radius:
+        50px;
+
+
+    cursor:
+        pointer;
+
+
+
+}
+
+
+
+
+
+.popup-confirm-btn:disabled {
+
+
+    opacity:
+        .4;
+
+
+    cursor:
+        not-allowed;
+
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   CALENDAR MODAL
+===================================================== */
+
+
+.calendar-modal-card {
+
+
+    width:
+        min(500px, 95%);
+
+
+    background:
+        white;
+
+
+    border-radius:
+        35px;
+
+
+    overflow:
+        hidden;
+
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, .25);
+
+
+
+}
+
+
+
+
+
+.calendar-modal-header {
+
+
+    padding:
+        30px;
+
+
+    display:
+        flex;
+
+
+    justify-content:
+        space-between;
+
+
+    align-items:
+        center;
+
+
+}
+
+
+
+
+.calendar-grid-container {
+
+
+    padding:
+        0 30px 30px;
+
+
+
+}
+
+
+
+
+.calendar-nav {
+
+
+    display:
+        flex;
+
+
+    justify-content:
+        space-between;
+
+
+    align-items:
+        center;
+
+
+    margin-bottom:
+        25px;
+
+
+
+}
+
+
+
+
+.cal-nav-arrow {
+
+
+    width:
+        40px;
+
+
+    height:
+        40px;
+
+
+    border-radius:
+        50%;
+
+
+    border:
+        none;
+
+
+    background:
+        var(--pink-soft);
+
+
+    cursor:
+        pointer;
+
+
+
+}
+
+
+
+.calendar-weekdays,
+.calendar-days-grid {
+
+
+    display:
+        grid;
+
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+
+    gap:
+        10px;
+
+
+}
+
+
+
+.calendar-weekdays div {
+
+
+    text-align:
+        center;
+
+
+    font-size:
+        12px;
+
+
+    color:
+        var(--pink-dark);
+
+
+
+}
+
+
+
+
+.calendar-day-btn {
+
+
+    aspect-ratio:
+        1;
+
+
+    border-radius:
+        50%;
+
+
+    border:
+        none;
+
+
+    background:
+        #fff0f7;
+
+
+    cursor:
+        pointer;
+
+
+
+}
+
+
+
+
+.calendar-day-btn.selected,
+.calendar-day-btn.today {
+
+
+    background:
+        var(--pink-primary);
+
+
+    color:
+        white;
+
+
+
+}
+
+
+
+.calendar-day-btn.disabled {
+
+
+    opacity:
+        .3;
+
+
+    cursor:
+        not-allowed;
+
+
+
+}
+
+
+
+.calendar-modal-footer {
+
+
+    padding:
+        25px;
+
+
+    text-align:
+        center;
+
+
+
+}
+
+
+
+.calendar-done-btn {
+
+
+    padding:
+        13px 35px;
+
+
+    border-radius:
+        50px;
+
+
+    border:
+        none;
+
+
+    background:
+        var(--pink-dark);
+
+
+    color:
+        white;
+
+
+    cursor:
+        pointer;
+
+
+
+}
+
+/* ===========================================
+   CONFIRMATION MODAL
+=========================================== */
+
+.luxury-confirmation-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.confirm-service-summary {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+}
+
+.confirm-service-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 22px;
+    border: 1px solid rgba(236, 72, 153, .15);
+}
+
+.confirm-service-text h3 {
+    font-size: 1.6rem;
+    color: #5a2342;
+    margin-bottom: 10px;
+}
+
+.confirm-service-text p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.confirm-badge {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: #ffe8f4;
+    color: #db2777;
+    font-weight: 600;
+    font-size: .82rem;
+}
+
+.confirm-receipt-area {
+    background: #fff8fc;
+    border-radius: 24px;
+    padding: 28px;
+    border: 1px solid rgba(236, 72, 153, .12);
+}
+
+.confirm-receipt-area h3 {
+    color: #5a2342;
+    margin-bottom: 12px;
+}
+
+.receipt-divider {
+    height: 1px;
+    background: #f2cade;
+    margin: 18px 0;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.receipt-label {
+    color: #777;
+}
+
+.receipt-value {
+    color: #5a2342;
+    font-weight: 600;
+}
+
+.total-amount-row {
+    font-size: 1.15rem;
+}
+
+.confirm-appointment-submit-btn {
+    border: none;
+    cursor: pointer;
+    padding: 14px 34px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ec4899, #db2777);
+    color: #fff;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.confirm-appointment-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 35px rgba(236, 72, 153, .25);
+}
+
+
+/* ===========================================
+   CALENDAR
+=========================================== */
+
+.calendar-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 10, 15, .55);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.calendar-modal-card {
+    width: 560px;
+    max-width: 95%;
+    background: #fff;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.calendar-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.calendar-modal-header h3 {
+    color: #5a2342;
+}
+
+.calendar-close-btn {
+    border: none;
+    background: #ffe6f3;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #db2777;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.cal-nav-arrow {
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #ffeaf4;
+    color: #db2777;
+}
+
+.cal-month-year {
+    font-weight: 600;
+    color: #5a2342;
+}
+
+.calendar-weekdays,
+.calendar-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-weekdays div {
+    text-align: center;
+    font-weight: 600;
+    color: #777;
+    padding-bottom: 8px;
+}
+
+.calendar-day-btn {
+    height: 50px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    background: #fff7fb;
+    transition: .25s;
+}
+
+.calendar-day-btn:hover {
+    background: #ffd7ea;
+}
+
+.calendar-day-btn.selected {
+    background: #ec4899;
+    color: #fff;
+}
+
+.calendar-day-btn.today {
+    border: 2px solid #ec4899;
+}
+
+.calendar-day-btn.disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
+.calendar-day-btn.other-month {
+    visibility: hidden;
+}
+
+.calendar-modal-footer {
+    margin-top: 28px;
+    text-align: right;
+}
+
+.calendar-done-btn {
+    border: none;
+    cursor: pointer;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: #ec4899;
+    color: #fff;
+}
+
+
+/* ===========================================
+   PROFILE
+=========================================== */
+
+.profile-details-card {
+    max-width: 620px;
+}
+
+.profile-modal-content {
+    text-align: center;
+}
+
+.profile-modal-avatar {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    border: 5px solid #ffe0ef;
+}
+
+.profile-modal-content h4 {
+    margin-top: 18px;
+    color: #5a2342;
+    font-size: 1.5rem;
+}
+
+.profile-role {
+    display: inline-block;
+    margin-top: 8px;
+    color: #db2777;
+}
+
+.profile-bio {
+    max-width: 460px;
+    margin: 22px auto;
+    line-height: 1.8;
+    color: #666;
+}
+
+.profile-meta-info {
+    display: grid;
+    gap: 12px;
+    text-align: left;
+    background: #fff8fc;
+    padding: 24px;
+    border-radius: 20px;
+}
+
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+.animate-fade-up {
+    animation: fadeUp .55s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px) {
+
+    .luxury-confirmation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confirm-service-summary {
+        flex-direction: column;
+    }
+
+    .confirm-service-img {
+        width: 100%;
+        height: 280px;
+    }
+
+    .datetime-popup-card {
+        width: 96%;
+        padding: 28px;
+    }
+
+    .staff-modal-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .staff-meta-details {
+        align-items: center;
+    }
+
+    .staff-name-profile-row {
+        flex-direction: column;
+    }
+
+    .staff-actions-area {
+        width: 100%;
+    }
+
+    .staff-select-action-btn {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .services-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .service-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popup-footer {
+        flex-direction: column;
+    }
+
+    .popup-footer button {
+        width: 100%;
+    }
+
+    .selected-summary-pill-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .horizontal-date-scroll {
+        justify-content: flex-start;
+    }
+
+    .calendar-modal-card {
+        padding: 22px;
+    }
+
+}
+
+@media(max-width:500px) {
+
+    .services-hero {
+        height: 65vh;
+    }
+
+    .services-hero h1 {
+        font-size: 2rem;
+    }
+
+    .datetime-popup-card {
+        padding: 20px;
+    }
+
+    .confirm-service-img {
+        height: 220px;
+    }
+
+    .calendar-day-btn {
+        height: 42px;
+    }
+
+}

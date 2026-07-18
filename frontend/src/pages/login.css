@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.login-page {
+  height: 100vh;
+  width: 100%;
+  background: var(--bg-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 20px;
+}
+
+/* =========================
+   LOGIN CARD
+   ========================= */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 35px rgba(165, 81, 102, 0.08);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   LOGO
+   ========================= */
+.login-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-logo h1 {
+  padding-top: 15px;
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 42px;
+  line-height: 0.9;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: var(--text-primary);
+}
+
+.login-logo span {
+  color: var(--text-secondary);
+}
+
+.login-logo p {
+  margin-top: 8px;
+  font-size: 10px;
+  letter-spacing: 6px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* =========================
+   TITLE
+   ========================= */
+.login-title {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+.login-card h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+.login-card h2+p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* =========================
+   FORM
+   ========================= */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Capsule Form input groups */
+.login-input-group {
+  height: 56px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  background: var(--bg-primary);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-input-group:focus-within {
+  border-color: var(--border-hover);
+  background: var(--bg-primary);
+  box-shadow: 0 0 10px rgba(165, 81, 102, 0.05);
+}
+
+/* Hide icons to match the clean mockup design */
+.login-icon {
+  display: none !important;
+}
+
+.login-input-group input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.login-input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Directly styled inputs on Signup page */
+.login-card input[type="text"],
+.login-card input[type="email"],
+.login-card input[type="password"] {
+  width: 100%;
+  height: 56px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  padding: 0 28px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.login-card input:focus {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 10px rgba(165, 81, 102, 0.05);
+}
+
+.login-card input::placeholder {
+  color: var(--text-muted);
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.login-button,
+.login-card button[type="submit"] {
+  margin-top: 10px;
+  height: 56px;
+  border-radius: 50px;
+  border: none;
+  background: var(--text-secondary);
+  color: var(--pure-white);
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: capitalize;
+}
+
+.login-button:hover,
+.login-card button[type="submit"]:hover {
+  background: var(--text-muted);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(165, 81, 102, 0.15);
+}
+
+/* Hide arrow on login button to match button style */
+.login-button .arrow {
+  display: none !important;
+}
+
+/* =========================
+   LINKS
+   ========================= */
+.login-links {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.login-links button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.login-links button:hover {
+  opacity: 0.8;
+}
+
+.small-text {
+  font-size: 13px !important;
+  color: var(--text-primary) !important;
+  margin-top: 25px;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+.small-text span {
+  color: var(--text-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.small-text span:hover {
+  opacity: 0.8;
+}
+
+.forgot-password {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.forgot-password a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: var(--text-secondary);
+}
+
+/* Bottom help label mock-injected on Login page */
+div.login-card::after {
+  content: "✦ Help";
+  position: absolute;
+  bottom: -40px;
+  right: 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 300;
+  cursor: pointer;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+
+div.login-card::after:hover {
+  opacity: 0.8;
+}
+
+/* Bottom terms of use mock-injected on Signup page */
+form.login-card .small-text::before {
+  content: "By signing up, I agree to the Terms of Use\A\A";
+  white-space: pre-wrap;
+  display: block;
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 520px) {
+  .login-page {
+    padding: 20px;
+  }
+
+  .login-card {
+    padding: 30px 20px;
+  }
+
+  .login-logo h1 {
+    font-size: 36px;
+  }
+
+  div.login-card::after {
+    bottom: -30px;
+    right: 0px;
+  }
+}

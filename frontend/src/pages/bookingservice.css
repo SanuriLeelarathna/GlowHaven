@@ -1,0 +1,1657 @@
+/* ============================================================
+   La Cruz–inspired redesign — bookingservice.css
+   Palette:
+     --ink:        #1a1a1a   (near-black background)
+     --ink-soft:   #242322   (card / surface on dark)
+     --ivory:      #f5f1ea   (cream text / card background)
+     --gold:       #c9a876   (muted gold accent)
+     --taupe:      #9a9388   (secondary text on dark)
+     --line:       rgba(245, 241, 234, 0.16)  (hairline on dark)
+   Type:
+     Display: 'Playfair Display' (serif, italic emphasis)
+     Body/UI: 'Inter' (sans, wide tracking on labels)
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap");
+
+.booking-service-page {
+  background: #1a1a1a;
+  color: #f5f1ea;
+  font-family: "Inter", -apple-system, sans-serif;
+}
+
+.booking-service-page h1,
+.booking-service-page h2,
+.booking-service-page h3,
+.booking-service-page h4 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.booking-service-page em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ---------- Hero banner ---------- */
+
+.service-top-banner {
+  position: relative;
+  min-height: 800px;
+  display: flex;
+  align-items: flex-end;
+  padding: 64px 64px 56px;
+  background:
+    linear-gradient(180deg, rgba(26, 26, 26, 0.15) 0%, rgba(26, 26, 26, 0.92) 88%),
+    radial-gradient(circle at 70% 20%, rgba(201, 168, 118, 0.18), transparent 55%),
+    #232120;
+
+  overflow: hidden;
+}
+
+.banner-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.service-top-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(115deg,
+      rgba(245, 241, 234, 0.025) 0px,
+      rgba(245, 241, 234, 0.025) 1px,
+      transparent 1px,
+      transparent 64px);
+  pointer-events: none;
+}
+
+.service-top-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.service-top-small {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c9a876;
+  margin: 0 0 18px;
+}
+
+.service-top-content h1 {
+  font-size: clamp(80px, 8vw, px);
+  line-height: 1.25;
+  color: #f5f1ea;
+}
+
+.page-subtitle {
+  max-width: 560px;
+  margin: 40px auto 0;
+  padding: 10px 10px;
+  text-align: center;
+  color: #9a9388;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+/* ---------- Category tabs ---------- */
+
+.service-booking-list-section {
+  padding: 24px 24px 96px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.menu-eyebrow {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 40px;
+  color: #f5f1ea;
+  margin: 0 0 28px;
+}
+
+.category-tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 56px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(245, 241, 234, 0.12);
+}
+
+.category-tab-bar button {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a9388;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.category-tab-bar button:hover {
+  color: #f5f1ea;
+}
+
+.category-tab-bar button.active {
+  color: #1a1a1a;
+  background: #f5f1ea;
+  border-color: #f5f1ea;
+}
+
+/* ---------- Service card grid ---------- */
+
+.loading-placeholder {
+  text-align: center;
+  padding: 80px 0;
+  color: #121211;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  display: flex;
+  justify-content: center;
+}
+
+.service-card-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 28px;
+}
+
+.service-booking-card {
+  background: #1f1f1f;
+  color: #fbf5f5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-booking-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+.service-card-image-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.service-card-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: var(--transition-smooth);
+}
+
+.service-card-content {
+  padding: 22px 22px 0;
+  flex: 1;
+}
+
+.service-card-content h3 {
+  color: #f4f4ed;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.service-card-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #5c5750;
+  margin: 0;
+}
+
+
+.service-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px 22px;
+  margin-top: 16px;
+}
+
+.service-card-footer span {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+}
+
+.service-card-footer button {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #1a1a1a;
+  color: #f5f1ea;
+  border: 1px solid #fefbfb;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.service-card-footer button:hover {
+  background: transparent;
+  color: #757171;
+}
+
+/* ---------- Modal shell (datetime / staff / confirmation / calendar) ---------- */
+
+.datetime-popup-overlay,
+.calendar-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.datetime-popup-card,
+.calendar-modal-card {
+  background: #ffffffc6;
+  color: #111111;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid #e2e2e2;
+  border-radius: 1px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.datetime-popup-card.wide-modal,
+.datetime-popup-card.wide-confirmation-modal {
+  max-width: 820px;
+}
+
+.popup-header,
+.calendar-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  border-bottom: 1px solid #e2e2e2;
+  background: #ffffff;
+}
+
+.step-count {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #555555;
+  margin-bottom: 4px;
+}
+
+.popup-header h3,
+.calendar-modal-header h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #111111;
+}
+
+.popup-close-btn,
+.calendar-close-btn {
+  background: transparent;
+  border: 1px solid #e2e2e2;
+  color: #111111;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.popup-close-btn:hover,
+.calendar-close-btn:hover {
+  background: #f5f5f5;
+  border-color: #111111;
+  color: #111111;
+}
+
+.popup-body {
+  padding: 28px;
+}
+
+.selected-summary-pill-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.selected-summary-pill-bar span {
+  font-size: 12px;
+  color: #555555;
+  background: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
+
+.selected-summary-pill-bar strong {
+  color: #111111;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.popup-body h4 {
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 14px;
+  border-left: 2px solid #111111;
+  padding-left: 8px;
+}
+
+/* ---------- Date selection ---------- */
+
+.horizontal-date-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.horizontal-date-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.horizontal-date-scroll::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: 2px;
+}
+
+.date-selection-card {
+  flex: 0 0 auto;
+  min-width: 90px;
+  background: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  color: #555555;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.date-selection-card:hover {
+  border-color: #111111;
+  color: #111111;
+}
+
+.date-selection-card.selected {
+  background: #111111;
+  color: #ffffff !important;
+  border-color: #111111;
+  font-weight: 600;
+}
+
+.date-selection-card .card-day {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.date-selection-card.selected .card-day {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.date-selection-card .card-date {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #111111;
+}
+
+.date-selection-card.selected .card-date {
+  color: #ffffff;
+}
+
+.date-selection-card .card-avail {
+  font-size: 9px;
+  opacity: 0.8;
+  color: #555555;
+}
+
+.date-selection-card.selected .card-avail {
+  color: #ffffff;
+}
+
+.date-selection-card.custom-trigger {
+  border-style: dashed;
+}
+
+.selected-date-confirm-pill {
+  font-size: 13px;
+  color: #555555;
+  background: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.selected-date-confirm-pill strong {
+  color: #111111;
+  margin-left: 4px;
+}
+
+.times-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 10px;
+}
+
+.times-grid button {
+  background: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  color: #111111;
+  padding: 12px 6px;
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.times-grid button:hover {
+  border-color: #111111;
+}
+
+.times-grid button.selected-time {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+  font-weight: 600;
+}
+
+.times-grid button:disabled {
+  background: #ebebeb;
+  border-color: #d8d8d8;
+  color: #a0a0a0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.times-grid button:disabled:hover {
+  border-color: #d8d8d8;
+}
+
+/* ---------- Popup footer / actions ---------- */
+
+.popup-footer {
+  padding: 24px 28px;
+  border-top: 1px solid #e2e2e2;
+  display: flex;
+  background: #ffffff;
+}
+
+.popup-footer.space-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-back-btn {
+  background: transparent;
+  border: 1px solid #111111;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.popup-back-btn:hover {
+  background: #f5f5f5;
+  color: #111111;
+}
+
+.popup-confirm-btn,
+.confirm-appointment-submit-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.popup-confirm-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.popup-confirm-btn:not(:disabled):hover,
+.confirm-appointment-submit-btn:not(:disabled):hover {
+  background: #333333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Staff selection ---------- */
+
+.no-availability-message {
+  color: #555555;
+  font-size: 13.5px;
+  line-height: 1.6;
+  text-align: center;
+  padding: 32px 12px;
+}
+
+.premium-staff-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.staff-modal-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  padding: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.staff-modal-card.selected {
+  border-color: #111111;
+}
+
+.staff-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #f5f5f5;
+}
+
+.staff-meta-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.staff-name-profile-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.staff-name-profile-row h4 {
+  font-size: 15px;
+  color: #111111;
+}
+
+.staff-profile-btn-inline {
+  background: transparent;
+  border: none;
+  color: #111111;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  text-decoration: underline;
+}
+
+.staff-specialization {
+  display: block;
+  font-size: 12px;
+  color: #555555;
+  margin-top: 2px;
+}
+
+.staff-rating-badge {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #111111;
+}
+
+.rating-count {
+  color: #555555;
+}
+
+.staff-actions-area {
+  flex-shrink: 0;
+}
+
+.staff-select-action-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid #111111;
+  color: #111111;
+  padding: 10px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.staff-select-action-btn.active {
+  background: #111111;
+  border-color: #111111;
+  color: #ffffff;
+}
+
+/* ---------- Confirmation ---------- */
+
+.luxury-confirmation-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.confirm-details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.confirm-form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 12px;
+  border-left: 1px solid #e2e2e2;
+}
+
+.confirm-form-column h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #111111;
+}
+
+.form-column-desc {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.confirm-service-summary {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.confirm-service-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #e2e2e2;
+}
+
+.confirm-service-text h3 {
+  font-size: 18px;
+  color: #111111;
+  margin-bottom: 4px;
+}
+
+.confirm-service-text p {
+  font-size: 12.5px;
+  color: #555555;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.confirm-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111111;
+  border: 1px solid #111111;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.confirm-receipt-area {
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.confirm-receipt-area h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  color: #111111;
+}
+
+.receipt-divider {
+  height: 1px;
+  background: #e2e2e2;
+  margin: 14px 0;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  padding: 6px 0;
+}
+
+.receipt-label {
+  color: #555555;
+}
+
+.receipt-value {
+  color: #111111;
+  font-weight: 500;
+}
+
+.total-amount-row .receipt-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.total-amount-row .receipt-value {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #111111;
+  font-weight: 700;
+}
+
+/* ---------- Premium Input Fields ---------- */
+
+.booking-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.booking-input-group label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111111;
+}
+
+.booking-input-group input,
+.booking-input-group textarea {
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  color: #111111;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  font-family: "Inter", sans-serif;
+  border-radius: 4px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.booking-input-group input::placeholder,
+.booking-input-group textarea::placeholder {
+  color: #cccccc;
+}
+
+.booking-input-group input:focus,
+.booking-input-group textarea:focus {
+  outline: none;
+  border-color: #111111;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.booking-input-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ---------- Calendar modal ---------- */
+
+.calendar-grid-container {
+  padding: 24px 28px;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.cal-nav-arrow {
+  background: transparent;
+  border: 1px solid #e2e2e2;
+  color: #111111;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cal-month-year {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  color: #111111;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 11px;
+  color: #555555;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.calendar-weekdays div {
+  text-align: center;
+  padding: 4px 0;
+}
+
+.calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-day-btn {
+  aspect-ratio: 1;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #111111;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.calendar-day-btn:hover:not(.disabled) {
+  border-color: #111111;
+}
+
+.calendar-day-btn.other-month {
+  color: #cccccc;
+}
+
+.calendar-day-btn.disabled {
+  color: #e2e2e2;
+  cursor: not-allowed;
+}
+
+.calendar-day-btn.today {
+  color: #111111;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.calendar-day-btn.selected {
+  background: #111111;
+  color: #ffffff;
+}
+
+.calendar-modal-footer {
+  padding: 16px 28px 24px;
+  border-top: 1px solid #e2e2e2;
+}
+
+.calendar-done-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #111111;
+  color: #111111;
+  padding: 13px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.calendar-done-btn:hover {
+  background: #f5f5f5;
+}
+
+/* ---------- Staff profile modal ---------- */
+
+.profile-modal-content {
+  padding: 8px 28px 24px;
+  text-align: center;
+}
+
+.profile-modal-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  background: #f5f5f5;
+}
+
+.profile-modal-content h4 {
+  font-size: 18px;
+  color: #111111;
+}
+
+.profile-role {
+  display: block;
+  font-size: 12px;
+  color: #555555;
+  letter-spacing: 0.04em;
+  margin: 4px 0 16px;
+}
+
+.profile-bio {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.profile-meta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  font-size: 13px;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 16px;
+}
+
+.profile-meta-info strong {
+  color: #111111;
+  font-weight: 600;
+}
+
+/* ---------- Motion ---------- */
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .service-top-banner {
+    padding: 40px 24px 36px;
+    min-height: 280px;
+  }
+
+  .service-booking-list-section {
+    padding: 16px 16px 64px;
+  }
+
+  .category-tab-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .service-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .confirm-service-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Focus visibility ---------- */
+
+.booking-service-page button:focus-visible,
+.datetime-popup-card button:focus-visible,
+.calendar-modal-card button:focus-visible {
+  outline: 2px solid #c9a876;
+  outline-offset: 2px;
+}
+
+/* ---------- Pamper CTA (split text / video section) ---------- */
+
+.pamper-cta-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 750px;
+  background: #070707;
+  margin-top: 0%;
+}
+
+.pamper-cta-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 64px 72px;
+  margin-top: 40px;
+}
+
+.pamper-cta-text h1 {
+  font-size: clamp(62px, 4.5vw, 52px);
+  line-height: 1.45;
+  color: #f5f1ea;
+  text-transform: uppercase;
+}
+
+.pamper-cta-text h2 {
+  font-size: clamp(32px, 4.5vw, 52px);
+  line-height: 1.45;
+  color: #f5f1ea;
+  text-transform: uppercase;
+}
+
+.pamper-cta-text h2 em {
+  text-transform: none;
+  font-style: italic;
+}
+
+.pamper-cta-text p {
+  max-width: 420px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #9a9388;
+  margin: 0;
+}
+
+.pamper-cta-btn {
+  align-self: flex-start;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f5f1ea;
+  background: transparent;
+  border: 1px solid rgba(245, 241, 234, 0.45);
+  border-radius: 999px;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.pamper-cta-btn:hover {
+  background: #f5f1ea;
+  color: #1a1a1a;
+  border-color: #f5f1ea;
+}
+
+.pamper-cta-media {
+  position: relative;
+  overflow: hidden;
+  background: #0e0e0e;
+}
+
+.pamper-cta-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .pamper-cta-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .pamper-cta-text {
+    padding: 56px 28px;
+  }
+
+  .pamper-cta-media {
+    min-height: 320px;
+  }
+}
+
+/* ==========================================
+   SERVICES HERO
+========================================== */
+
+.services-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  overflow: hidden;
+}
+
+
+
+.services-hero-overlay {
+  max-width: 850px;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.hero-subtitle {
+  color: #fbfbfb;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.services-hero h1 {
+  font-size: 68px;
+  font-weight: 700;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.services-hero h1 span {
+  color: #ffffff;
+}
+
+.services-hero p {
+  font-size: 18px;
+  color: #f5f5f5;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.hero-btn {
+  padding: 16px 40px;
+  border: none;
+  border-radius: 50px;
+  background: #d4af37;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+  background: #e6c14d;
+}
+
+/* ===========================================
+   CONFIRMATION MODAL
+=========================================== */
+
+.luxury-confirmation-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.confirm-service-summary {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.confirm-service-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid rgba(236, 72, 153, .15);
+}
+
+.confirm-service-text h3 {
+  font-size: 1.6rem;
+  color: #5a2342;
+  margin-bottom: 10px;
+}
+
+.confirm-service-text p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.confirm-badge {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: #ffe8f4;
+  color: #db2777;
+  font-weight: 600;
+  font-size: .82rem;
+}
+
+.confirm-receipt-area {
+  background: #fff8fc;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(236, 72, 153, .12);
+}
+
+.confirm-receipt-area h3 {
+  color: #5a2342;
+  margin-bottom: 12px;
+}
+
+.receipt-divider {
+  height: 1px;
+  background: #f2cade;
+  margin: 18px 0;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.receipt-label {
+  color: #777;
+}
+
+.receipt-value {
+  color: #5a2342;
+  font-weight: 600;
+}
+
+.total-amount-row {
+  font-size: 1.15rem;
+}
+
+.confirm-appointment-submit-btn {
+  border: none;
+  cursor: pointer;
+  padding: 14px 34px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ec4899, #db2777);
+  color: #fff;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.confirm-appointment-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(236, 72, 153, .25);
+}
+
+
+/* ===========================================
+   CALENDAR
+=========================================== */
+
+.calendar-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 10, 15, .55);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.calendar-modal-card {
+  width: 560px;
+  max-width: 95%;
+  background: #fff;
+  border-radius: 30px;
+  padding: 30px;
+}
+
+.calendar-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.calendar-modal-header h3 {
+  color: #5a2342;
+}
+
+.calendar-close-btn {
+  border: none;
+  background: #ffe6f3;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #db2777;
+}
+
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.cal-nav-arrow {
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffeaf4;
+  color: #db2777;
+}
+
+.cal-month-year {
+  font-weight: 600;
+  color: #5a2342;
+}
+
+.calendar-weekdays,
+.calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-weekdays div {
+  text-align: center;
+  font-weight: 600;
+  color: #777;
+  padding-bottom: 8px;
+}
+
+.calendar-day-btn {
+  height: 50px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: #fff7fb;
+  transition: .25s;
+}
+
+.calendar-day-btn:hover {
+  background: #ffd7ea;
+}
+
+.calendar-day-btn.selected {
+  background: #ec4899;
+  color: #fff;
+}
+
+.calendar-day-btn.today {
+  border: 2px solid #ec4899;
+}
+
+.calendar-day-btn.disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.calendar-day-btn.other-month {
+  visibility: hidden;
+}
+
+.calendar-modal-footer {
+  margin-top: 28px;
+  text-align: right;
+}
+
+.calendar-done-btn {
+  border: none;
+  cursor: pointer;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: #ec4899;
+  color: #fff;
+}
+
+
+/* ===========================================
+   PROFILE
+=========================================== */
+
+.profile-details-card {
+  max-width: 620px;
+}
+
+.profile-modal-content {
+  text-align: center;
+}
+
+.profile-modal-avatar {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+  border: 5px solid #ffe0ef;
+}
+
+.profile-modal-content h4 {
+  margin-top: 18px;
+  color: #5a2342;
+  font-size: 1.5rem;
+}
+
+.profile-role {
+  display: inline-block;
+  margin-top: 8px;
+  color: #db2777;
+}
+
+.profile-bio {
+  max-width: 460px;
+  margin: 22px auto;
+  line-height: 1.8;
+  color: #666;
+}
+
+.profile-meta-info {
+  display: grid;
+  gap: 12px;
+  text-align: left;
+  background: #fff8fc;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+.animate-fade-up {
+  animation: fadeUp .55s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px) {
+
+  .luxury-confirmation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .confirm-service-summary {
+    flex-direction: column;
+  }
+
+  .confirm-service-img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .datetime-popup-card {
+    width: 96%;
+    padding: 28px;
+  }
+
+  .staff-modal-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .staff-meta-details {
+    align-items: center;
+  }
+
+  .staff-name-profile-row {
+    flex-direction: column;
+  }
+
+  .staff-actions-area {
+    width: 100%;
+  }
+
+  .staff-select-action-btn {
+    width: 100%;
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .services-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .service-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .popup-footer {
+    flex-direction: column;
+  }
+
+  .popup-footer button {
+    width: 100%;
+  }
+
+  .selected-summary-pill-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .horizontal-date-scroll {
+    justify-content: flex-start;
+  }
+
+  .calendar-modal-card {
+    padding: 22px;
+  }
+
+}
+
+@media(max-width:500px) {
+
+  .services-hero {
+    height: 65vh;
+  }
+
+  .services-hero h1 {
+    font-size: 2rem;
+  }
+
+  .datetime-popup-card {
+    padding: 20px;
+  }
+
+  .confirm-service-img {
+    height: 220px;
+  }
+
+  .calendar-day-btn {
+    height: 42px;
+  }
+
+}

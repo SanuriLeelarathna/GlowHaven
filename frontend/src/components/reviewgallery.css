@@ -1,0 +1,371 @@
+/* =====================================
+   PREMIUM CLIENT REVIEWS SECTION
+===================================== */
+
+
+.reviews-section {
+
+
+    padding: 120px 20px;
+
+
+    background:
+
+        linear-gradient(135deg,
+            #deb7c8,
+            #ffffff);
+
+
+    border-top:
+
+        1px solid rgba(236, 72, 153, .12);
+
+
+    border-bottom:
+
+        1px solid rgba(236, 72, 153, .12);
+
+
+}
+
+
+
+
+
+.reviews-container {
+
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    text-align: center;
+
+
+}
+
+
+
+
+/* small label */
+
+
+.review-tag {
+
+
+    display: inline-block;
+
+
+    font-family: "Poppins", sans-serif;
+
+
+    font-size: 12px;
+
+
+    letter-spacing: 4px;
+
+
+    text-transform: uppercase;
+
+
+    color: #EC4899;
+
+
+    font-weight: 600;
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+
+
+/* Heading */
+
+
+.reviews-container h2 {
+
+
+    margin: 0;
+
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+
+    font-size:
+        clamp(2.2rem, 4vw, 3.5rem);
+
+
+    font-weight: 400;
+
+
+    letter-spacing: .03em;
+
+
+    color: #1F2937;
+
+
+}
+
+
+
+
+
+/* Review Card */
+
+
+.review-card {
+
+
+    margin:
+
+        55px auto 0;
+
+
+    max-width: 750px;
+
+
+    padding:
+
+        55px 70px;
+
+
+
+    background: white;
+
+
+
+    border-radius: 35px;
+
+
+
+    box-shadow:
+
+        0 25px 60px rgba(103, 37, 70, .15);
+
+
+
+    position: relative;
+
+
+    transition: .5s ease;
+
+
+}
+
+
+
+
+.review-card.fade {
+
+
+    opacity: 0;
+
+
+    transform:
+        translateY(25px);
+
+
+}
+
+
+
+
+
+/* Stars */
+
+
+.stars {
+
+
+    margin-bottom: 25px;
+
+
+}
+
+
+
+.stars span {
+
+
+    color: #d6a24a;
+
+
+    font-size: 28px;
+
+
+    margin: 0 3px;
+
+
+}
+
+
+
+
+
+/* Comment */
+
+
+.review-message {
+
+
+    font-family:
+
+        "Playfair Display",
+        serif;
+
+
+
+    font-size: 24px;
+
+
+    line-height: 1.8;
+
+
+
+    font-style: italic;
+
+
+
+    color: #4b3741;
+
+
+
+    margin: 0;
+
+
+
+}
+
+
+
+
+
+/* Customer Name */
+
+
+.review-card h4 {
+
+
+    margin-top: 35px;
+
+
+
+    font-family:
+
+        "Poppins",
+        sans-serif;
+
+
+
+    font-size: 17px;
+
+
+    font-weight: 500;
+
+
+    color: #672546;
+
+
+
+}
+
+
+
+
+
+/* Counter */
+
+
+.review-card small {
+
+
+    display: block;
+
+
+    margin-top: 25px;
+
+
+    color: #9ca3af;
+
+
+    font-family: "Poppins", sans-serif;
+
+
+}
+
+
+
+
+
+
+/* Empty Review */
+
+
+.empty-review {
+
+
+    color: #6B7280;
+
+
+    font-family: "Poppins", sans-serif;
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:768px) {
+
+
+    .reviews-section {
+
+
+        padding: 80px 20px;
+
+
+    }
+
+
+
+    .review-card {
+
+
+        padding: 40px 25px;
+
+
+    }
+
+
+
+
+    .review-message {
+
+
+        font-size: 19px;
+
+
+    }
+
+
+
+    .reviews-container h2 {
+
+
+        font-size: 2.2rem;
+
+
+    }
+
+
+
+}
