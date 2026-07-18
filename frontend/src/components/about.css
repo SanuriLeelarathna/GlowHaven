@@ -119,6 +119,7 @@
     gap: 90px;
     align-items: center;
     margin-bottom: 120px;
+    margin-top: 20px;
 }
 
 .reverse {
@@ -131,6 +132,7 @@
     color: #2f2f35;
     margin-bottom: 20px;
     font-weight: 400;
+    margin-top: 0px;
 }
 
 .service-content p {
