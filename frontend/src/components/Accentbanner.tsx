@@ -11,7 +11,7 @@ export default function AccentBanner() {
 
         <h2 className="accent-title">
 
-          BALAYAGE{" "}
+          GLOWHAVEN{" "}
 
           <span>
             hair extensions

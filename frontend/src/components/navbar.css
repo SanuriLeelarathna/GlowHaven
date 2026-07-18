@@ -14,7 +14,7 @@
 
   z-index: 1000;
 
-  padding: 25px 50px;
+  padding: 20px;
 
 }
 
@@ -37,12 +37,22 @@
   justify-content: space-between;
 
 
-  padding: 0 35px;
+  padding: 30px 50px 35px;
 
 
-  background:
+  background: transparent, linear-gradient(135deg,
+      #deb7c8,
+      #ffffff);
 
-    rgba(48, 17, 41, 0.43);
+
+  border-top:
+
+    1px solid rgba(236, 72, 153, .12);
+
+
+  border-bottom:
+
+    1px solid rgba(236, 72, 153, .12);
 
 
   backdrop-filter:
