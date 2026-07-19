@@ -3,13 +3,13 @@
 ===================================================== */
 
 .global-footer {
-  background: linear-gradient(rgba(175, 150, 163, 0.979),
-      rgba(243, 228, 228, 0.874), rgba(174, 111, 153, 0.874));
+  background: linear-gradient(rgba(251, 249, 250, 0.979),
+      rgba(20, 20, 20, 0.55));
 
   border-top: 1px solid var(--border-gold);
   padding: 80px 40px 40px;
   font-family: var(--font-sans);
-  color: white;
+  color: var(--text-gray);
   position: relative;
   z-index: 10;
 }

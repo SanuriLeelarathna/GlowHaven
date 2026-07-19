@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import API from "../api/axios";
-import h11 from "../assets/h11.jpg";
+import h11 from "../assets/pb.png";
 import "./login.css";
 
 export default function Login() {
@@ -41,60 +41,86 @@ export default function Login() {
 
   return (
     <div className="login-page">
+      {/* LEFT: hero image panel */}
       <div
-        className="login-card"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,)), url(${h11})`
-        }}
+        className="login-image-panel"
+        style={{ ["--login-hero-image" as any]: `url(${h11})` }}
       >
-
-        <div className="login-logo">
-          <h1>
-            GlowHaven<span>.</span>
-          </h1>
-          <p>Beauty Salon</p>
+        <div className="login-brand">
+          GlowHaven<span>.</span>
         </div>
 
-        <h2 className="login-title">Sign In</h2>
+        <div className="login-quote">
+          <blockquote>"Luminous beauty begins within the shadows."</blockquote>
+          <div className="accent-rule" />
+        </div>
+      </div>
 
-        <form className="login-form" onSubmit={handleLogin}>
-          <div className="login-input-group">
-            <span className="login-icon">@</span>
-            <input
-              placeholder="Email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+      {/* RIGHT: form panel */}
+      <div className="login-form-panel">
+        <div className="login-content">
+          <div className="login-heading">
+            <h1>Welcome Back</h1>
           </div>
+          <p className="login-subtitle">
+            Sign in to access your curated luxury beauty experience.
+          </p>
 
-          <div className="login-input-group">
-            <span className="login-icon">⌘</span>
-            <input
-              placeholder="Password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
+          <form className="login-form" onSubmit={handleLogin}>
+            <div className="form-group">
+              <div className="form-label-row">
+                <label htmlFor="email">Email address</label>
+              </div>
+              <input
+                className="form-input"
+                id="email"
+                type="email"
+                placeholder="name@haven.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
 
-          <button className="login-button" type="submit">
-            Sign In
-            <span className="arrow">→</span>
-          </button>
-        </form>
+            <div className="form-group">
+              <div className="form-label-row">
+                <label htmlFor="password">Password</label>
+                <a className="forgot-link" href="#">
+                  Forgot?
+                </a>
+              </div>
+              <input
+                className="form-input"
+                id="password"
+                type="password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
 
-        <div className="login-links">
-          <button type="button" onClick={() => navigate("/signup")}>
-            New User? Sign Up here
-          </button>
+            <button className="btn-signin" type="submit">
+              Sign In
+            </button>
+          </form>
+
+          <p className="login-footer">
+            Don't have an account?{" "}
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/signup");
+              }}
+            >
+              Create account
+            </a>
+          </p>
         </div>
 
-        <div className="forgot-password">
-          <a href="#">Forgot Password?</a>
+        <div className="login-copyright">
+          © 2026 GlowHaven Luxury Salon. All rights reserved.
         </div>
       </div>
     </div>
-
   );
 }

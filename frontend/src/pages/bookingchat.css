@@ -218,16 +218,29 @@
 
 .bot-msg-row .msg-bubble {
   background: var(--white);
-  color: black;
+  color: var(--charcoal);
   border-top-left-radius: 3px;
   border: 1px solid var(--hairline);
 }
 
+.bot-msg-row .msg-bubble p {
+  color: var(--charcoal);
+  opacity: 1;
+  margin: 0;
+}
+
 .user-msg-row .msg-bubble {
-  background: var(--pink-gradient);
-  color: var(--white);
+  background: var(--dark-pink);
+  color: #ffffff;
+  font-weight: 500;
   border-top-right-radius: 3px;
-  box-shadow: 0 4px 15px rgba(184, 62, 113, 0.15);
+  box-shadow: 0 4px 15px rgba(184, 62, 113, 0.25);
+}
+
+.user-msg-row .msg-bubble p {
+  color: #ffffff;
+  opacity: 1;
+  margin: 0;
 }
 
 .msg-timestamp {

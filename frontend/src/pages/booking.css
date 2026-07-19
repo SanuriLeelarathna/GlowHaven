@@ -24,7 +24,7 @@
   min-height: 100vh;
   width: 100%;
   padding: 160px 6% 110px;
-  background: var(--background);
+  background: rgba(212, 206, 206, 0.349);
   color: var(--ink);
   display: flex;
   justify-content: center;
@@ -43,7 +43,7 @@
   height: 500px;
   background: rgba(197, 168, 128, 0.04);
   filter: blur(100px);
-  border-radius: 50%;
+  border-radius: 0%;
   pointer-events: none;
 }
 
@@ -127,7 +127,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--hairline);
-  border-radius: 28px;
+  border-radius: 12px;
   padding: 48px 38px 40px;
   position: relative;
   overflow: hidden;
@@ -298,6 +298,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -308,12 +309,14 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .booking-header,
   .booking-options-grid,
   .booking-footer-note {

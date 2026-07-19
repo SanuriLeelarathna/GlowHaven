@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api/axios";
-
+import h11 from "../assets/pb.png";
 import "./login.css";
 
 export default function Signup() {
@@ -38,49 +38,111 @@ export default function Signup() {
 
   return (
     <div className="login-page">
-      <form
-        className="login-card"
-        onSubmit={handleSignup}
-
+      {/* LEFT: hero image panel */}
+      <div
+        className="login-image-panel"
+        style={{ ["--login-hero-image" as any]: `url(${h11})` }}
       >
-        <h1>Create Account</h1>
-        <p>Sign up to book your salon appointment</p>
+        <div className="login-brand">
+          GlowHaven<span>.</span>
+        </div>
 
-        <input
-          type="text"
-          placeholder="Full Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        <div className="login-quote">
+          <blockquote>"Your beauty story starts here."</blockquote>
+          <div className="accent-rule" />
+        </div>
+      </div>
 
-        <input
-          type="email"
-          placeholder="Email Address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+      {/* RIGHT: form panel */}
+      <div className="login-form-panel">
+        <div className="login-content">
+          <div className="login-heading">
+            <h1>Create Account</h1>
+          </div>
+          <p className="login-subtitle">
+            Sign up to book your salon appointment.
+          </p>
 
-        <input
-          type="text"
-          placeholder="Phone Number"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
+          <form className="login-form" onSubmit={handleSignup}>
+            <div className="form-group">
+              <div className="form-label-row">
+                <label htmlFor="name">Full name</label>
+              </div>
+              <input
+                className="form-input"
+                id="name"
+                type="text"
+                placeholder="Jane Doe"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
 
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+            <div className="form-group">
+              <div className="form-label-row">
+                <label htmlFor="email">Email address</label>
+              </div>
+              <input
+                className="form-input"
+                id="email"
+                type="email"
+                placeholder="name@haven.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
 
-        <button type="submit">Sign Up</button>
+            <div className="form-group">
+              <div className="form-label-row">
+                <label htmlFor="phone">Phone number</label>
+              </div>
+              <input
+                className="form-input"
+                id="phone"
+                type="text"
+                placeholder="+94 71 234 5678"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </div>
 
-        <p className="small-text">
-          Already have an account?{" "}
-          <span onClick={() => navigate("/login")}>Login</span>
-        </p>
-      </form>
+            <div className="form-group">
+              <div className="form-label-row">
+                <label htmlFor="password">Password</label>
+              </div>
+              <input
+                className="form-input"
+                id="password"
+                type="password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+
+            <button className="btn-signin" type="submit">
+              Sign Up
+            </button>
+          </form>
+
+          <p className="login-footer">
+            Already have an account?{" "}
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/login");
+              }}
+            >
+              Login
+            </a>
+          </p>
+        </div>
+
+        <div className="login-copyright">
+          © 2026 GlowHaven Luxury Salon. All rights reserved.
+        </div>
+      </div>
     </div>
   );
 }

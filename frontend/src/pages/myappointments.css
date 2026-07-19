@@ -33,7 +33,10 @@
 
 /* Profile Header Card */
 .profile-header-card {
-  background: rgba(255, 255, 255, 0.72);
+  background: linear-gradient(135deg,
+      #393838 0%,
+      #957987ca 45%,
+      #9e7783 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-gold);
@@ -58,7 +61,7 @@
   font-family: var(--font-serif);
   font-size: clamp(32px, 4vw, 42px);
   margin: 0 0 24px;
-  color: var(--deep-pink);
+  color: black;
   font-weight: 400;
 }
 
@@ -78,7 +81,7 @@
 
 .meta-label {
   font-size: 10px;
-  color: var(--text-gray);
+  color: black;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
@@ -91,7 +94,7 @@
 }
 
 .client-role {
-  color: var(--primary-pink);
+  color: black;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
