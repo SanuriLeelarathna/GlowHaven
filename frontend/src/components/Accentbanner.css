@@ -6,9 +6,9 @@
   padding: 100px 40px;
 
   background:
-    linear-gradient(rgba(40, 33, 37, 0.65),
-      rgba(27, 27, 27, 0.815)),
-    url("../assets/ac.png");
+    linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(4, 4, 4, 0.815)),
+    url("../assets/acnt.jpg");
 
   background-size: cover;
   background-position: center;
@@ -53,18 +53,19 @@
 .accent-title {
   margin: 0 auto 35px;
   max-width: 950px;
+  font-style: italic;
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 4vw, 3.6rem);
+  font-size: clamp(2.6rem, 4vw, 4.6rem);
   line-height: 1.4;
   letter-spacing: 0.05em;
-  font-weight: 600;
-  color: white;
+  font-weight: 400;
+  color: rgb(182, 178, 178);
 }
 
 .accent-title span {
   font-family: var(--font-serif);
   font-style: italic;
-  color: rgb(218, 169, 199);
+  color: rgb(189, 108, 158);
   text-transform: lowercase;
   font-weight: 400;
 }

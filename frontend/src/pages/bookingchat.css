@@ -218,7 +218,7 @@
 
 .bot-msg-row .msg-bubble {
   background: var(--white);
-  color: var(--charcoal);
+  color: black;
   border-top-left-radius: 3px;
   border: 1px solid var(--hairline);
 }
@@ -267,10 +267,13 @@
 }
 
 @keyframes typingBlink {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.4;
     transform: scale(1);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.2);
@@ -421,7 +424,7 @@
 
 .reply-time-btn:disabled {
   background: rgba(224, 90, 141, 0.05);
-  color: var(--text-gray);
+  color: black;
   border-color: var(--border-gold);
   cursor: not-allowed;
   opacity: 0.5;
@@ -923,6 +926,7 @@
     opacity: 0;
     transform: scale(0.97);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -934,6 +938,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -944,6 +949,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

@@ -7,6 +7,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 
+/* =====================================================
+   MODAL / POPUP THEME (dark pink + white + black)
+===================================================== */
+
+:root {
+  --pink-primary: #d96b9b;
+  --pink-dark: #8f3158;
+  --pink-deep: #6b2343;
+  --pink-soft: #f8dce8;
+  --pink-light: #fff5fa;
+
+  --modal-border: rgba(143, 49, 88, 0.2);
+  --shadow-luxury: 0 25px 60px rgba(107, 35, 67, 0.18);
+}
+
+
 
 /* =====================================================
    GLOBAL PAGE VARIABLES
@@ -139,7 +155,7 @@
 
     radial-gradient(circle,
       transparent 20%,
-      rgba(255, 250, 247, .65));
+      rgba(255, 250, 247, 0.111));
 
 
 }
@@ -162,11 +178,11 @@
 
 
   max-width:
-    850px;
+    1100px;
 
 
   padding:
-    30px;
+    5px;
 
 
 
@@ -177,7 +193,8 @@
 .hero-title {
 
 
-  margin-top: 50px;
+  margin:
+    60px 0 0;
 
 
   font-family:
@@ -186,7 +203,7 @@
 
 
   font-size:
-    clamp(3.2rem,
+    clamp(2.2rem,
       6vw,
       5.5rem);
 
@@ -200,7 +217,7 @@
 
 
   letter-spacing:
-    2px;
+    4px;
 
 
   color:
@@ -321,7 +338,7 @@
   transition:
     .4s ease;
 
-
+  margin-top: 20px;
 
 }
 
@@ -437,7 +454,7 @@
 
 
   height:
-    100%;
+    90%;
 
 
   top:
@@ -604,7 +621,7 @@
     120px 7% 150px;
 
 
-  background: rgba(215, 203, 203, 0.786);
+  background: rgba(229, 226, 226, 0.786);
 
 
 
@@ -972,7 +989,7 @@
 
 
   margin:
-    0 auto;
+    0;
 
 
   font-size:
@@ -984,7 +1001,7 @@
 
 
   color:
-    white;
+    var(--text-gray);
 
 
   font-weight:
@@ -1013,7 +1030,7 @@
 
 
   justify-content:
-    center;
+    flex-start;
 
 
   gap:
@@ -1062,7 +1079,7 @@
 
 
   color:
-    black;
+    var(--dark);
 
 
 
@@ -1308,7 +1325,7 @@
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--border-gold);
+  border: 1px solid var(--modal-border);
   border-radius: 14px;
   box-shadow: var(--shadow-luxury);
   padding: 30px;
@@ -1403,7 +1420,7 @@
 
 
   border-bottom:
-    1px solid rgba(201, 164, 92, .25);
+    1px solid rgba(143, 49, 88, .25);
 
 
   padding-bottom:
@@ -1427,7 +1444,7 @@
 
 
   color:
-    var(--champagne);
+    var(--pink-dark);
 
 
   text-transform:
@@ -1504,7 +1521,7 @@
 
 
   color:
-    var(--champagne);
+    var(--pink-dark);
 
 
   transform:
@@ -1554,7 +1571,7 @@
 
 
   border:
-    1px solid rgba(201, 164, 92, .3);
+    1px solid rgba(143, 49, 88, .3);
 
 
   padding:
@@ -1624,7 +1641,7 @@
   gap: 25px;
   padding: 18px;
   background: white;
-  border: 1px solid rgba(201, 164, 92, .25);
+  border: 1px solid rgba(143, 49, 88, .25);
   transition: .4s;
 }
 
@@ -1752,7 +1769,7 @@
 
 
   background:
-    var(--cream);
+    var(--pink-soft);
 
 
   font-size:
@@ -1772,7 +1789,7 @@
 
 
   border:
-    1px solid var(--champagne);
+    1px solid var(--pink-dark);
 
 
   background:
@@ -1813,7 +1830,7 @@
 
 
   background:
-    var(--champagne);
+    var(--pink-dark);
 
 
   color:
@@ -1891,7 +1908,7 @@
 
 
   border:
-    1px solid rgba(201, 164, 92, .3);
+    1px solid rgba(143, 49, 88, .3);
 
 
   background:
@@ -1916,7 +1933,7 @@
 
 
   background:
-    var(--champagne);
+    var(--pink-dark);
 
 
   color:
@@ -2018,7 +2035,7 @@
 
 
   border:
-    1px solid rgba(201, 164, 92, .3);
+    1px solid rgba(143, 49, 88, .3);
 
 
   background:
@@ -2043,7 +2060,7 @@
 
 
   background:
-    var(--champagne);
+    var(--pink-dark);
 
 
   color:
@@ -2098,7 +2115,7 @@
 
 
   border-top:
-    1px solid rgba(201, 164, 92, .25);
+    1px solid rgba(143, 49, 88, .25);
 
 
 
@@ -2146,7 +2163,7 @@
 
 
   color:
-    var(--champagne);
+    var(--pink-dark);
 
 
 
@@ -2160,11 +2177,11 @@
 
 
   border:
-    1px solid var(--champagne);
+    1px solid var(--pink-dark);
 
 
   background:
-    var(--champagne);
+    linear-gradient(135deg, var(--pink-dark), var(--pink-primary));
 
 
   color:
@@ -2209,7 +2226,7 @@
 
 
   background:
-    #b28b45;
+    var(--pink-deep);
 
 
   transform:
@@ -2277,7 +2294,7 @@
 
 
   border:
-    1px solid rgba(201, 164, 92, .25);
+    1px solid rgba(143, 49, 88, .25);
 
 
 
@@ -2369,11 +2386,11 @@
 
 
   background:
-    var(--cream);
+    var(--pink-soft);
 
 
   color:
-    var(--champagne);
+    var(--pink-dark);
 
 
   font-size:
@@ -2406,7 +2423,7 @@
 
 
   border:
-    1px solid rgba(201, 164, 92, .25);
+    1px solid rgba(143, 49, 88, .25);
 
 
 
@@ -2446,7 +2463,7 @@
 
 
   background:
-    rgba(201, 164, 92, .3);
+    rgba(143, 49, 88, .3);
 
 
   margin:
@@ -2514,7 +2531,7 @@
 
 
   color:
-    var(--champagne);
+    var(--pink-dark);
 
 
   font-size:
@@ -2580,7 +2597,7 @@
 
 
   background:
-    var(--ivory);
+    var(--white);
 
 
   padding:
@@ -2588,7 +2605,7 @@
 
 
   border:
-    1px solid rgba(201, 164, 92, .35);
+    1px solid rgba(143, 49, 88, .35);
 
 
   box-shadow:
@@ -2711,7 +2728,7 @@
 
 
   border:
-    1px solid var(--champagne);
+    1px solid var(--pink-dark);
 
 
   background:
@@ -2776,7 +2793,7 @@
 
 
   color:
-    var(--champagne);
+    var(--pink-dark);
 
 
 
@@ -2792,7 +2809,7 @@
 
 
   border:
-    1px solid rgba(201, 164, 92, .25);
+    1px solid rgba(143, 49, 88, .25);
 
 
   background:
@@ -2814,7 +2831,7 @@
 
 
   background:
-    var(--champagne);
+    var(--pink-dark);
 
 
   color:
@@ -2880,7 +2897,7 @@
 
 
   border:
-    2px solid var(--champagne);
+    2px solid var(--pink-dark);
 
 
 
@@ -2916,7 +2933,7 @@
 
 
   color:
-    var(--champagne);
+    var(--pink-dark);
 
 
   letter-spacing:

@@ -41,7 +41,13 @@ app.use(
   })
 );
 
-app.use(express.json({ limit: "10kb" }));
+// Change this part
+app.use(express.json({ limit: "10mb" }));
+
+app.use(express.urlencoded({
+  extended: true,
+  limit: "10mb"
+}));
 
 app.get("/", (req, res) => {
   res.send("Salon Booking Backend API Running");

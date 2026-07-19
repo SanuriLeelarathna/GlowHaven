@@ -461,14 +461,12 @@ export default function BookingSchedule() {
         <section className="staff-page-hero">
           <div className="hero-overlay"></div>
           <div className="hero-content">
-            <span className="hero-tag">SALON & SPA</span>
+
             <h1 className="hero-title">
               BOOK <span className="serif-italic">with</span> ONE <span className="serif-italic">of</span><br />
               <span className="serif-italic">our</span> EXPERTS TODAY
             </h1>
-            <p className="hero-subtitle-text">
-              Dye shaved sides fiery blond highlights blowout, twist, headband hairband bouncy. Highlights salon weave twist caramel.
-            </p>
+
             <button
               className="btn-oval"
               onClick={() => document.getElementById("our-team")?.scrollIntoView({ behavior: "smooth" })}

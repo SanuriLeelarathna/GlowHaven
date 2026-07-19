@@ -266,42 +266,57 @@ export const updateAppointmentStatus = async (req: Request, res: Response) => {
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Appointment Confirmation</title>
 </head>
 
-<body style="margin:0; padding:0; background:#11120D; font-family:Arial, sans-serif;">
+<body style="margin:0; padding:0; background:#f4eef1; font-family:Arial, Helvetica, sans-serif;">
 
-<table width="100%" cellpadding="0" cellspacing="0">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
 <tr>
 <td align="center" style="padding:40px 20px;">
 
-<table width="600" style="
-background:white;
-border-radius:15px;
+<table width="600" cellpadding="0" cellspacing="0" border="0" style="
+background:#ffffff;
+border-radius:18px;
 overflow:hidden;
+box-shadow:0 20px 50px rgba(143,49,88,0.15);
 ">
 
 <!-- Header -->
 <tr>
 <td style="
 background:#11120D;
-padding:30px;
+padding:40px 30px 34px;
 text-align:center;
 ">
 
+<p style="
+color:#d96b9b;
+margin:0 0 10px;
+font-size:11px;
+letter-spacing:4px;
+text-transform:uppercase;
+font-weight:bold;
+">
+GlowHaven
+</p>
+
 <h1 style="
-color:#D4AF37;
+color:#ffffff;
 margin:0;
-font-size:32px;
+font-size:30px;
 letter-spacing:2px;
+font-weight:600;
 ">
 YOUR SALON
 </h1>
 
 <p style="
-color:#D8CFBC;
-margin-top:10px;
-font-size:14px;
+color:#a08d95;
+margin:12px 0 0;
+font-size:13px;
+letter-spacing:1px;
 ">
 Luxury Beauty Experience
 </p>
@@ -310,110 +325,165 @@ Luxury Beauty Experience
 </tr>
 
 
+<!-- Accent divider -->
+<tr>
+<td style="height:4px; background:linear-gradient(90deg,#8f3158,#d96b9b);"></td>
+</tr>
+
+
 <!-- Content -->
 <tr>
 <td style="
-padding:35px;
-color:#11120D;
+padding:40px 40px 10px;
+color:#262020;
 ">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:25px;">
+<tr>
+<td align="center">
+<span style="
+display:inline-block;
+background:#f8dce8;
+color:#8f3158;
+font-size:11px;
+font-weight:bold;
+letter-spacing:2px;
+text-transform:uppercase;
+padding:8px 20px;
+border-radius:30px;
+">
+&#10003; Appointment Confirmed
+</span>
+</td>
+</tr>
+</table>
 
 <h2 style="
 color:#11120D;
 text-align:center;
+font-size:24px;
+font-weight:600;
+margin:0 0 25px;
 ">
-Appointment Confirmed ✨
+We can't wait to see you ✨
 </h2>
 
-
-<p>
-Hello <b>${customer.name}</b>,
+<p style="font-size:15px; line-height:1.7; color:#443b3e;">
+Hello <b style="color:#8f3158;">${customer.name}</b>,
 </p>
 
-<p>
-Your appointment has been confirmed successfully.
-We are excited to welcome you and provide a premium salon experience.
+<p style="font-size:15px; line-height:1.7; color:#443b3e;">
+Your appointment has been confirmed successfully. We're excited to
+welcome you and provide a premium salon experience crafted just for you.
 </p>
 
 
 <!-- Booking Card -->
 
-<table width="100%" style="
-background:#D8CFBC;
-border-radius:12px;
-padding:20px;
-margin-top:25px;
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="
+background:#fdf3f6;
+border:1px solid #f3d8e2;
+border-radius:14px;
+margin-top:20px;
 ">
 
 <tr>
-<td style="padding:8px;">
-<b>Service</b>
-</td>
-
-<td style="padding:8px; text-align:right;">
-${service.name}
-</td>
-</tr>
-
-
-<tr>
-<td style="padding:8px;">
-<b>Professional</b>
-</td>
-
-<td style="padding:8px; text-align:right;">
-${staff.name}
+<td colspan="2" style="
+padding:16px 24px 10px;
+font-size:11px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#8f3158;
+font-weight:bold;
+border-bottom:1px solid #f3d8e2;
+">
+Booking Details
 </td>
 </tr>
 
+<tr>
+<td style="padding:14px 24px 0; font-size:14px; color:#7c7272;">Service</td>
+<td style="padding:14px 24px 0; text-align:right; font-size:14px; color:#11120D; font-weight:bold;">${service.name}</td>
+</tr>
 
 <tr>
-<td style="padding:8px;">
-<b>Date</b>
-</td>
+<td style="padding:10px 24px 0; font-size:14px; color:#7c7272;">Professional</td>
+<td style="padding:10px 24px 0; text-align:right; font-size:14px; color:#11120D; font-weight:bold;">${staff.name}</td>
+</tr>
 
-<td style="padding:8px; text-align:right;">
-${appointment.date}
+<tr>
+<td style="padding:10px 24px 0; font-size:14px; color:#7c7272;">Date</td>
+<td style="padding:10px 24px 0; text-align:right; font-size:14px; color:#11120D; font-weight:bold;">${appointment.date}</td>
+</tr>
+
+<tr>
+<td style="padding:10px 24px 0; font-size:14px; color:#7c7272;">Time</td>
+<td style="padding:10px 24px 0; text-align:right; font-size:14px; color:#11120D; font-weight:bold;">${appointment.time}</td>
+</tr>
+
+<tr>
+<td colspan="2" style="padding:16px 24px 0;">
+<div style="height:1px; background:#f3d8e2;"></div>
 </td>
 </tr>
 
-
 <tr>
-<td style="padding:8px;">
-<b>Time</b>
-</td>
-
-<td style="padding:8px; text-align:right;">
-${appointment.time}
-</td>
-</tr>
-
-
-<tr>
-<td style="padding:8px;">
-<b>Amount</b>
-</td>
-
+<td style="padding:14px 24px 20px; font-size:15px; color:#11120D; font-weight:bold;">Total Amount</td>
 <td style="
-padding:8px;
+padding:14px 24px 20px;
 text-align:right;
-color:#B8860B;
+color:#8f3158;
+font-size:20px;
 font-weight:bold;
 ">
 LKR ${appointment.amount}
 </td>
 </tr>
 
+</table>
 
+
+<!-- CTA button -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:30px;">
+<tr>
+<td align="center">
+<a href="#" style="
+display:inline-block;
+background:linear-gradient(135deg,#8f3158,#d96b9b);
+background-color:#8f3158;
+color:#ffffff;
+font-size:13px;
+font-weight:bold;
+letter-spacing:1.5px;
+text-transform:uppercase;
+text-decoration:none;
+padding:14px 38px;
+border-radius:30px;
+">
+View My Booking
+</a>
+</td>
+</tr>
 </table>
 
 
 <p style="
-margin-top:30px;
+margin:32px 0 10px;
 text-align:center;
+font-size:14px;
+color:#443b3e;
 ">
-Thank you for choosing <b>YOUR SALON</b>.
+Thank you for choosing <b style="color:#8f3158;">GlowHaven</b>.
 </p>
 
+<p style="
+margin:0 0 30px;
+text-align:center;
+font-size:12.5px;
+color:#9c8890;
+">
+Need to reschedule or have a question? Just reply to this email &mdash; we're happy to help.
+</p>
 
 </td>
 </tr>
@@ -424,16 +494,27 @@ Thank you for choosing <b>YOUR SALON</b>.
 <tr>
 <td style="
 background:#11120D;
-padding:20px;
+padding:26px 30px;
 text-align:center;
 ">
 
 <p style="
-color:#D8CFBC;
-font-size:13px;
+color:#d96b9b;
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+margin:0 0 8px;
+font-weight:bold;
+">
+GlowHaven
+</p>
+
+<p style="
+color:#8a7f83;
+font-size:12.5px;
 margin:0;
 ">
-© 2026 Your Salon. All Rights Reserved.
+&copy; 2026 Your Salon. All Rights Reserved.
 </p>
 
 </td>

@@ -1,6 +1,6 @@
 /* =====================================================
    GLOWHAVEN ADMIN DASHBOARD
-   Luxury Pink Salon Theme
+   Dark Pink & Black Salon Theme
    Dashboard.css Part 1
 ===================================================== */
 
@@ -15,8 +15,8 @@
 
 :root {
 
-  --pink-primary: #d98ca4;
-  --pink-dark: #b86682;
+  --pink-primary: #992c4e;
+  --pink-dark: #6e2f45;
   --pink-soft: #f8dce4;
   --pink-light: #fff0f4;
 
@@ -26,17 +26,17 @@
   --cream: #fff9f6;
   --white: #ffffff;
 
-  --text: #4a3038;
-  --text-soft: #7d6670;
+  --text: #1b1b1b;
+  --text-soft: #333333;
 
   --danger: #d96b75;
   --success: #6ca878;
 
   --border:
-    rgba(217, 140, 164, .25);
+    rgba(153, 44, 78, .25);
 
   --shadow:
-    0 15px 45px rgba(180, 100, 130, .15);
+    0 15px 45px rgba(98, 42, 63, .15);
 
   --radius: 22px;
 
@@ -145,7 +145,7 @@ body {
 
   box-shadow:
 
-    8px 0 30px rgba(180, 100, 130, .08);
+    8px 0 30px rgba(98, 42, 63, .08);
 
 
 
@@ -173,7 +173,7 @@ body {
 
   border-bottom:
 
-    1px solid rgba(217, 140, 164, .2);
+    1px solid rgba(153, 44, 78, .2);
 
 
 }
@@ -345,8 +345,8 @@ body {
   background:
 
     linear-gradient(135deg,
-      #d98ca4,
-      #c87895);
+      #992c4e,
+      #812f4d);
 
 
   color: white;
@@ -355,7 +355,7 @@ body {
 
   box-shadow:
 
-    0 10px 25px rgba(217, 140, 164, .35);
+    0 10px 25px rgba(153, 44, 78, .35);
 
 
 
@@ -774,7 +774,7 @@ body {
 
   box-shadow:
 
-    0 20px 35px rgba(217, 140, 164, .2);
+    0 20px 35px rgba(153, 44, 78, .2);
 
 
 
@@ -868,8 +868,8 @@ body {
   border-radius: 24px;
   padding: 32px;
   margin-bottom: 35px;
-  box-shadow: 0 15px 40px rgba(214, 132, 160, 0.12);
-  border: 1px solid rgba(230, 160, 185, 0.25);
+  box-shadow: 0 15px 40px rgba(147, 43, 79, 0.12);
+  border: 1px solid rgba(176, 38, 88, 0.25);
 }
 
 
@@ -888,7 +888,7 @@ body {
   background: #fff;
 
   font-size: 14px;
-  color: #5a3946;
+  color: #212121;
 
   outline: none;
 
@@ -910,10 +910,10 @@ body {
 .luxury-input:focus,
 .luxury-select:focus {
 
-  border-color: #e48aaa;
+  border-color: #aa1f51;
 
   box-shadow:
-    0 0 0 4px rgba(228, 138, 170, .15);
+    0 0 0 4px rgba(170, 31, 81, .15);
 }
 
 
@@ -959,13 +959,13 @@ body {
 
   background:
     linear-gradient(135deg,
-      #e88aaa,
-      #c85c86);
+      #b11b4e,
+      #7c2547);
 
   color: white;
 
   box-shadow:
-    0 8px 20px rgba(200, 92, 134, .25);
+    0 8px 20px rgba(124, 37, 71, .25);
 
 }
 
@@ -987,7 +987,7 @@ body {
 
   background: #fff0f5 !important;
 
-  color: #c45c83 !important;
+  color: #782645 !important;
 
   border: 1px solid #efbfd2 !important;
 
@@ -1017,7 +1017,7 @@ body {
 
   border-radius: 18px;
 
-  border: 1px dashed #e6aac2;
+  border: 1px dashed #b02c61;
 
   margin: 15px 0;
 
@@ -1031,7 +1031,7 @@ body {
 
   font-weight: 600;
 
-  color: #8b5369;
+  color: #323232;
 
   margin-bottom: 10px;
 
@@ -1073,7 +1073,7 @@ body {
   overflow: hidden;
 
   box-shadow:
-    0 15px 35px rgba(210, 120, 150, .12);
+    0 15px 35px rgba(141, 41, 74, .12);
 
   border: 1px solid #f2d5df;
 
@@ -1095,7 +1095,7 @@ body {
 
   gap: 20px;
 
-  color: #65414e;
+  color: #252525;
 
 }
 
@@ -1118,7 +1118,7 @@ body {
       #fbeaf0);
 
 
-  color: #9b4267;
+  color: #511e33;
 
   font-weight: 700;
 
@@ -1187,7 +1187,7 @@ body {
 
   justify-content: center;
 
-  color: #b27b92;
+  color: #444444;
 
   font-size: 12px;
 
@@ -1229,7 +1229,7 @@ body {
 
   background: #fde7ef;
 
-  color: #b34d76;
+  color: #5e223a;
 
   transition: .3s;
 
@@ -1289,7 +1289,7 @@ body {
       #ffe1ec);
 
 
-  color: #a7476d;
+  color: #572036;
 
   margin-bottom: 15px;
 
@@ -1300,7 +1300,7 @@ body {
 .category-group-count {
 
 
-  background: #e98bad;
+  background: #b31a51;
 
   color: white;
 
@@ -1348,7 +1348,7 @@ body {
   border: 1px solid #f3d4df;
 
   box-shadow:
-    0 15px 35px rgba(210, 120, 150, .12);
+    0 15px 35px rgba(141, 41, 74, .12);
 
 }
 
@@ -1382,7 +1382,7 @@ body {
 
   align-items: center;
 
-  color: #bb7891;
+  color: #73364d;
 
 }
 
@@ -1392,7 +1392,7 @@ body {
 
   margin-top: 18px;
 
-  color: #8c425d;
+  color: #491e2e;
 
 }
 
@@ -1400,7 +1400,7 @@ body {
 
 .staff-admin-card p {
 
-  color: #d06b92;
+  color: #88254b;
 
   font-weight: 600;
 
@@ -1426,7 +1426,7 @@ body {
 
   margin-top: 15px;
 
-  color: #966277;
+  color: #383838;
 
 }
 
@@ -1460,7 +1460,7 @@ body {
 
   background: #fde5ef;
 
-  color: #b14d76;
+  color: #5c233a;
 
 }
 
@@ -1548,7 +1548,7 @@ body {
 
   background: #ffe2e8;
 
-  color: #c34c6c;
+  color: #6b1d32;
 
   border: none;
 
@@ -1591,7 +1591,7 @@ body {
   margin-bottom: 25px;
 
   box-shadow:
-    0 12px 30px rgba(220, 130, 160, .12);
+    0 12px 30px rgba(156, 37, 76, .12);
 
   border: 1px solid #f3d5df;
 
@@ -1632,7 +1632,7 @@ body {
 
   background: #fff0f5;
 
-  color: #b94f77;
+  color: #63213a;
 
   font-weight: 600;
 
@@ -1686,10 +1686,10 @@ body {
 
   border-radius: 22px;
 
-  border-left: 5px solid #e889aa;
+  border-left: 5px solid #b11a4f;
 
   box-shadow:
-    0 10px 25px rgba(220, 120, 150, .12);
+    0 10px 25px rgba(154, 33, 69, .12);
 
 }
 
@@ -1702,7 +1702,7 @@ body {
 
   font-size: 14px;
 
-  color: #987080;
+  color: #3b3b3b;
 
 }
 
@@ -1715,7 +1715,7 @@ body {
 
   font-weight: 700;
 
-  color: #a8446b;
+  color: #581e35;
 
 }
 
@@ -1813,7 +1813,7 @@ body {
 
   font-weight: 600;
 
-  color: #784459;
+  color: #2a2a2a;
 
 }
 
@@ -1827,7 +1827,7 @@ body {
 
   font-size: 12px;
 
-  color: #9c7a89;
+  color: #3f3f3f;
 
   margin-top: 4px;
 
@@ -1837,7 +1837,7 @@ body {
 
 .date-cell {
 
-  color: #a44469;
+  color: #561e34;
 
 }
 
@@ -1848,7 +1848,7 @@ body {
 
   font-weight: 700;
 
-  color: #c35c82;
+  color: #772744;
 
 
 }
@@ -1896,7 +1896,7 @@ body {
 
   background: #fce8f1;
 
-  color: #b64f77;
+  color: #60223a;
 
 }
 
@@ -1967,7 +1967,7 @@ body {
   inset: 0;
 
   background:
-    rgba(90, 40, 60, .35);
+    rgba(59, 23, 37, .35);
 
   display: flex;
 
@@ -2054,7 +2054,7 @@ body {
 
 .modal-header h3 {
 
-  color: #a7446a;
+  color: #571e34;
 
 }
 
@@ -2077,7 +2077,7 @@ body {
 
   cursor: pointer;
 
-  color: #c45c82;
+  color: #782644;
 
 }
 
@@ -2113,7 +2113,7 @@ body {
 .detail-section-title {
 
 
-  color: #b14d75;
+  color: #5c233a;
 
   margin-bottom: 15px;
 
@@ -2149,7 +2149,7 @@ body {
 
 .lbl {
 
-  color: #987080;
+  color: #3b3b3b;
 
   font-weight: 600;
 
@@ -2159,7 +2159,7 @@ body {
 
 .val {
 
-  color: #65404e;
+  color: #252525;
 
   text-align: right;
 
@@ -2169,7 +2169,7 @@ body {
 
 .highlight-amount {
 
-  color: #d05c84;
+  color: #852043;
 
   font-weight: 700;
 
@@ -2224,7 +2224,7 @@ body {
 
   margin-bottom: 8px;
 
-  color: #8f5268;
+  color: #333333;
 
   font-weight: 600;
 
@@ -2239,7 +2239,7 @@ body {
 
 .admin-section h2 {
 
-  color: #a9446b;
+  color: #581e35;
 
 }
 
@@ -2266,7 +2266,7 @@ body {
   border: 1px solid #f3d5df;
 
   box-shadow:
-    0 10px 25px rgba(220, 120, 150, .12);
+    0 10px 25px rgba(154, 33, 69, .12);
 
 }
 
@@ -2275,7 +2275,7 @@ body {
 .review-card h3 {
 
 
-  color: #8c405c;
+  color: #491d2d;
 
 }
 
@@ -2295,7 +2295,7 @@ body {
 .review-comment {
 
 
-  color: #76515f;
+  color: #2d2d2d;
 
   line-height: 1.6;
 
@@ -2317,8 +2317,8 @@ body {
   background:
 
     linear-gradient(135deg,
-      #e88aaa,
-      #c95d87);
+      #b11b4e,
+      #7d2447);
 
   color: white;
 
@@ -2341,7 +2341,7 @@ body {
 
   text-align: center;
 
-  color: #ad8395;
+  color: #444444;
 
   font-size: 16px;
 
@@ -2538,7 +2538,7 @@ body {
 
   box-shadow:
 
-    0 15px 35px rgba(220, 120, 150, .12);
+    0 15px 35px rgba(154, 33, 69, .12);
 
 
   transition: .35s ease;
@@ -2578,7 +2578,7 @@ body {
 
   box-shadow:
 
-    0 20px 45px rgba(210, 100, 140, .18);
+    0 20px 45px rgba(137, 34, 71, .18);
 
 
 }
@@ -2588,7 +2588,7 @@ body {
 .overview-card span {
 
 
-  color: #9a7182;
+  color: #3c3c3c;
 
   font-size: 14px;
 
@@ -2606,7 +2606,7 @@ body {
 
   font-size: 42px;
 
-  color: #b34870;
+  color: #5e2037;
 
 }
 
@@ -2615,7 +2615,7 @@ body {
 .overview-card p {
 
 
-  color: #a78391;
+  color: #434343;
 
   margin-top: 8px;
 
@@ -2651,7 +2651,7 @@ body {
 
   margin: 5px 0;
 
-  color: #9f4167;
+  color: #531d33;
 
   font-size: 34px;
 
@@ -2669,7 +2669,7 @@ body {
 
   border-radius: 30px;
 
-  color: #b45176;
+  color: #5f233a;
 
   font-weight: 600;
 
@@ -2680,7 +2680,7 @@ body {
 .admin-subtitle {
 
 
-  color: #d1849f;
+  color: #8d2f50;
 
   font-size: 13px;
 
@@ -2714,7 +2714,7 @@ body {
 
   font-size: 28px;
 
-  color: #a8446b;
+  color: #581e35;
 
 
 }
@@ -2724,7 +2724,7 @@ body {
 .section-heading p {
 
 
-  color: #967483;
+  color: #3c3c3c;
 
   margin-top: 8px;
 
@@ -2753,8 +2753,8 @@ body {
   background:
 
     linear-gradient(135deg,
-      #e98bad,
-      #c95d86);
+      #b31a51,
+      #7d2446);
 
 
   color: white;
@@ -2767,7 +2767,7 @@ body {
 
   box-shadow:
 
-    0 15px 35px rgba(200, 90, 130, .3);
+    0 15px 35px rgba(124, 36, 68, .3);
 
 
   animation:
@@ -2836,7 +2836,7 @@ body {
 
   height: 100%;
 
-  background: #e788aa;
+  background: #af1b50;
 
   transform: scaleY(0);
 
@@ -2862,7 +2862,7 @@ body {
 
   background: #fff0f5;
 
-  color: #b34870;
+  color: #5e2037;
 
 
 }
@@ -2952,7 +2952,7 @@ html {
 ::-webkit-scrollbar-thumb {
 
 
-  background: #e49ab5;
+  background: #ac2657;
 
   border-radius: 20px;
 
@@ -2963,7 +2963,7 @@ html {
 ::-webkit-scrollbar-thumb:hover {
 
 
-  background: #c96388;
+  background: #7f2646;
 
 
 }
@@ -2978,7 +2978,7 @@ html {
 
 ::placeholder {
 
-  color: #c39aaa;
+  color: #4f4f4f;
 
 }
 

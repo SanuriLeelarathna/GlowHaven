@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api/axios";
-import h11 from "../assets/h11.jpg";
+
 import "./login.css";
 
 export default function Signup() {
@@ -41,12 +41,7 @@ export default function Signup() {
       <form
         className="login-card"
         onSubmit={handleSignup}
-        style={{
-          backgroundImage: `url(${h11})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat"
-        }}
+
       >
         <h1>Create Account</h1>
         <p>Sign up to book your salon appointment</p>
