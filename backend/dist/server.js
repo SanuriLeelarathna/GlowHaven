@@ -5,8 +5,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
+require("./cron/staffSchedule");
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
+const helmet_1 = __importDefault(require("helmet"));
 const db_1 = require("./config/db");
 const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
 const serviceRoutes_1 = __importDefault(require("./routes/serviceRoutes"));
@@ -16,9 +18,27 @@ const availabilityRoutes_1 = __importDefault(require("./routes/availabilityRoute
 const categoryRoutes_1 = __importDefault(require("./routes/categoryRoutes"));
 const emailRoutes_1 = __importDefault(require("./routes/emailRoutes"));
 const appointmentController_1 = require("./controllers/appointmentController");
+const reviewRoute_1 = __importDefault(require("./routes/reviewRoute"));
 const app = (0, express_1.default)();
-app.use((0, cors_1.default)());
-app.use(express_1.default.json());
+app.use((0, helmet_1.default)());
+app.disable("x-powered-by");
+const allowedOrigins = process.env.FRONTEND_URL
+    ? process.env.FRONTEND_URL.split(",")
+    : ["http://localhost:5173", "http://localhost:3000"];
+app.use((0, cors_1.default)({
+    origin: (origin, callback) => {
+        if (!origin)
+            return callback(null, true);
+        if (allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.includes("*")) {
+            return callback(null, true);
+        }
+        else {
+            return callback(new Error("Not allowed by CORS"), false);
+        }
+    },
+    credentials: true,
+}));
+app.use(express_1.default.json({ limit: "10kb" }));
 app.get("/", (req, res) => {
     res.send("Salon Booking Backend API Running");
 });
@@ -29,6 +49,7 @@ app.use("/api/appointments", appointmentRoutes_1.default);
 app.use("/api/availability", availabilityRoutes_1.default);
 app.use("/api/categories", categoryRoutes_1.default);
 app.use("/api/email", emailRoutes_1.default);
+app.use("/api/reviews", reviewRoute_1.default);
 const PORT = process.env.PORT || 5000;
 const startServer = async () => {
     try {

@@ -144,9 +144,17 @@ const getAvailableTimeSlotsForStaff = async (req, res) => {
                 availableSlots.push(minutesToTime(slotStart));
             }
         }
+        // Filter out past slots if the selected date is today based on server time
+        let filteredAvailableSlots = availableSlots;
+        const now = new Date();
+        const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+        if (dateStr === todayStr) {
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+            filteredAvailableSlots = availableSlots.filter((slot) => timeToMinutes(slot) >= currentMinutes);
+        }
         return res.status(200).json({
             message: "Available time slots fetched successfully",
-            availableSlots,
+            availableSlots: filteredAvailableSlots,
         });
     }
     catch (error) {

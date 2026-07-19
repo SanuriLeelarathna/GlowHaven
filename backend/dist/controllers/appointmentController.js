@@ -68,6 +68,23 @@ const createAppointment = async (req, res) => {
         // Run status update before checking availability/overlap and creating the booking
         await (0, exports.updatePassedAppointments)();
         const normalizedTime = time.replace(".", ":");
+        // Validate proposed date & time is not in the past relative to the server time
+        const now = new Date();
+        const [year, month, day] = date.split("-").map(Number);
+        const [hours, minutes] = normalizedTime.split(":").map(Number);
+        if (Number.isNaN(year) ||
+            Number.isNaN(month) ||
+            Number.isNaN(day) ||
+            Number.isNaN(hours) ||
+            Number.isNaN(minutes)) {
+            return res.status(400).json({ message: "Invalid date or time format" });
+        }
+        const proposedStart = new Date(year, month - 1, day, hours, minutes, 0, 0);
+        if (proposedStart < now) {
+            return res.status(400).json({
+                message: "Cannot book an appointment in the past.",
+            });
+        }
         const service = await service_1.default.findById(serviceId);
         if (!service) {
             return res.status(404).json({ message: "Service not found" });
@@ -212,7 +229,7 @@ const updateAppointmentStatus = async (req, res) => {
 <td align="center" style="padding:40px 20px;">
 
 <table width="600" style="
-background:#FFFFF4;
+background:white;
 border-radius:15px;
 overflow:hidden;
 ">

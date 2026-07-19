@@ -8,6 +8,9 @@ const appointmentController_1 = require("../controllers/appointmentController");
 const router = express_1.default.Router();
 router.post("/", appointmentController_1.createAppointment);
 router.get("/", appointmentController_1.getAppointments);
+router.get("/server-time", (req, res) => {
+    res.json({ serverTime: new Date().toISOString() });
+});
 router.get("/:id", appointmentController_1.getAppointmentById);
 router.put("/:id/status", appointmentController_1.updateAppointmentStatus);
 router.put("/:id", appointmentController_1.updateAppointment);
