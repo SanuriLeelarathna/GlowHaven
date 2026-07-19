@@ -1,233 +1,119 @@
-/* =====================================
-   ACCENT BANNER
-===================================== */
-
+/* =====================================================
+   ACCENT BANNER - REDESIGN
+===================================================== */
 
 .accent-banner {
+  padding: 100px 40px;
 
-    padding: 120px 20px;
+  background:
+    linear-gradient(rgba(40, 33, 37, 0.65),
+      rgba(27, 27, 27, 0.815)),
+    url("../assets/ac.png");
 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    background:
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
 
-        linear-gradient(135deg,
-            #deb7c8,
-            #ffffff);
-
-
-    border-top:
-
-        1px solid rgba(236, 72, 153, .12);
-
-
-    border-bottom:
-
-        1px solid rgba(236, 72, 153, .12);
-
-
-    text-align: center;
-
-
+  position: relative;
+  text-align: center;
+  overflow: hidden;
 }
 
+.accent-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+}
 
-
+.accent-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+}
 
 .accent-container {
-
-
-    max-width: 1200px;
-
-    margin: auto;
-
-
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
-
-
-
 
 /* Main Heading */
-
-
 .accent-title {
-
-
-    margin: 0 auto 45px;
-
-
-    max-width: 1100px;
-
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-
-    font-size:
-        clamp(1.8rem, 3.5vw, 3.2rem);
-
-
-    line-height: 1.5;
-
-
-    letter-spacing: .04em;
-
-
-    font-weight: 400;
-
-
-    color: #1F2937;
-
-
+  margin: 0 auto 35px;
+  max-width: 950px;
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 4vw, 3.6rem);
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: white;
 }
-
-
 
 .accent-title span {
-
-
-    font-style: italic;
-
-
-    color: #EC4899;
-
-
-    text-transform: lowercase;
-
-
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: rgb(218, 169, 199);
+  text-transform: lowercase;
+  font-weight: 400;
 }
-
-
-
 
 /* Description */
-
-
 .accent-description {
-
-
-    max-width: 650px;
-
-
-    margin: 0 auto 45px;
-
-
-    font-family:
-        "Poppins",
-        sans-serif;
-
-
-    font-size: 1rem;
-
-
-    line-height: 1.9;
-
-
-    font-weight: 300;
-
-
-    color: #6B7280;
-
-
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  line-height: 1.9;
+  font-weight: 300;
+  color: var(--text-gray);
+  letter-spacing: 0.5px;
 }
-
-
 
 /* Button */
-
-
 .accent-button {
-
-
-    display: inline-flex;
-
-
-    padding: 14px 38px;
-
-
-    border-radius: 50px;
-
-
-    text-decoration: none;
-
-
-    text-transform: uppercase;
-
-
-    letter-spacing: 2px;
-
-
-    font-size: 12px;
-
-
-    font-weight: 600;
-
-
-    color: white;
-
-
-    background:
-
-        linear-gradient(135deg,
-            #672546,
-            #DB2777);
-
-
-    box-shadow:
-
-        0 15px 30px rgba(236, 72, 153, .25);
-
-
-    transition: .4s ease;
-
-
+  display: inline-flex;
+  padding: 14px 38px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--pink-gradient);
+  box-shadow: 0 8px 25px rgba(184, 62, 113, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-smooth);
 }
-
-
 
 .accent-button:hover {
-
-
-    transform:
-        translateY(-4px);
-
-
-    box-shadow:
-
-        0 20px 40px rgba(236, 72, 153, .35);
-
-
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(184, 62, 113, 0.35), var(--shadow-gold);
 }
 
+@media (max-width: 768px) {
+  .accent-banner {
+    padding: 70px 20px;
+  }
 
+  .accent-title {
+    font-size: 1.6rem;
+  }
 
-
-
-@media(max-width:600px) {
-
-
-    .accent-banner {
-
-        padding: 80px 20px;
-
-    }
-
-
-
-    .accent-title {
-
-        font-size: 1.8rem;
-
-    }
-
-
-
-    .accent-description {
-
-        font-size: .9rem;
-
-    }
-
-
-
+  .accent-description {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
 }

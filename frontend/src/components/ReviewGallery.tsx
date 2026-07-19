@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./reviewgallery.css";
+import reviewBg from "../assets/review-bg.jpg";
 
 
 interface Review {
@@ -160,83 +161,88 @@ export default function ReviewGallery() {
 
     return (
 
-
-        <section className="reviews-section">
-
-
-            <div className="reviews-container">
-
-
-                <span className="review-tag">
-                    CLIENT LOVE
-                </span>
-
-
-
-                <h2>
-                    What Our Guests Say
-                </h2>
+        <section
+            className="reviews-section"
+            style={{
+                backgroundImage: `url(${reviewBg})`,
+            }}
+        >
+            <div className="reviews-overlay">
+                <div className="reviews-container">
 
 
 
 
-                <div
-                    className={
-                        `review-card ${animate ? "fade" : ""}`
-                    }
-                >
+                    <span className="review-tag">
+                        CLIENT LOVE
+                    </span>
 
 
 
-                    <div className="stars">
+                    <h2>
+                        What Our Guests Say
+                    </h2>
 
-                        {
-                            Array.from({
-                                length: review.rating
-                            }).map((_, i) => (
 
-                                <span key={i}>
-                                    ★
-                                </span>
 
-                            ))
+
+                    <div
+                        className={
+                            `review-card ${animate ? "fade" : ""}`
                         }
+                    >
+
+
+
+                        <div className="stars">
+
+                            {
+                                Array.from({
+                                    length: review.rating
+                                }).map((_, i) => (
+
+                                    <span key={i}>
+                                        ★
+                                    </span>
+
+                                ))
+                            }
+
+                        </div>
+
+
+
+
+                        <p className="review-message">
+
+                            "{review.comment}"
+
+                        </p>
+
+
+
+
+                        <h4>
+                            — {review.name}
+                        </h4>
+
+
+
+
+                        <small>
+
+                            {index + 1} / {reviews.length}
+
+                        </small>
+
+
 
                     </div>
 
 
 
-
-                    <p className="review-message">
-
-                        "{review.comment}"
-
-                    </p>
-
-
-
-
-                    <h4>
-                        — {review.name}
-                    </h4>
-
-
-
-
-                    <small>
-
-                        {index + 1} / {reviews.length}
-
-                    </small>
-
-
-
                 </div>
-
-
-
             </div>
-
 
 
         </section>

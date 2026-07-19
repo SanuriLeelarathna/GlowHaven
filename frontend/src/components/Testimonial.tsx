@@ -4,15 +4,17 @@ export default function Testimonial() {
       id="testimonials"
       style={{
         position: 'relative',
-        height: '60vh',
-        minHeight: '450px',
+        height: '50vh',
+        minHeight: '400px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'var(--bg-secondary)',
-        color: 'var(--text-primary)',
+        backgroundColor: 'var(--soft-pink)',
+        color: 'var(--text-dark)',
         textAlign: 'center',
-        padding: '0 20px'
+        padding: '0 20px',
+        borderTop: '1px solid var(--border)',
+        borderBottom: '1px solid var(--border)'
       }}
     >
       <div 
@@ -21,42 +23,47 @@ export default function Testimonial() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '24px'
+          gap: '24px',
+          position: 'relative',
+          zIndex: 2
         }}
       >
         <span 
           style={{
             fontFamily: 'var(--font-sans)',
-            fontSize: '0.8rem',
-            letterSpacing: '0.25em',
+            fontSize: '11px',
+            letterSpacing: '0.3em',
             textTransform: 'uppercase',
-            color: 'var(--accent-gold)'
+            color: 'var(--accent-gold-dark)',
+            fontWeight: 600
           }}
         >
-          client love
+          client testimonial
         </span>
         
         <h2
           style={{
             fontFamily: 'var(--font-serif)',
             fontStyle: 'italic',
-            fontSize: 'clamp(1.8rem, 4vw, 3rem)',
-            lineHeight: '1.3',
-            color: 'var(--text-primary)',
-            fontWeight: 400
+            fontSize: 'clamp(1.6rem, 3.5vw, 2.6rem)',
+            lineHeight: '1.4',
+            color: 'var(--deep-pink)',
+            fontWeight: 300
           }}
         >
           "I can't say enough good things about Glow Haven. The atmosphere is relaxing, and my stylist is truly an artist!"
         </h2>
         
+        <div style={{ width: '40px', height: '1px', background: 'var(--accent-gold)' }} />
+        
         <p
           style={{
             fontFamily: 'var(--font-sans)',
-            fontSize: '0.9rem',
-            letterSpacing: '0.15em',
+            fontSize: '11px',
+            letterSpacing: '0.25em',
             textTransform: 'uppercase',
-            color: 'var(--text-secondary)',
-            fontWeight: 500
+            color: 'var(--text-gray)',
+            fontWeight: 600
           }}
         >
           — Eleanor Vance, Studio regular

@@ -47,25 +47,13 @@ export default function AccentBanner() {
 
         {/* Description */}
 
-        <p className="accent-description">
 
-          Experience the difference of custom-tailored beauty.
-          Our team of hair specialists and estheticians work
-          together to deliver custom-tailored results.
-
-        </p>
 
 
 
 
         {/* Button */}
 
-        <a
-          href="#about"
-          className="accent-button"
-        >
-          Read Info
-        </a>
 
 
 

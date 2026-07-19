@@ -1,595 +1,264 @@
-/* =====================================
-   WHAT TO EXPECT - LUXE EXPERIENCE
-===================================== */
-
+/* =====================================================
+   WHAT TO EXPECT - LUXE EXPERIENCE - REDESIGN
+===================================================== */
 
 .expect-section {
-
-    width: 100%;
-
-    padding: 120px 80px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 100px;
-
-    align-items: center;
-
-
-    background:
-
-        linear-gradient(135deg,
-            #fff8fb,
-            #ffffff);
-
-
-    overflow: hidden;
-
+  width: 100%;
+  padding: 120px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+  background: linear-gradient(rgba(254, 253, 254, 0.979),
+      rgba(20, 20, 20, 0.55));
+  position: relative;
+  overflow: hidden;
 }
 
+/* Background Soft Glows */
+.expect-section::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 400px;
+  height: 400px;
+  background: rgb(255, 255, 255);
+  filter: blur(100px);
+  border-radius: 0%;
+  pointer-events: none;
+}
 
-
-
-/* =====================================
+/* =====================================================
    IMAGE GALLERY
-===================================== */
-
-
+===================================================== */
 .expect-gallery {
-
-
-    position: relative;
-
-    display: flex;
-
-    justify-content: center;
-
-
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
-
-
 
 .expect-image-wrapper {
+  width: 100%;
+  max-width: 530px;
+  height: 580px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  box-shadow: var(--shadow-luxury);
 
-
-    width: 100%;
-
-    max-width: 550px;
-
-    height: 650px;
-
-
-    position: relative;
-
-
-    overflow: hidden;
-
-
-    border-radius:
-
-        220px 220px 35px 35px;
-
-
-    box-shadow:
-
-        0 30px 70px rgba(236, 72, 153, .15);
-
-
-    border:
-
-        1px solid rgba(236, 72, 153, .15);
-
-
+  outline: 1px solid var(--white);
+  outline-offset: 12px;
+  transition: var(--transition-smooth);
 }
-
-
 
 .expect-image {
-
-
-    position: absolute;
-
-
-    inset: 0;
-
-
-    width: 100%;
-
-
-    height: 100%;
-
-
-    object-fit: cover;
-
-
-    opacity: 0;
-
-
-    transform: scale(1.08);
-
-
-    transition:
-
-        opacity .8s ease,
-        transform 1s ease;
-
-
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 0.8s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-
-
 
 .expect-image.active {
-
-
-    opacity: 1;
-
-
-    transform: scale(1);
-
-
+  opacity: 1;
+  transform: scale(1);
 }
 
-
-
-
-/* =====================================
+/* =====================================================
    SLIDER BUTTONS
-===================================== */
-
-
+===================================================== */
 .slider-buttons {
-
-
-    position: absolute;
-
-
-    bottom: 35px;
-
-
-    right: 40px;
-
-
-    display: flex;
-
-
-    gap: 15px;
-
-
+  position: absolute;
+  bottom: 24px;
+  right: -8px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
 }
-
-
 
 .slider-buttons button {
-
-
-    width: 48px;
-
-
-    height: 48px;
-
-
-    border-radius: 50%;
-
-
-    border: none;
-
-
-    cursor: pointer;
-
-
-    display: flex;
-
-
-    align-items: center;
-
-
-    justify-content: center;
-
-
-    font-size: 22px;
-
-
-    color: white;
-
-
-    background:
-
-
-        linear-gradient(135deg,
-
-            #672546,
-
-            #DB2777);
-
-
-    box-shadow:
-
-        0 10px 25px rgba(219, 39, 119, .3);
-
-
-    transition: .35s ease;
-
-
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-gold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--accent-gold-dark);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
 }
-
-
 
 .slider-buttons button:hover {
-
-
-    transform:
-
-        translateY(-5px);
-
-
-    background:
-
-        linear-gradient(135deg,
-
-            #DB2777,
-
-            #672546);
-
-
+  transform: translateY(-3px);
+  background: var(--pink-gradient);
+  color: var(--white);
+  border-color: transparent;
+  box-shadow: 0 10px 20px rgba(184, 62, 113, 0.25);
 }
 
-
-
-
-
-/* =====================================
+/* =====================================================
    CONTENT
-===================================== */
-
-
+===================================================== */
 .expect-content {
-
-
-    max-width: 520px;
-
-
+  max-width: 500px;
 }
-
-
 
 .expect-label {
-
-
-    display: block;
-
-
-    margin-bottom: 25px;
-
-
-    color: #EC4899;
-
-
-    font-size: 12px;
-
-
-    letter-spacing: 4px;
-
-
-    text-transform: uppercase;
-
-
-    font-weight: 600;
-
-
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-gold-dark);
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
 }
 
-
+.expect-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 20px;
+  height: 1px;
+  background: var(--accent-gold);
+}
 
 .expect-content h2 {
-
-
-    margin: 0 0 30px;
-
-
-    font-family:
-
-        "Playfair Display",
-        serif;
-
-
-    font-size:
-
-        clamp(2.8rem, 4vw, 4rem);
-
-
-    line-height: 1.2;
-
-
-    color: #1F2937;
-
-
+  margin: 0 0 24px;
+  font-family: var(--font-serif);
+  font-size: clamp(3.4rem, 5vw, 5.6rem);
+  line-height: 1.2;
+  color: var(--text-dark);
+  font-weight: 400;
 }
-
-
-
 
 .expect-content h2 span {
-
-
-    font-style: italic;
-
-
-    color: #EC4899;
-
-
-    font-weight: 400;
-
-
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--dark-pink);
+  font-weight: 300;
 }
-
-
-
 
 .expect-content p {
-
-
-    font-family:
-
-        "Poppins",
-        sans-serif;
-
-
-    color: #6B7280;
-
-
-    font-size: 1rem;
-
-
-    line-height: 1.9;
-
-
-    margin-bottom: 35px;
-
-
+  font-family: var(--font-sans);
+  color: var(--text-gray);
+  font-size: 0.98rem;
+  line-height: 1.85;
+  margin-bottom: 35px;
+  font-weight: 300;
 }
-
-
-
 
 /* LIST */
-
-
 .expect-content ul {
-
-
-    list-style: none;
-
-
-    padding: 0;
-
-    margin: 0;
-
-
-    display: flex;
-
-
-    flex-direction: column;
-
-
-    gap: 18px;
-
-
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
 }
-
-
 
 .expect-content li {
-
-
-    position: relative;
-
-
-    padding-left: 35px;
-
-
-    font-family:
-
-        "Poppins",
-        sans-serif;
-
-
-    font-size: 1rem;
-
-
-    color: #374151;
-
-
+  position: relative;
+  padding-left: 28px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 400;
+  transition: var(--transition);
 }
-
-
 
 .expect-content li::before {
-
-
-    content: "";
-
-
-    position: absolute;
-
-
-    left: 0;
-
-
-    top: 8px;
-
-
-    width: 12px;
-
-
-    height: 12px;
-
-
-    border-radius: 50%;
-
-
-    background: #EC4899;
-
-
+  content: "✧";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  color: var(--accent-gold-dark);
+  font-size: 14px;
+  font-weight: bold;
 }
 
-
-
-
-
-/* =====================================
-   TABLET
-===================================== */
-
-
-@media(max-width:1000px) {
-
-
-    .expect-section {
-
-
-        grid-template-columns: 1fr;
-
-
-        padding: 90px 35px;
-
-
-        gap: 60px;
-
-
-    }
-
-
-
-    .expect-gallery {
-
-
-        order: 1;
-
-
-    }
-
-
-
-    .expect-content {
-
-
-        order: 2;
-
-
-        text-align: center;
-
-
-        margin: auto;
-
-
-    }
-
-
-
-    .expect-content ul {
-
-
-        align-items: center;
-
-
-    }
-
-
-
-    .expect-content li {
-
-
-        padding-left: 0;
-
-
-    }
-
-
-
-    .expect-content li::before {
-
-
-        display: none;
-
-
-    }
-
-
-
+.expect-content li:hover {
+  transform: translateX(4px);
+  color: var(--dark-pink);
 }
 
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .expect-section {
+    grid-template-columns: 1fr;
+    padding: 80px 40px;
+    gap: 60px;
+  }
 
+  .expect-gallery {
+    order: 1;
+  }
 
+  .expect-content {
+    order: 2;
+    text-align: center;
+    margin: 0 auto;
+  }
 
-/* =====================================
-   MOBILE
-===================================== */
+  .expect-label {
+    padding-left: 0;
+  }
 
+  .expect-label::before {
+    display: none;
+  }
 
-@media(max-width:600px) {
+  .expect-content ul {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 
+  .expect-content li {
+    text-align: left;
+  }
 
-    .expect-section {
+  .expect-image-wrapper {
+    max-width: 500px;
+    height: 520px;
+  }
 
+  .slider-buttons {
+    right: 20px;
+  }
+}
 
-        padding: 70px 20px;
+@media (max-width: 600px) {
+  .expect-section {
+    padding: 80px 20px;
+  }
 
+  .expect-content ul {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 
-    }
+  .expect-image-wrapper {
+    max-width: 320px;
+    height: 420px;
+    outline-offset: 8px;
+  }
 
-
-
-    .expect-image-wrapper {
-
-
-        height: 450px;
-
-
-        border-radius:
-
-            150px 150px 25px 25px;
-
-
-    }
-
-
-
-    .slider-buttons {
-
-
-        bottom: 20px;
-
-
-        right: 20px;
-
-
-    }
-
-
-
-    .slider-buttons button {
-
-
-        width: 42px;
-
-
-        height: 42px;
-
-
-    }
-
-
-
-    .expect-content h2 {
-
-
-        font-size: 2.5rem;
-
-
-    }
-
-
+  .slider-buttons {
+    bottom: 20px;
+    right: 10px;
+  }
 }

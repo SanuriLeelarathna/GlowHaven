@@ -12,82 +12,60 @@
 
 :root {
 
-  /* Luxury Pink Palette */
-  --primary-pink: #EC4899;
-  --dark-pink: #DB2777;
-  --deep-pink: #9D174D;
+  /* Luxury Rose & Gold Palette */
+  --primary-pink: #E05A8D;
+  --dark-pink: #B83E71;
+  --deep-pink: #7A2247;
 
-  --soft-pink: #FDF2F8;
-  --light-pink: #FCE7F3;
+  --soft-pink: #FFF5F8;
+  --light-pink: #FCE6EF;
+  --accent-gold: #C5A880;
+  --accent-gold-dark: #A88D65;
+  --accent-gold-light: #F4EFEA;
 
   --white: #FFFFFF;
 
-  --background: #FFF8FB;
+  --background: #FFFDFE;
   --surface: #FFFFFF;
 
-  --text-dark: #1F2937;
-  --text-gray: #6B7280;
+  --text-dark: #1F191B;
+  --text-gray: #756A6E;
 
-  --border:
-    rgba(236, 72, 153, 0.15);
-
-
-  /* Gradient */
-  --pink-gradient:
-    linear-gradient(135deg,
-      #672546,
-      #DB2777);
+  --border: rgba(224, 90, 141, 0.12);
+  --border-gold: rgba(197, 168, 128, 0.22);
+  --border-glass: rgba(255, 255, 255, 0.4);
 
 
-  --pink-gradient-soft:
-    linear-gradient(135deg,
-      #FCE7F3,
-      #FDF2F8);
+  /* Gradients */
+  --pink-gradient: linear-gradient(135deg, #7A2247 0%, #D84F85 100%);
+  --gold-gradient: linear-gradient(135deg, #A88D65 0%, #D9C3A3 100%);
+  --pink-gradient-soft: linear-gradient(135deg, #FCE6EF 0%, #FFFDFE 100%);
+  --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.45) 100%);
 
 
   /* Shadows */
-
-  --shadow-soft:
-    0 20px 50px rgba(236, 72, 153, 0.15);
-
-
-  --shadow-card:
-    0 15px 40px rgba(31, 41, 55, 0.08);
+  --shadow-soft: 0 20px 50px rgba(122, 34, 71, 0.06);
+  --shadow-card: 0 15px 40px rgba(122, 34, 71, 0.04);
+  --shadow-gold: 0 15px 35px rgba(197, 168, 128, 0.15);
+  --shadow-luxury: 0 30px 60px rgba(122, 34, 71, 0.1);
 
 
   /* Radius */
-
   --radius-small: 12px;
-
   --radius-card: 24px;
-
   --radius-pill: 100px;
 
 
 
   /* Fonts */
-
-  --font-serif:
-    'Cormorant Garamond',
-    Georgia,
-    serif;
-
-
-  --font-sans:
-    'Plus Jakarta Sans',
-    Arial,
-    sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', Arial, sans-serif;
 
 
 
   /* Animation */
-
-  --transition:
-    all .35s ease;
-
-
-  --transition-smooth:
-    all .6s cubic-bezier(.16, 1, .3, 1);
+  --transition: all .35s cubic-bezier(.25, .8, .25, 1);
+  --transition-smooth: all .6s cubic-bezier(.16, 1, .3, 1);
 
 }
 

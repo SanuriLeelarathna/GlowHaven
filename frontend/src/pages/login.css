@@ -1,105 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* =====================================================
+   LOGIN & SIGNUP PAGES - LUXURY REDESIGN
+===================================================== */
 
 .login-page {
   height: 100vh;
   width: 100%;
-  background: var(--bg-secondary);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 245, 248, 0.8) 0%, rgba(255, 253, 254, 1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  font-family: var(--font-sans);
   overflow: hidden;
   position: relative;
   padding: 40px 20px;
 }
 
-/* =========================
-   LOGIN CARD
-   ========================= */
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 350px;
+  height: 350px;
+  background: rgba(197, 168, 128, 0.04);
+  filter: blur(80px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* --- CARD --- */
 .login-card {
   width: 100%;
-  max-width: 420px;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 40px 30px;
-  box-shadow: 0 15px 35px rgba(165, 81, 102, 0.08);
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-gold);
+  border-radius: 28px;
+  padding: 45px 35px;
+  box-shadow: var(--shadow-luxury);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   z-index: 2;
+  transition: var(--transition-smooth);
 }
 
-/* =========================
-   LOGO
-   ========================= */
+/* --- LOGO --- */
 .login-logo {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .login-logo h1 {
-  padding-top: 15px;
+  padding-top: 10px;
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 42px;
-  line-height: 0.9;
-  letter-spacing: 1px;
-  font-weight: 300;
-  color: var(--text-primary);
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--deep-pink);
+  letter-spacing: 0.5px;
 }
 
 .login-logo span {
-  color: var(--text-secondary);
+  color: var(--primary-pink);
 }
 
 .login-logo p {
-  margin-top: 8px;
-  font-size: 10px;
-  letter-spacing: 6px;
-  color: var(--text-muted);
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--accent-gold-dark);
   text-transform: uppercase;
   font-weight: 600;
 }
 
-/* =========================
-   TITLE
-   ========================= */
+/* --- TITLE & HEADINGS --- */
 .login-title {
   text-align: center;
-  font-size: 13px;
-  letter-spacing: 4px;
+  font-size: 11px;
+  letter-spacing: 3px;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   text-transform: uppercase;
-  color: var(--text-muted);
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 15px;
+  color: var(--text-gray);
+  border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+  padding-bottom: 12px;
 }
 
 .login-card h2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 28px;
+  font-family: var(--font-serif);
+  font-size: 26px;
   text-align: center;
-  color: var(--text-primary);
+  color: var(--text-dark);
   margin-bottom: 8px;
   font-weight: 400;
-  letter-spacing: -0.5px;
 }
 
-.login-card h2+p {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-bottom: 30px;
+.login-card h2 + p {
+  font-size: 13.5px;
+  color: var(--text-gray);
+  margin-bottom: 28px;
   text-align: center;
+  font-weight: 300;
 }
 
-/* =========================
-   FORM
-   ========================= */
+/* --- FORM --- */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -108,25 +119,25 @@
 
 /* Capsule Form input groups */
 .login-input-group {
-  height: 56px;
-  border: 1px solid var(--border-color);
-  border-radius: 50px;
+  height: 52px;
+  border: 1px solid var(--border-gold);
+  border-radius: 26px;
   display: flex;
   align-items: center;
-  padding: 0 28px;
-  background: var(--bg-primary);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0 24px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
   width: 100%;
   box-sizing: border-box;
 }
 
 .login-input-group:focus-within {
-  border-color: var(--border-hover);
-  background: var(--bg-primary);
-  box-shadow: 0 0 10px rgba(165, 81, 102, 0.05);
+  border-color: var(--primary-pink);
+  background: var(--white);
+  box-shadow: 0 0 12px rgba(224, 90, 141, 0.12);
 }
 
-/* Hide icons to match the clean mockup design */
+/* Hide icons to match clean mockup */
 .login-icon {
   display: none !important;
 }
@@ -136,14 +147,15 @@
   border: none;
   outline: none;
   background: transparent;
-  color: var(--text-primary);
-  font-size: 15px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  color: var(--text-dark);
+  font-size: 14.5px;
+  font-family: var(--font-sans);
+  font-weight: 400;
 }
 
 .login-input-group input::placeholder {
-  color: var(--text-muted);
+  color: var(--text-gray);
+  opacity: 0.65;
 }
 
 /* Directly styled inputs on Signup page */
@@ -151,171 +163,168 @@
 .login-card input[type="email"],
 .login-card input[type="password"] {
   width: 100%;
-  height: 56px;
-  border: 1px solid var(--border-color);
-  border-radius: 50px;
-  padding: 0 28px;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  font-size: 15px;
+  height: 52px;
+  border: 1px solid var(--border-gold);
+  border-radius: 26px;
+  padding: 0 24px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--text-dark);
+  font-size: 14.5px;
   outline: none;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   box-sizing: border-box;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  transition: var(--transition);
+  font-family: var(--font-sans);
+  font-weight: 400;
 }
 
 .login-card input:focus {
-  border-color: var(--border-hover);
-  box-shadow: 0 0 10px rgba(165, 81, 102, 0.05);
+  border-color: var(--primary-pink);
+  background: var(--white);
+  box-shadow: 0 0 12px rgba(224, 90, 141, 0.12);
 }
 
 .login-card input::placeholder {
-  color: var(--text-muted);
+  color: var(--text-gray);
+  opacity: 0.65;
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* --- BUTTONS --- */
 .login-button,
 .login-card button[type="submit"] {
   margin-top: 10px;
-  height: 56px;
-  border-radius: 50px;
-  border: none;
-  background: var(--text-secondary);
-  color: var(--pure-white);
-  font-size: 15px;
-  letter-spacing: 0.5px;
+  height: 52px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--pink-gradient);
+  color: var(--white);
+  font-size: 13px;
+  letter-spacing: 1.5px;
   font-weight: 600;
   cursor: pointer;
   width: 100%;
   box-sizing: border-box;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  text-transform: capitalize;
+  transition: var(--transition-smooth);
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(184, 62, 113, 0.2);
 }
 
 .login-button:hover,
 .login-card button[type="submit"]:hover {
-  background: var(--text-muted);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(165, 81, 102, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(184, 62, 113, 0.35), var(--shadow-gold);
 }
 
-/* Hide arrow on login button to match button style */
 .login-button .arrow {
   display: none !important;
 }
 
-/* =========================
-   LINKS
-   ========================= */
+/* --- LINKS --- */
 .login-links {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 22px;
 }
 
 .login-links button {
   background: none;
   border: none;
-  color: var(--text-secondary);
-  font-size: 13px;
-  font-weight: 400;
+  color: var(--accent-gold-dark);
+  font-size: 12.5px;
+  font-weight: 600;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   letter-spacing: 0.5px;
-  transition: opacity 0.3s ease;
+  transition: var(--transition);
 }
 
 .login-links button:hover {
-  opacity: 0.8;
+  color: var(--dark-pink);
 }
 
 .small-text {
-  font-size: 13px !important;
-  color: var(--text-primary) !important;
-  margin-top: 25px;
+  font-size: 12.5px !important;
+  color: var(--text-gray) !important;
+  margin-top: 22px;
   letter-spacing: 0.5px;
   font-weight: 300;
+  line-height: 1.5;
 }
 
 .small-text span {
-  color: var(--text-secondary);
+  color: var(--dark-pink);
   font-weight: 600;
   cursor: pointer;
   text-decoration: underline;
-  transition: opacity 0.2s ease;
+  transition: var(--transition);
 }
 
 .small-text span:hover {
-  opacity: 0.8;
+  color: var(--deep-pink);
 }
 
 .forgot-password {
-  margin-top: 25px;
+  margin-top: 22px;
   text-align: center;
 }
 
 .forgot-password a {
-  color: var(--text-muted);
+  color: var(--text-gray);
   text-decoration: none;
   font-size: 12px;
   letter-spacing: 0.5px;
-  transition: color 0.3s ease;
+  transition: var(--transition);
 }
 
 .forgot-password a:hover {
-  color: var(--text-secondary);
+  color: var(--dark-pink);
 }
 
 /* Bottom help label mock-injected on Login page */
 div.login-card::after {
-  content: "✦ Help";
+  content: "✦ GlowHaven Assistance";
   position: absolute;
-  bottom: -40px;
-  right: 10px;
-  font-size: 13px;
-  color: var(--text-secondary);
-  font-weight: 300;
+  bottom: -35px;
+  right: 15px;
+  font-size: 12px;
+  color: var(--accent-gold-dark);
+  font-weight: 500;
   cursor: pointer;
   z-index: 5;
-  transition: opacity 0.3s ease;
+  transition: var(--transition);
 }
 
 div.login-card::after:hover {
-  opacity: 0.8;
+  color: var(--dark-pink);
 }
 
 /* Bottom terms of use mock-injected on Signup page */
 form.login-card .small-text::before {
-  content: "By signing up, I agree to the Terms of Use\A\A";
+  content: "By signing up, I agree to the GlowHaven terms of use\A\A";
   white-space: pre-wrap;
   display: block;
-  font-size: 13px;
-  color: var(--text-primary);
-  margin-bottom: 5px;
+  font-size: 11px;
+  color: var(--text-gray);
+  margin-bottom: 4px;
   font-weight: 300;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* --- RESPONSIVE --- */
 @media (max-width: 520px) {
   .login-page {
     padding: 20px;
   }
 
   .login-card {
-    padding: 30px 20px;
+    padding: 35px 20px;
+    border-radius: 20px;
   }
 
   .login-logo h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   div.login-card::after {
-    bottom: -30px;
-    right: 0px;
+    bottom: -28px;
+    right: 5px;
   }
 }

@@ -1,649 +1,263 @@
-/* =====================================
-   PREMIUM SERVICES SECTION
-   GlowHaven Luxury Pink Theme
-===================================== */
-
+/* =====================================================
+   PREMIUM SERVICES SECTION - REDESIGN
+===================================================== */
 
 .premium-services {
-
-    width: 100%;
-
-    padding: 120px 8%;
-
-    background:
-        linear-gradient(180deg,
-            #fff8f6,
-            #fdecef);
-
+  width: 100%;
+  padding: 120px 8%;
+  background: var(--background);
+  position: relative;
+  overflow: hidden;
 }
 
+/* ambient light glows */
+.premium-services::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 500px;
+  height: 500px;
+  background: rgba(197, 168, 128, 0.03);
+  filter: blur(120px);
+  border-radius: 50%;
+  pointer-events: none;
+}
 
-
-
-
-/* =====================================
+/* =====================================================
    HEADER
-===================================== */
-
-
+===================================================== */
 .premium-services-header {
-
-    text-align: center;
-
-    max-width: 750px;
-
-    margin: 0 auto 70px;
-
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 70px;
 }
-
-
 
 .premium-services-header span {
-
-
-    display: inline-block;
-
-
-    color: #b76e79;
-
-
-    font-size: 13px;
-
-
-    letter-spacing: 4px;
-
-
-    font-weight: 600;
-
-
-    margin-bottom: 20px;
-
-
+  display: inline-block;
+  font-family: var(--font-sans);
+  color: var(--accent-gold-dark);
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
-
-
-
-
 
 .premium-services-header h2 {
-
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-
-    font-size:
-        clamp(45px, 5vw, 70px);
-
-
-    line-height: 0.95;
-
-
-    font-weight: 500;
-
-
-    color: #3b2029;
-
-
-    margin-bottom: 25px;
-
-
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.15;
+  font-weight: 300;
+  color: var(--text-dark);
+  margin-bottom: 24px;
 }
-
-
-
-
 
 .premium-services-header p {
-
-
-    font-family:
-        "Inter",
-        sans-serif;
-
-
-    font-size: 17px;
-
-
-    color: #70555d;
-
-
-    line-height: 1.8;
-
-
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+  font-weight: 300;
 }
 
-
-
-
-
-
-
-/* =====================================
+/* =====================================================
    SERVICE GRID
-===================================== */
-
-
+===================================================== */
 .premium-service-grid {
-
-
-    display: grid;
-
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-
-    gap: 35px;
-
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
-
-
-
-
-
-
-
-/* =====================================
+/* =====================================================
    CARD
-===================================== */
-
-
+===================================================== */
 .premium-service-card {
-
-
-    background:
-        rgba(255, 255, 255, .75);
-
-
-    border-radius: 32px;
-
-
-    overflow: hidden;
-
-
-    backdrop-filter: blur(15px);
-
-
-    border:
-        1px solid rgba(255, 255, 255, .8);
-
-
-    box-shadow:
-
-        0 25px 60px rgba(183, 110, 121, .15);
-
-
-    transition: .5s ease;
-
-
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 28px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
 }
-
-
-
-
 
 .premium-service-card:hover {
-
-
-    transform:
-        translateY(-15px);
-
-
-    box-shadow:
-
-        0 35px 80px rgba(183, 110, 121, .25);
-
-
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-luxury);
+  border-color: var(--primary-pink);
 }
 
-
-
-
-
-
-
-/* =====================================
+/* =====================================================
    IMAGE
-===================================== */
-
-
+===================================================== */
 .premium-service-image {
-
-
-    height: 360px;
-
-
-    position: relative;
-
-
-    overflow: hidden;
-
-
+  height: 300px;
+  position: relative;
+  overflow: hidden;
 }
-
-
-
-
 
 .premium-service-image img {
-
-
-    width: 100%;
-
-
-    height: 100%;
-
-
-    object-fit: cover;
-
-
-    transition:
-        transform .8s ease;
-
-
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-
-
-
 
 .premium-service-card:hover .premium-service-image img {
-
-
-    transform:
-        scale(1.08);
-
-
+  transform: scale(1.06);
 }
 
-
-
-
-
-
-
-/* =====================================
+/* =====================================================
    RATING BADGE
-===================================== */
-
-
+===================================================== */
 .rating-badge {
-
-
-    position: absolute;
-
-
-    top: 25px;
-
-
-    right: 25px;
-
-
-
-    background:
-        rgba(255, 255, 255, .9);
-
-
-
-    color: #b76e79;
-
-
-    padding:
-
-        10px 18px;
-
-
-
-    border-radius: 50px;
-
-
-    font-weight: 600;
-
-
-    font-size: 14px;
-
-
-    box-shadow:
-
-        0 10px 30px rgba(0, 0, 0, .15);
-
-
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  color: var(--accent-gold-dark);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  box-shadow: 0 4px 15px rgba(122, 34, 71, 0.05);
+  border: 1px solid var(--border-gold);
 }
-
-
 
 .rating-badge span {
-
-
-    margin-left: 5px;
-
-
-    color: #8b747a;
-
-
-    font-weight: 400;
-
-
+  margin-left: 4px;
+  color: var(--text-gray);
+  font-weight: 400;
+  font-size: 11px;
 }
 
-
-
-
-
-
-
-/* =====================================
+/* =====================================================
    CONTENT
-===================================== */
-
-
+===================================================== */
 .premium-service-content {
-
-
-    padding: 35px;
-
-
+  padding: 30px;
 }
-
-
 
 .premium-service-content h3 {
-
-
-    font-family:
-
-        "Cormorant Garamond",
-        serif;
-
-
-    font-size: 34px;
-
-
-    color: #3b2029;
-
-
-    margin-bottom: 15px;
-
-
-    font-weight: 600;
-
-
+  font-family: var(--font-serif);
+  font-size: 26px;
+  color: var(--deep-pink);
+  margin-bottom: 12px;
+  font-weight: 400;
 }
-
-
-
 
 .premium-service-content p {
-
-
-    color: #70555d;
-
-
-    font-size: 15px;
-
-
-    line-height: 1.8;
-
-
-    min-height: 85px;
-
-
+  color: var(--text-gray);
+  font-size: 0.94rem;
+  line-height: 1.8;
+  min-height: 75px;
+  font-weight: 300;
 }
 
-
-
-
-
-
-
-
-/* =====================================
+/* =====================================================
    PRODUCT BOX
-===================================== */
-
-
+===================================================== */
 .product-box {
-
-
-    margin-top: 25px;
-
-
-    padding: 18px;
-
-
-    border-radius: 18px;
-
-
-    background:
-
-        #fff2f5;
-
-
-    display: flex;
-
-
-    flex-direction: column;
-
-
-    gap: 8px;
-
-
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--soft-pink);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px dashed rgba(224, 90, 141, 0.15);
 }
-
-
 
 .product-box span {
-
-
-    font-size: 11px;
-
-
-    letter-spacing: 2px;
-
-
-    color: #b76e79;
-
-
-    font-weight: 600;
-
-
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--accent-gold-dark);
+  font-weight: 600;
+  text-transform: uppercase;
 }
-
-
 
 .product-box strong {
-
-
-    font-size: 15px;
-
-
-    color: #4a3038;
-
-
+  font-size: 13px;
+  color: var(--text-dark);
+  font-weight: 500;
 }
 
-
-
-
-
-
-
-
-/* =====================================
+/* =====================================================
    FOOTER
-===================================== */
-
-
+==================================================== */
 .service-footer {
-
-
-    display: flex;
-
-
-    align-items: center;
-
-
-    justify-content: space-between;
-
-
-    margin-top: 30px;
-
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(197, 168, 128, 0.1);
 }
-
-
 
 .service-footer h4 {
-
-
-    font-size: 28px;
-
-
-    color: #b76e79;
-
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-
+  font-size: 24px;
+  color: var(--dark-pink);
+  font-family: var(--font-serif);
+  font-weight: 400;
 }
-
-
-
-
 
 .service-footer button {
-
-
-    border: none;
-
-
-    background:
-
-        linear-gradient(135deg,
-            #d88aa0,
-            #b76e79);
-
-
-    color: white;
-
-
-    padding:
-
-        12px 25px;
-
-
-    border-radius: 40px;
-
-
-    cursor: pointer;
-
-
-    font-size: 14px;
-
-
-    transition: .3s;
-
-
+  border: none;
+  background: var(--pink-gradient);
+  color: var(--white);
+  padding: 11px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(184, 62, 113, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-smooth);
 }
-
-
-
-
 
 .service-footer button:hover {
-
-
-    transform:
-        translateY(-3px);
-
-
-    box-shadow:
-
-        0 10px 25px rgba(183, 110, 121, .35);
-
-
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(184, 62, 113, 0.3), var(--shadow-gold);
 }
 
-
-
-
-
-
-
-/* =====================================
-   RESPONSIVE
-===================================== */
-
-
-
-@media(max-width:1100px) {
-
-
-    .premium-service-grid {
-
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-
-    }
-
-
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 1100px) {
+  .premium-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
+@media (max-width: 768px) {
+  .premium-services {
+    padding: 80px 40px;
+  }
 
+  .premium-service-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
 
+  .premium-service-image {
+    height: 280px;
+  }
 
+  .premium-services-header {
+    margin-bottom: 50px;
+  }
+}
 
-@media(max-width:700px) {
-
-
-    .premium-services {
-
-
-        padding: 80px 5%;
-
-
-    }
-
-
-
-    .premium-service-grid {
-
-
-        grid-template-columns: 1fr;
-
-
-    }
-
-
-
-
-    .premium-service-image {
-
-
-        height: 320px;
-
-
-    }
-
-
-
-
-    .premium-service-content {
-
-
-        padding: 28px;
-
-
-    }
-
-
-
+@media (max-width: 480px) {
+  .premium-services {
+    padding: 80px 20px;
+  }
 }

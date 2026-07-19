@@ -489,51 +489,13 @@ export default function BookingService() {
           </div>
         </section>
 
-        <section className="pamper-cta-section animate-fade-up">
-          <div className="pamper-cta-text">
-            <h1>
-              Come <em>let us</em> <br /></h1>
-            <h2>
-              Make You Glow
-            </h2>
 
-            <p>
-              Every treatment is performed by experienced stylists in a calm,
-              welcoming space — designed around you, from the first
-              consultation to the final touch.
-            </p>
 
-            <button
-              type="button"
-              className="pamper-cta-btn"
-              onClick={() =>
-                document
-                  .getElementById("service-menu")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Get On The Books
-            </button>
-          </div>
 
-          <div className="pamper-cta-media">
-            <video
-              src="/videos/stfp.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          </div>
-        </section>
-
-        <p className="page-subtitle animate-fade-up">
-          Select your preferred salon service and continue with date, time, and
-          available stylist selection.
-        </p>
 
         <section className="service-booking-list-section animate-fade-up" id="service-menu">
           <p className="menu-eyebrow">on the menu</p>
+
 
           {categoryTabs.length > 0 && (
             <div className="category-tab-bar">
@@ -1102,9 +1064,48 @@ export default function BookingService() {
                   Close Profile
                 </button>
               </div>
+
             </div>
           </div>
+
         )}
+        <section className="pamper-cta-section animate-fade-up">
+          <div className="pamper-cta-text">
+            <h1>
+              Come <em>let us</em> <br /></h1>
+            <h2>
+              Make You Glow
+            </h2>
+
+            <p>
+              Every treatment is performed by experienced stylists in a calm,
+              welcoming space — designed around you, from the first
+              consultation to the final touch.
+            </p>
+
+            <button
+              type="button"
+              className="pamper-cta-btn"
+              onClick={() =>
+                document
+                  .getElementById("service-menu")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Get On The Books
+            </button>
+          </div>
+
+          <div className="pamper-cta-media">
+            <video
+              src="/videos/stfp.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
+        </section>
       </main>
     </>
   );

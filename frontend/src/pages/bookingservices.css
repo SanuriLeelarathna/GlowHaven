@@ -298,7 +298,7 @@
 
 
     max-width:
-        1250px;
+        100%;
 
 
     margin:
@@ -327,12 +327,12 @@
 
     background:
         linear-gradient(135deg,
-            #ffffff,
-            #f9d9e8);
-
+            #d9c8c8 0%,
+            #200c14ca 45%,
+            #33292c 100%);
 
     border-radius:
-        40px;
+        0px;
 
 
     box-shadow:
@@ -360,11 +360,11 @@
 
 
     font-size:
-        3.5rem;
+        4.5rem;
 
 
     font-weight:
-        400;
+        500;
 
 
     color:
@@ -465,7 +465,7 @@
 
 
     border-radius:
-        50px;
+        0px;
 
 
     cursor:
@@ -539,7 +539,7 @@
 
 
     border-radius:
-        35px;
+        0px;
 
 
     overflow:
@@ -747,7 +747,7 @@
 
 
     border-radius:
-        50px;
+        20px;
 
 
     border:
@@ -873,7 +873,7 @@
 
 
     border-radius:
-        30px;
+        20px;
 
 
     overflow:
@@ -881,7 +881,7 @@
 
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, .08);
+        0 15px 40px rgba(0, 0, 0, 0.304);
 
 
     transition:
@@ -1274,1264 +1274,1171 @@
 
 }
 
-/* =====================================================
-   BOOKING POPUP OVERLAY
-===================================================== */
-
-
+/* ---------- Modal shell (datetime / staff / confirmation / calendar) ---------- */
 .datetime-popup-overlay,
 .calendar-modal-overlay {
-
-
-    position:
-        fixed;
-
-
-    inset:
-        0;
-
-
-    background:
-        rgba(45, 15, 30, .45);
-
-
-    backdrop-filter:
-        blur(8px);
-
-
-    display:
-        flex;
-
-
-    align-items:
-        center;
-
-
-    justify-content:
-        center;
-
-
-    z-index:
-        9999;
-
-
-    padding:
-        20px;
-
-
-
+    position: fixed;
+    inset: 0;
+    background: rgba(122, 34, 71, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 1000;
 }
 
-
-
-
-
-
-/* =====================================================
-   POPUP CARD
-===================================================== */
-
-
-.datetime-popup-card {
-
-
-    width:
-        min(950px, 95%);
-
-
-    max-height:
-        90vh;
-
-
-    overflow-y:
-        auto;
-
-
-    background:
-        linear-gradient(180deg,
-            #ffffff,
-            #fff5fa);
-
-
-    border-radius:
-        35px;
-
-
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, .25);
-
-
-    animation:
-        popupScale .4s ease;
-
-
-
+.datetime-popup-card,
+.calendar-modal-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    color: var(--text-dark);
+    width: 100%;
+    max-width: 520px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border: 1px solid var(--border-gold);
+    border-radius: 24px;
+    box-shadow: var(--shadow-luxury);
+    transition: var(--transition-smooth);
 }
 
-
-
-.wide-modal,
-.wide-confirmation-modal {
-
-
-    width:
-        min(1100px, 95%);
-
-
+.datetime-popup-card.wide-modal,
+.datetime-popup-card.wide-confirmation-modal {
+    max-width: 720px;
 }
 
-
-
-
-
-
-@keyframes popupScale {
-
-
-    from {
-
-        opacity:
-            0;
-
-        transform:
-            scale(.9) translateY(40px);
-
-    }
-
-
-    to {
-
-        opacity:
-            1;
-
-        transform:
-            scale(1) translateY(0);
-
-    }
-
+.popup-header,
+.calendar-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 28px;
+    border-bottom: 1px solid #e2e2e2;
+    background: #ffffff;
 }
-
-
-
-
-
-
-/* =====================================================
-   POPUP HEADER
-===================================================== */
-
-
-.popup-header {
-
-
-    padding:
-        35px 40px;
-
-
-    display:
-        flex;
-
-
-    justify-content:
-        space-between;
-
-
-    align-items:
-        center;
-
-
-    border-bottom:
-        1px solid rgba(217, 107, 155, .15);
-
-
-
-}
-
-
-
 
 .step-count {
-
-
-    font-size:
-        11px;
-
-
-    letter-spacing:
-        3px;
-
-
-    color:
-        var(--pink-primary);
-
-
-    font-weight:
-        600;
-
-
-
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #555555;
+    margin-bottom: 4px;
 }
 
-
-
-
-.popup-header h3 {
-
-
-    margin:
-        8px 0 0;
-
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-
-    font-size:
-        2rem;
-
-
-    color:
-        var(--text-dark);
-
-
-
+.popup-header h3,
+.calendar-modal-header h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #27061a;
 }
 
-
-
-
-
-.popup-close-btn {
-
-
-    width:
-        42px;
-
-
-    height:
-        42px;
-
-
-    border-radius:
-        50%;
-
-
-    border:
-        none;
-
-
-    background:
-        var(--pink-soft);
-
-
-    color:
-        var(--pink-dark);
-
-
-    cursor:
-        pointer;
-
-
-    font-size:
-        18px;
-
-
-    transition:
-        .3s;
-
-
-
+.popup-close-btn,
+.calendar-close-btn {
+    background: transparent;
+    border: 1px solid #e2e2e2;
+    color: #111111;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
 }
 
-
-
-.popup-close-btn:hover {
-
-
-    background:
-        var(--pink-primary);
-
-
-    color:
-        white;
-
-
-
+.popup-close-btn:hover,
+.calendar-close-btn:hover {
+    background: #f5f5f5;
+    border-color: #111111;
+    color: #111111;
 }
-
-
-
-
-
-
-
-/* =====================================================
-   POPUP BODY
-===================================================== */
-
 
 .popup-body {
-
-
-    padding:
-        35px 40px;
-
-
-
+    padding: 28px;
 }
-
-
-
-
-
-
-/* SUMMARY PILLS */
-
 
 .selected-summary-pill-bar {
-
-
-    display:
-        flex;
-
-
-    flex-wrap:
-        wrap;
-
-
-    gap:
-        15px;
-
-
-    margin-bottom:
-        35px;
-
-
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
 }
-
-
-
 
 .selected-summary-pill-bar span {
-
-
-    background:
-        white;
-
-
-    padding:
-        12px 20px;
-
-
-    border-radius:
-        50px;
-
-
-    font-size:
-        13px;
-
-
-    color:
-        var(--text-light);
-
-
-    box-shadow:
-        0 8px 20px rgba(217, 107, 155, .12);
-
-
-
+    font-size: 12px;
+    color: #555555;
+    background: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    padding: 8px 14px;
+    border-radius: 4px;
 }
-
-
-
 
 .selected-summary-pill-bar strong {
-
-
-    color:
-        var(--pink-dark);
-
-
-
+    color: #111111;
+    font-weight: 600;
+    margin-left: 4px;
 }
-
-
-
-
-
 
 .popup-body h4 {
-
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-
-    font-size:
-        1.5rem;
-
-
-    margin:
-        25px 0;
-
-
-
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #111111;
+    margin-bottom: 14px;
+    border-left: 2px solid #111111;
+    padding-left: 8px;
 }
 
-
-
-
-
-
-/* =====================================================
-   DATE SELECTION
-===================================================== */
-
+/* ---------- Date selection ---------- */
 
 .horizontal-date-scroll {
-
-
-    display:
-        flex;
-
-
-    gap:
-        15px;
-
-
-    overflow-x:
-        auto;
-
-
-    padding:
-        10px 0 20px;
-
-
-
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
 }
 
+.horizontal-date-scroll::-webkit-scrollbar {
+    height: 4px;
+}
 
-
-
+.horizontal-date-scroll::-webkit-scrollbar-thumb {
+    background: #e2e2e2;
+    border-radius: 2px;
+}
 
 .date-selection-card {
-
-
-    min-width:
-        130px;
-
-
-    padding:
-        20px;
-
-
-    border-radius:
-        25px;
-
-
-    border:
-        1px solid rgba(217, 107, 155, .2);
-
-
-    background:
-        white;
-
-
-    cursor:
-        pointer;
-
-
-    transition:
-        .35s ease;
-
-
-    display:
-        flex;
-
-
-    flex-direction:
-        column;
-
-
-    gap:
-        8px;
-
-
-    text-align:
-        center;
-
-
-
+    flex: 0 0 auto;
+    min-width: 90px;
+    background: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    color: #555555;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
 
-
-
-
-.card-day {
-
-
-    color:
-        var(--pink-primary);
-
-
-    font-size:
-        12px;
-
-
-    text-transform:
-        uppercase;
-
-
-    letter-spacing:
-        1px;
-
-
-
+.date-selection-card:hover {
+    border-color: #c996b5;
+    color: #e3d6d6;
 }
 
-
-
-.card-date {
-
-
-    font-size:
-        16px;
-
-
-    font-weight:
-        600;
-
-
-
-}
-
-
-
-.card-avail {
-
-
-    font-size:
-        11px;
-
-
-    color:
-        #999;
-
-
-
-}
-
-
-
-
-
-.date-selection-card:hover,
 .date-selection-card.selected {
-
-
-    background:
-        linear-gradient(135deg,
-            var(--pink-dark),
-            var(--pink-primary));
-
-
-    color:
-        white;
-
-
-    transform:
-        translateY(-5px);
-
-
-
+    background: #111111;
+    color: #ffffff !important;
+    border-color: #111111;
+    font-weight: 600;
 }
 
+.date-selection-card .card-day {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
 
+.date-selection-card.selected .card-day {
+    color: rgba(255, 255, 255, 0.7);
+}
 
+.date-selection-card .card-date {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #111111;
+}
 
+.date-selection-card.selected .card-date {
+    color: #ffffff;
+}
 
-.date-selection-card.selected .card-day,
+.date-selection-card .card-avail {
+    font-size: 9px;
+    opacity: 0.8;
+    color: #555555;
+}
+
 .date-selection-card.selected .card-avail {
-
-
-    color:
-        #ffe6ef;
-
-
-
+    color: #ffffff;
 }
 
-
-
-
-
+.date-selection-card.custom-trigger {
+    border-style: dashed;
+}
 
 .selected-date-confirm-pill {
-
-
-    margin:
-        20px 0;
-
-
-    padding:
-        14px 25px;
-
-
-    border-radius:
-        50px;
-
-
-    background:
-        #fff0f7;
-
-
-    color:
-        var(--pink-dark);
-
-
-    display:
-        inline-block;
-
-
-
+    font-size: 13px;
+    color: #555555;
+    background: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    display: inline-block;
 }
 
-
-
-
-
-
-
-/* =====================================================
-   TIME GRID
-===================================================== */
-
+.selected-date-confirm-pill strong {
+    color: #111111;
+    margin-left: 4px;
+}
 
 .times-grid {
-
-
-    display:
-        grid;
-
-
-    grid-template-columns:
-        repeat(5, 1fr);
-
-
-    gap:
-        15px;
-
-
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+    gap: 10px;
 }
-
-
-
-
 
 .times-grid button {
-
-
-    padding:
-        14px;
-
-
-    border-radius:
-        18px;
-
-
-    border:
-        1px solid rgba(217, 107, 155, .25);
-
-
-    background:
-        white;
-
-
-    cursor:
-        pointer;
-
-
-    color:
-        var(--text-dark);
-
-
-    transition:
-        .3s;
-
-
-
+    background: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    color: #111111;
+    padding: 12px 6px;
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
-
-
-
-
 
 .times-grid button:hover {
-
-
-    border-color:
-        var(--pink-primary);
-
-
+    border-color: #111111;
 }
 
-
-
-
-.times-grid .selected-time {
-
-
-    background:
-        linear-gradient(135deg,
-            var(--gold),
-            #e9c65b);
-
-
-    color:
-        white;
-
-
-    border:
-        none;
-
-
+.times-grid button.selected-time {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+    font-weight: 600;
 }
 
-
-
-
-
-.disabled-time-slot {
-
-
-    opacity:
-        .35;
-
-
-    cursor:
-        not-allowed !important;
-
-
-
+.times-grid button:disabled {
+    background: #ebebeb;
+    border-color: #d8d8d8;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
+.times-grid button:disabled:hover {
+    border-color: #d8d8d8;
+}
 
-
-
-
-
-
-/* =====================================================
-   POPUP FOOTER
-===================================================== */
-
+/* ---------- Popup footer / actions ---------- */
 
 .popup-footer {
-
-
-    padding:
-        25px 40px;
-
-
-    display:
-        flex;
-
-
-    align-items:
-        center;
-
-
-    gap:
-        20px;
-
-
-    border-top:
-        1px solid rgba(217, 107, 155, .15);
-
-
-
+    padding: 24px 28px;
+    border-top: 1px solid #e2e2e2;
+    display: flex;
+    background: #ffffff;
 }
 
-
-
-.space-between {
-
-
-    justify-content:
-        space-between;
-
-
-
+.popup-footer.space-between {
+    justify-content: space-between;
+    align-items: center;
 }
-
-
-
-
 
 .popup-back-btn {
-
-
-    background:
-        transparent;
-
-
-    border:
-        1px solid var(--pink-primary);
-
-
-    color:
-        var(--pink-dark);
-
-
-    padding:
-        14px 30px;
-
-
-    border-radius:
-        50px;
-
-
-    cursor:
-        pointer;
-
-
-
+    background: transparent;
+    border: 1px solid #111111;
+    color: #111111;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
 
-
-
-
+.popup-back-btn:hover {
+    background: #f5f5f5;
+    color: #111111;
+}
 
 .popup-confirm-btn,
 .confirm-appointment-submit-btn {
-
-
-    background:
-        linear-gradient(135deg,
-            var(--pink-dark),
-            var(--pink-primary));
-
-
-    color:
-        white;
-
-
-    border:
-        none;
-
-
-    padding:
-        14px 35px;
-
-
-    border-radius:
-        50px;
-
-
-    cursor:
-        pointer;
-
-
-
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
-
-
-
-
 
 .popup-confirm-btn:disabled {
-
-
-    opacity:
-        .4;
-
-
-    cursor:
-        not-allowed;
-
-
-
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
-
-
-
-
-
-/* =====================================================
-   CALENDAR MODAL
-===================================================== */
-
-
-.calendar-modal-card {
-
-
-    width:
-        min(500px, 95%);
-
-
-    background:
-        white;
-
-
-    border-radius:
-        35px;
-
-
-    overflow:
-        hidden;
-
-
-    box-shadow:
-        0 30px 70px rgba(0, 0, 0, .25);
-
-
-
+.popup-confirm-btn:not(:disabled):hover,
+.confirm-appointment-submit-btn:not(:disabled):hover {
+    background: #333333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* ---------- Staff selection ---------- */
 
-
-
-
-.calendar-modal-header {
-
-
-    padding:
-        30px;
-
-
-    display:
-        flex;
-
-
-    justify-content:
-        space-between;
-
-
-    align-items:
-        center;
-
-
+.no-availability-message {
+    color: #555555;
+    font-size: 13.5px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 32px 12px;
 }
 
-
-
-
-.calendar-grid-container {
-
-
-    padding:
-        0 30px 30px;
-
-
-
+.premium-staff-modal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 360px;
+    overflow-y: auto;
 }
 
-
-
-
-.calendar-nav {
-
-
-    display:
-        flex;
-
-
-    justify-content:
-        space-between;
-
-
-    align-items:
-        center;
-
-
-    margin-bottom:
-        25px;
-
-
-
+.staff-modal-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    padding: 14px;
+    transition: border-color 0.2s ease;
 }
 
-
-
-
-.cal-nav-arrow {
-
-
-    width:
-        40px;
-
-
-    height:
-        40px;
-
-
-    border-radius:
-        50%;
-
-
-    border:
-        none;
-
-
-    background:
-        var(--pink-soft);
-
-
-    cursor:
-        pointer;
-
-
-
+.staff-modal-card.selected {
+    border-color: #111111;
 }
 
-
-
-.calendar-weekdays,
-.calendar-days-grid {
-
-
-    display:
-        grid;
-
-
-    grid-template-columns:
-        repeat(7, 1fr);
-
-
-    gap:
-        10px;
-
-
+.staff-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #f5f5f5;
 }
 
-
-
-.calendar-weekdays div {
-
-
-    text-align:
-        center;
-
-
-    font-size:
-        12px;
-
-
-    color:
-        var(--pink-dark);
-
-
-
+.staff-meta-details {
+    flex: 1;
+    min-width: 0;
 }
 
-
-
-
-.calendar-day-btn {
-
-
-    aspect-ratio:
-        1;
-
-
-    border-radius:
-        50%;
-
-
-    border:
-        none;
-
-
-    background:
-        #fff0f7;
-
-
-    cursor:
-        pointer;
-
-
-
+.staff-name-profile-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
 }
 
-
-
-
-.calendar-day-btn.selected,
-.calendar-day-btn.today {
-
-
-    background:
-        var(--pink-primary);
-
-
-    color:
-        white;
-
-
-
+.staff-name-profile-row h4 {
+    font-size: 15px;
+    color: #111111;
 }
 
-
-
-.calendar-day-btn.disabled {
-
-
-    opacity:
-        .3;
-
-
-    cursor:
-        not-allowed;
-
-
-
+.staff-profile-btn-inline {
+    background: transparent;
+    border: none;
+    color: #111111;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    text-decoration: underline;
 }
 
-
-
-.calendar-modal-footer {
-
-
-    padding:
-        25px;
-
-
-    text-align:
-        center;
-
-
-
+.staff-specialization {
+    display: block;
+    font-size: 12px;
+    color: #555555;
+    margin-top: 2px;
 }
 
-
-
-.calendar-done-btn {
-
-
-    padding:
-        13px 35px;
-
-
-    border-radius:
-        50px;
-
-
-    border:
-        none;
-
-
-    background:
-        var(--pink-dark);
-
-
-    color:
-        white;
-
-
-    cursor:
-        pointer;
-
-
-
+.staff-rating-badge {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #111111;
 }
 
-/* ===========================================
-   CONFIRMATION MODAL
-=========================================== */
+.rating-count {
+    color: #555555;
+}
+
+.staff-actions-area {
+    flex-shrink: 0;
+}
+
+.staff-select-action-btn {
+    font-family: "Inter", sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #111111;
+    color: #111111;
+    padding: 10px 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.staff-select-action-btn.active {
+    background: #111111;
+    border-color: #111111;
+    color: #ffffff;
+}
+
+/* ---------- Confirmation ---------- */
 
 .luxury-confirmation-grid {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: 30px;
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.confirm-details-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.confirm-form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 12px;
+    border-left: 1px solid #e2e2e2;
+}
+
+.confirm-form-column h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #111111;
+}
+
+.form-column-desc {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 8px;
 }
 
 .confirm-service-summary {
     display: flex;
-    gap: 22px;
-    align-items: flex-start;
+    gap: 16px;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    padding: 16px;
+    border-radius: 8px;
 }
 
 .confirm-service-img {
-    width: 180px;
-    height: 180px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
-    border-radius: 22px;
-    border: 1px solid rgba(236, 72, 153, .15);
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #e2e2e2;
 }
 
 .confirm-service-text h3 {
-    font-size: 1.6rem;
-    color: #5a2342;
-    margin-bottom: 10px;
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 4px;
 }
 
 .confirm-service-text p {
-    color: #666;
-    line-height: 1.7;
+    font-size: 12.5px;
+    color: #555555;
+    margin: 0 0 8px;
+    line-height: 1.4;
 }
 
 .confirm-badge {
     display: inline-block;
-    margin-top: 18px;
-    padding: 8px 18px;
-    border-radius: 30px;
-    background: #ffe8f4;
-    color: #db2777;
+    font-size: 9px;
     font-weight: 600;
-    font-size: .82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #111111;
+    border: 1px solid #111111;
+    padding: 3px 8px;
+    border-radius: 2px;
 }
 
 .confirm-receipt-area {
-    background: #fff8fc;
-    border-radius: 24px;
-    padding: 28px;
-    border: 1px solid rgba(236, 72, 153, .12);
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    padding: 20px;
 }
 
 .confirm-receipt-area h3 {
-    color: #5a2342;
-    margin-bottom: 12px;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    color: #111111;
 }
 
 .receipt-divider {
     height: 1px;
-    background: #f2cade;
+    background: #e2e2e2;
+    margin: 14px 0;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13.5px;
+    padding: 6px 0;
+}
+
+.receipt-label {
+    color: #555555;
+}
+
+.receipt-value {
+    color: #111111;
+    font-weight: 500;
+}
+
+.total-amount-row .receipt-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111111;
+}
+
+.total-amount-row .receipt-value {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #111111;
+    font-weight: 700;
+}
+
+/* ---------- Premium Input Fields ---------- */
+
+.booking-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.booking-input-group label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #111111;
+}
+
+.booking-input-group input,
+.booking-input-group textarea {
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    color: #111111;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    font-family: "Inter", sans-serif;
+    border-radius: 4px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.booking-input-group input::placeholder,
+.booking-input-group textarea::placeholder {
+    color: #cccccc;
+}
+
+.booking-input-group input:focus,
+.booking-input-group textarea:focus {
+    outline: none;
+    border-color: #111111;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.booking-input-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* ---------- Calendar modal ---------- */
+
+.calendar-grid-container {
+    padding: 24px 28px;
+}
+
+.calendar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.cal-nav-arrow {
+    background: transparent;
+    border: 1px solid #e2e2e2;
+    color: #111111;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cal-month-year {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    color: #111111;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 11px;
+    color: #555555;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+}
+
+.calendar-weekdays div {
+    text-align: center;
+    padding: 4px 0;
+}
+
+.calendar-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.calendar-day-btn {
+    aspect-ratio: 1;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #111111;
+    font-size: 13px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.calendar-day-btn:hover:not(.disabled) {
+    border-color: #111111;
+}
+
+.calendar-day-btn.other-month {
+    color: #cccccc;
+}
+
+.calendar-day-btn.disabled {
+    color: #e2e2e2;
+    cursor: not-allowed;
+}
+
+.calendar-day-btn.today {
+    color: #111111;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.calendar-day-btn.selected {
+    background: #111111;
+    color: #ffffff;
+}
+
+.calendar-modal-footer {
+    padding: 16px 28px 24px;
+    border-top: 1px solid #e2e2e2;
+}
+
+.calendar-done-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #111111;
+    color: #111111;
+    padding: 13px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.calendar-done-btn:hover {
+    background: #f5f5f5;
+}
+
+/* ---------- Staff profile modal ---------- */
+
+.profile-modal-content {
+    padding: 8px 28px 24px;
+    text-align: center;
+}
+
+.profile-modal-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    background: #f5f5f5;
+}
+
+.profile-modal-content h4 {
+    font-size: 18px;
+    color: #111111;
+}
+
+.profile-role {
+    display: block;
+    font-size: 12px;
+    color: #555555;
+    letter-spacing: 0.04em;
+    margin: 4px 0 16px;
+}
+
+.profile-bio {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+.profile-meta-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    font-size: 13px;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 16px;
+}
+
+.profile-meta-info strong {
+    color: #111111;
+    font-weight: 600;
+}
+
+/* ---------- Motion ---------- */
+
+.animate-fade-up {
+    animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-fade-up {
+        animation: none;
+    }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+    .service-top-banner {
+        padding: 40px 24px 36px;
+        min-height: 280px;
+    }
+
+    .service-booking-list-section {
+        padding: 16px 16px 64px;
+    }
+
+    .category-tab-bar {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .service-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confirm-service-summary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ---------- Focus visibility ---------- */
+
+.booking-service-page button:focus-visible,
+.datetime-popup-card button:focus-visible,
+.calendar-modal-card button:focus-visible {
+    outline: 2px solid #c9a876;
+    outline-offset: 2px;
+}
+
+/* ---------- Pamper CTA (split text / video section) ---------- */
+
+.pamper-cta-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 750px;
+    background: #070707;
+    margin-top: 0%;
+}
+
+.pamper-cta-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 64px 72px;
+    margin-top: 40px;
+}
+
+.pamper-cta-text h1 {
+    font-size: clamp(62px, 4.5vw, 52px);
+    line-height: 1.45;
+    color: #f5f1ea;
+    text-transform: uppercase;
+}
+
+.pamper-cta-text h2 {
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.45;
+    color: #f5f1ea;
+    text-transform: uppercase;
+}
+
+.pamper-cta-text h2 em {
+    text-transform: none;
+    font-style: italic;
+}
+
+.pamper-cta-text p {
+    max-width: 420px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #9a9388;
+    margin: 0;
+}
+
+.pamper-cta-btn {
+    align-self: flex-start;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f5f1ea;
+    background: transparent;
+    border: 1px solid rgba(245, 241, 234, 0.45);
+    border-radius: 999px;
+    padding: 16px 32px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.pamper-cta-btn:hover {
+    background: #f5f1ea;
+    color: #1a1a1a;
+    border-color: #f5f1ea;
+}
+
+.pamper-cta-media {
+    position: relative;
+    overflow: hidden;
+    background: #0e0e0e;
+}
+
+.pamper-cta-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .pamper-cta-section {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .pamper-cta-text {
+        padding: 56px 28px;
+    }
+
+    .pamper-cta-media {
+        min-height: 320px;
+    }
+}
+
+/* ==========================================
+   SERVICES HERO
+========================================== */
+
+.services-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+
+
+.services-hero-overlay {
+    max-width: 850px;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.hero-subtitle {
+    color: #fbfbfb;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.services-hero h1 {
+    font-size: 68px;
+    font-weight: 700;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.services-hero h1 span {
+    color: #ffffff;
+}
+
+.services-hero p {
+    font-size: 18px;
+    color: #f5f5f5;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-btn {
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    background: #d4af37;
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-4px);
+    background: #e6c14d;
+}
+
+/* ===========================================
+   CONFIRMATION MODAL - LUXURY (EDITED)
+   - Cards now stack VERTICALLY instead of side-by-side
+   - Image overflow bug fixed
+=========================================== */
+
+.luxury-confirmation-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* vertical stack: was minmax(0,1.1fr) minmax(320px,.9fr) */
+    gap: 24px;
+    margin-top: 20px;
+}
+
+/* =========================
+   SERVICE SUMMARY CARD
+========================= */
+
+.confirm-details-column {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.confirm-service-summary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 24px;
+    border: 1px solid rgba(236, 72, 153, .15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .06);
+    min-height: 220px;
+    overflow: hidden;
+    /* clips anything oversized inside the card */
+}
+
+.confirm-service-img {
+    width: 170px !important;
+    height: 170px !important;
+    max-width: 170px !important;
+    max-height: 170px !important;
+    min-width: 170px !important;
+    flex: 0 0 170px !important;
+    /* stops the image from growing to fill the row */
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.confirm-service-text {
+    flex: 1 1 0%;
+    min-width: 0;
+    /* lets text wrap instead of being squeezed to 0 */
+    padding-left: 0;
+}
+
+.confirm-service-text h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: #111111;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.confirm-service-text p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Badge */
+.confirm-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: #ffe4f1;
+    color: #db2777;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================
+   RECEIPT AREA
+========================= */
+
+.confirm-receipt-area {
+    background: #fff5fa;
+    border-radius: 24px;
+    padding: 28px;
+    border: 1px solid rgba(236, 72, 153, .15);
+    height: auto;
+    /* no longer needs to stretch to match a side-by-side row */
+    min-height: unset;
+}
+
+.confirm-receipt-area h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.receipt-divider {
+    height: 1px;
+    background: rgba(236, 72, 153, .2);
     margin: 18px 0;
 }
 
 .receipt-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 14px;
 }
 
 .receipt-label {
-    color: #777;
+    color: #777777;
+    font-size: 14px;
 }
 
 .receipt-value {
-    color: #5a2342;
+    color: #111111;
     font-weight: 600;
 }
 
 .total-amount-row {
-    font-size: 1.15rem;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
+.total-amount-row .receipt-value {
+    color: #ec4899;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.popup-footer {
+    margin-top: 30px;
+    border-radius: 0 0 25px 25px;
+}
+
+.popup-footer.space-between {
+    display: flex;
+    gap: 20px;
+}
+
+/* =========================
+   CONFIRM BUTTON
+========================= */
+
 .confirm-appointment-submit-btn {
+    flex: 1;
+    padding: 15px 30px;
     border: none;
-    cursor: pointer;
-    padding: 14px 34px;
     border-radius: 999px;
+    cursor: pointer;
     background: linear-gradient(135deg, #ec4899, #db2777);
-    color: #fff;
-    font-weight: 600;
+    color: white;
+    font-weight: 700;
     transition: .3s;
 }
 
@@ -2540,6 +2447,70 @@
     box-shadow: 0 18px 35px rgba(236, 72, 153, .25);
 }
 
+.popup-back-btn {
+    min-width: 150px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:900px) {
+
+
+    .luxury-confirmation-grid {
+
+
+        grid-template-columns: 1fr;
+
+
+    }
+
+
+
+    .confirm-service-summary {
+
+
+        flex-direction: column;
+
+
+        text-align: center;
+
+
+    }
+
+
+
+    .confirm-service-img {
+
+
+        width: 100%;
+
+
+        height: 250px;
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px) {
+
+
+    .confirm-service-text h3 {
+
+
+        font-size: 22px;
+
+
+    }
+
+
+}
 
 /* ===========================================
    CALENDAR

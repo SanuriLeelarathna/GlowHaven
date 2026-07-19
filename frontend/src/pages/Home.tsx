@@ -7,7 +7,7 @@ import "./Home.css";
 
 import { useEffect } from "react";
 import AccentBanner from "../components/Accentbanner";
-import Testimonial from "../components/Testimonial";
+
 import WhatToExpect from "../components/expect";
 import ReviewGallery from "../components/ReviewGallery";
 
@@ -49,10 +49,10 @@ export default function Home() {
 
 
       <WhatToExpect />
-      <ReviewGallery />
-      <Services />
 
-      <Testimonial />
+      <Services />
+      <ReviewGallery />
+
 
     </>
   );

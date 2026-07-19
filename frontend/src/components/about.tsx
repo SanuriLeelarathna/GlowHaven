@@ -1,11 +1,27 @@
 import aboutHair from "../assets/ab.jpg";
-import teamPortrait from "../assets/team_portrait.png";
+import teamPortrait from "../assets/abb.png";
 import "./about.css";
 import bgImage from "../assets/hrr.png";
+import topLeftBg from "../assets/top-left.png";
+import bottomRightBg from "../assets/bottom-right.png";
 
 export default function About() {
   return (
     <section className="about-section" id="about">
+
+
+
+      <div
+        className="bg-top-left"
+        style={{ backgroundImage: `url(${topLeftBg})` }}
+      ></div>
+
+      <div
+        className="bg-bottom-right"
+        style={{ backgroundImage: `url(${bottomRightBg})` }}
+      ></div>
+
+
 
       {/* Background Shapes */}
       <div
@@ -32,9 +48,7 @@ export default function About() {
             BEAUTY
             <br />
             & LUXURY
-            <span className="meet">
-              meet
-            </span>
+
           </h1>
 
         </div>
@@ -61,7 +75,7 @@ export default function About() {
       <div className="title-wrapper">
 
         <h2>
-          OUR EXPERTISE
+
         </h2>
 
       </div>
@@ -91,9 +105,6 @@ export default function About() {
             techniques and luxury products.
           </p>
 
-          <a href="#booking">
-            BOOK APPOINTMENT
-          </a>
 
         </div>
 
@@ -135,9 +146,6 @@ export default function About() {
 
         <div className="service-content">
 
-          <h3>
-            Meet Our Experts
-          </h3>
 
           <p>
             Our talented professionals combine

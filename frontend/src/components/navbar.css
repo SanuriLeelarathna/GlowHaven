@@ -1,164 +1,73 @@
 /* =====================================================
-   GLOWHAVEN NAVBAR
-   PREMIUM PINK GLASS STYLE
+   GLOWHAVEN NAVBAR - LUXURY BLACK PINK REDESIGN
 ===================================================== */
 
 
 .navbar-wrapper {
-
   position: fixed;
   top: 0;
   left: 0;
 
   width: 100%;
-
   z-index: 1000;
 
-  padding: 20px;
-
+  transition: var(--transition);
 }
 
 
 
-/* MAIN NAVBAR */
+/* ================= NAVBAR ================= */
 
 .pill-navbar {
 
-
   width: 100%;
-
-  height: 82px;
-
+  height: 90px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
-
-  padding: 30px 50px 35px;
-
-
-  background: transparent, linear-gradient(135deg,
-      #deb7c8,
-      #ffffff);
+  padding: 0 45px;
 
 
-  border-top:
-
-    1px solid rgba(236, 72, 153, .12);
+  background: rgb(0, 0, 0);
 
 
-  border-bottom:
-
-    1px solid rgba(236, 72, 153, .12);
-
-
-  backdrop-filter:
-    blur(18px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 
 
-  -webkit-backdrop-filter:
-    blur(18px);
-
-
-
-  border:
-
-    1px solid rgba(236, 72, 153, 0.15);
-
-
-
-  border-radius:
-
-    50px;
-
+  border-bottom: 1px solid rgba(224, 90, 141, 0.25);
 
 
   box-shadow:
-
-    0 15px 40px rgba(236, 72, 153, 0.12);
-
+    0 10px 40px rgba(0, 0, 0, 0.25);
 
 
-  transition:
-    .4s ease;
-
+  transition: var(--transition-smooth);
 }
 
 
 
-
-
-/* =====================================================
-   LOGO
-===================================================== */
+/* ================= LOGO ================= */
 
 
 .navbar-logo {
 
-
   display: flex;
-
   align-items: center;
-
-  gap: 14px;
-
 
   text-decoration: none;
-
-
 }
-
-
-
-.logo-image {
-
-
-  width: 55px;
-
-  height: 55px;
-
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-
-}
-
-
-
-.logo-image img {
-
-
-  width: 100%;
-
-  height: 100%;
-
-
-  object-fit: contain;
-
-
-}
-
-
 
 
 
 .logo-text {
 
-
   display: flex;
-
   flex-direction: column;
 
-
-  line-height: 1;
-
+  line-height: 1.1;
 
 }
 
@@ -167,22 +76,21 @@
 .logo-text h2 {
 
 
-  font-family:
-    var(--font-serif);
-
+  font-family: var(--font-serif);
 
   font-size: 28px;
 
 
-  color:
-    var(--dark-pink);
+  color: #ffffff;
 
 
   font-weight: 500;
 
 
-  margin: 0;
+  letter-spacing: 2px;
 
+
+  margin: 0;
 
 }
 
@@ -191,21 +99,22 @@
 .logo-text span {
 
 
-  margin-top: 5px;
+  font-family: var(--font-sans);
 
 
-  font-size: 10px;
+  font-size: 9px;
 
 
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 
 
   text-transform: uppercase;
 
 
-  color:
-    var(--text-gray);
+  color: rgba(255, 255, 255, .65);
 
+
+  margin-top: 5px;
 
 }
 
@@ -213,10 +122,7 @@
 
 
 
-
-/* =====================================================
-   CENTER LINKS
-===================================================== */
+/* ================= NAV LINKS ================= */
 
 
 .navbar-center {
@@ -226,8 +132,7 @@
 
   align-items: center;
 
-  gap: 38px;
-
+  gap: 35px;
 
 }
 
@@ -242,17 +147,19 @@
   text-decoration: none;
 
 
-  font-size: 13px;
+  font-family: var(--font-sans);
 
 
-  letter-spacing: 1.8px;
+  font-size: 11px;
+
+
+  letter-spacing: 2px;
 
 
   text-transform: uppercase;
 
 
-  color:
-    var(--text-dark);
+  color: #ffffff;
 
 
   font-weight: 500;
@@ -260,9 +167,7 @@
 
   transition: .3s ease;
 
-
 }
-
 
 
 
@@ -282,8 +187,7 @@
   bottom: -8px;
 
 
-  transform:
-    translateX(-50%);
+  transform: translateX(-50%);
 
 
   width: 0;
@@ -292,8 +196,7 @@
   height: 2px;
 
 
-  background:
-    var(--primary-pink);
+  background: #e05a8d;
 
 
   transition: .3s ease;
@@ -307,8 +210,7 @@
 .navbar-center a.active {
 
 
-  color:
-    var(--primary-pink);
+  color: #e05a8d;
 
 
 }
@@ -328,10 +230,7 @@
 
 
 
-
-/* =====================================================
-   BOOK BUTTON
-===================================================== */
+/* ================= BOOK BUTTON ================= */
 
 
 .book-now-link {
@@ -339,43 +238,53 @@
 
   display: flex;
 
-
   align-items: center;
 
-
-  gap: 8px;
-
-
-  padding: 13px 25px;
+  justify-content: center;
 
 
-  border-radius: 100px;
+  padding: 13px 30px;
+
+
+  border-radius: 30px;
+
 
 
   background:
 
     linear-gradient(135deg,
-      #672546,
-      #DB2777);
+      #e05a8d,
+      #b83e71);
 
 
-  color: white !important;
+
+  color: #ffffff !important;
 
 
-  font-weight: 600 !important;
+
+  font-weight: 700 !important;
+
+
+  font-size: 11px !important;
+
+
+  letter-spacing: 1.5px;
+
 
 
   box-shadow:
 
-    0 10px 25px rgba(219, 39, 119, .25);
+    0 10px 30px rgba(224, 90, 141, .25);
 
+
+
+  transition: .3s ease !important;
 
 }
 
 
 
 .book-now-link::after {
-
 
   display: none;
 
@@ -386,14 +295,12 @@
 .book-now-link:hover {
 
 
-  transform:
-
-    translateY(-3px);
+  transform: translateY(-4px);
 
 
   box-shadow:
 
-    0 15px 35px rgba(219, 39, 119, .4);
+    0 15px 40px rgba(224, 90, 141, .45);
 
 
 }
@@ -403,10 +310,7 @@
 
 
 
-
-/* =====================================================
- RIGHT SECTION
-===================================================== */
+/* ================= RIGHT AREA ================= */
 
 
 .navbar-right {
@@ -416,18 +320,16 @@
 
   align-items: center;
 
-  gap: 20px;
-
+  gap: 18px;
 
 }
-
 
 
 
 .nav-right-link {
 
 
-  font-size: 13px;
+  font-size: 11px;
 
 
   letter-spacing: 1.5px;
@@ -436,9 +338,10 @@
   text-transform: uppercase;
 
 
-  color:
-    var(--text-dark);
+  color: #ffffff;
 
+
+  transition: .3s;
 
 }
 
@@ -447,8 +350,7 @@
 .nav-right-link:hover {
 
 
-  color:
-    var(--primary-pink);
+  color: #e05a8d;
 
 
 }
@@ -457,30 +359,38 @@
 
 
 
+
+
+/* ================= LOGIN ================= */
+
+
 .login-btn {
 
 
-  padding:
-
-    12px 25px;
+  padding: 11px 26px;
 
 
-  border-radius:
+  border-radius: 30px;
 
-    100px;
 
 
   background:
 
-    var(--light-pink);
+    rgba(255, 255, 255, .08);
 
 
-  color:
 
-    var(--dark-pink);
+  color: #ffffff;
 
 
-  font-size: 13px;
+
+  border:
+
+    1px solid rgba(224, 90, 141, .35);
+
+
+
+  font-size: 11px;
 
 
   font-weight: 600;
@@ -489,19 +399,21 @@
   letter-spacing: 1.5px;
 
 
+
+  transition: .3s;
+
 }
+
 
 
 
 .login-btn:hover {
 
 
-  background:
-
-    var(--dark-pink);
+  background: #e05a8d;
 
 
-  color: white;
+  color: #ffffff;
 
 
 }
@@ -511,9 +423,7 @@
 
 
 
-/* =====================================================
- USER AREA
-===================================================== */
+/* ================= USER AREA ================= */
 
 
 .nav-user-section {
@@ -521,13 +431,15 @@
 
   display: flex;
 
+
   align-items: center;
 
 
-  gap: 15px;
+  gap: 12px;
 
 
 }
+
 
 
 
@@ -541,49 +453,39 @@
   align-items: center;
 
 
-  gap: 7px;
 
+  padding: 9px 18px;
 
-  padding: 10px 15px;
 
 
   background:
 
-    var(--soft-pink);
+
+    rgba(224, 90, 141, .12);
 
 
-  border-radius:
 
-    100px;
-
-
-  color:
-
-    var(--dark-pink);
+  border-radius: 30px;
 
 
-  font-size: 12px;
+
+  color: #e05a8d;
+
+
+
+  font-size: 11px;
 
 
   font-weight: 600;
 
 
-}
 
+  border:
 
-
-
-.nav-user-name-link:hover,
-.nav-admin-link:hover {
-
-
-  background:
-
-    var(--light-pink);
+    1px solid rgba(224, 90, 141, .25);
 
 
 }
-
 
 
 
@@ -592,13 +494,7 @@
 .nav-logout-button {
 
 
-  display: flex;
-
-
-  align-items: center;
-
-
-  gap: 7px;
+  background: none;
 
 
   border: none;
@@ -607,20 +503,16 @@
   cursor: pointer;
 
 
-  background:
 
-    transparent;
-
-
-  color:
-
-    var(--text-gray);
+  color: rgba(255, 255, 255, .7);
 
 
-  font-size: 12px;
+
+  font-size: 11px;
 
 
-  font-weight: 600;
+
+  transition: .3s;
 
 
 }
@@ -630,9 +522,7 @@
 .nav-logout-button:hover {
 
 
-  color:
-
-    var(--dark-pink);
+  color: #e05a8d;
 
 
 }
@@ -641,12 +531,7 @@
 
 
 
-
-
-
-/* =====================================================
- MOBILE BUTTON
-===================================================== */
+/* ================= MOBILE ================= */
 
 
 .mobile-toggle {
@@ -655,32 +540,35 @@
   display: none;
 
 
+
+  width: 44px;
+
+
+  height: 44px;
+
+
+
   border: none;
 
 
-  background:
-
-    var(--soft-pink);
-
-
-  color:
-
-    var(--dark-pink);
-
-
-  width: 45px;
-
-
-  height: 45px;
-
 
   border-radius: 50%;
+
+
+
+  background: #e05a8d;
+
+
+
+  color: #ffffff;
+
 
 
   align-items: center;
 
 
   justify-content: center;
+
 
 
   cursor: pointer;
@@ -694,48 +582,17 @@
 
 
 
-
-/* =====================================================
- RESPONSIVE
-===================================================== */
+/* ================= RESPONSIVE ================= */
 
 
-@media(max-width:1100px) {
-
-
-  .navbar-center {
-
-
-    gap: 22px;
-
-
-  }
-
-
-
-  .pill-navbar {
-
-
-    padding: 0 20px;
-
-
-  }
-
-
-
-}
-
-
-
-
-@media(max-width:900px) {
+@media(max-width:992px) {
 
 
 
   .navbar-wrapper {
 
 
-    padding: 15px;
+    padding: 15px 20px;
 
 
   }
@@ -749,7 +606,10 @@
     height: 75px;
 
 
-    border-radius: 22px;
+    border-radius: 40px;
+
+
+    padding: 0 25px;
 
 
   }
@@ -772,46 +632,63 @@
     position: absolute;
 
 
+
     top: 90px;
 
 
-    left: 15px;
+    left: 20px;
 
 
-    right: 15px;
+    right: 20px;
 
 
 
     flex-direction: column;
 
 
-    background: white;
+
+    background:
+
+
+      rgba(15, 15, 15, .95);
+
+
+
+    backdrop-filter: blur(30px);
+
 
 
     padding: 30px;
 
 
+
     border-radius: 25px;
 
 
-    box-shadow:
 
-      0 20px 50px rgba(0, 0, 0, .12);
+    border:
+
+      1px solid rgba(224, 90, 141, .25);
+
+
+
+    gap: 20px;
+
 
 
     opacity: 0;
 
 
+
     pointer-events: none;
 
 
-    transform: translateY(-20px);
 
-
-    transition: .35s ease;
+    transform: translateY(-10px);
 
 
   }
+
 
 
 
@@ -831,6 +708,25 @@
 
 
 
+
+  .navbar-center a {
+
+
+    color: white;
+
+
+    text-align: center;
+
+
+    padding: 10px;
+
+
+  }
+
+
+
+
+
   .navbar-right {
 
 
@@ -840,6 +736,9 @@
   }
 
 
+
+
+
   .logo-text h2 {
 
 
@@ -847,6 +746,7 @@
 
 
   }
+
 
 
 }

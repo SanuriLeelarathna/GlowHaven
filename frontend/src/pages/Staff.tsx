@@ -478,6 +478,7 @@ export default function BookingSchedule() {
           </div>
         </section>
 
+
         {/* Owner Showcase Section */}
         <section className="owner-section">
           <div className="owner-container">

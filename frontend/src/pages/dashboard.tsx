@@ -1575,13 +1575,7 @@ export default function Dashboard() {
                         >
                           View
                         </button>
-                        <button
-                          type="button"
-                          className="luxury-action-btn edit-btn"
-                          onClick={() => handleOpenEditModal(app)}
-                        >
-                          Edit
-                        </button>
+
                         {appointmentStatus === "pending" && (
                           <button
                             type="button"
@@ -1609,13 +1603,7 @@ export default function Dashboard() {
                             Cancel
                           </button>
                         )}
-                        <button
-                          type="button"
-                          className="luxury-action-btn delete-btn danger-btn"
-                          onClick={() => handleDeleteAppointment(app._id)}
-                        >
-                          Delete
-                        </button>
+
                       </span>
                     </div>
                   );

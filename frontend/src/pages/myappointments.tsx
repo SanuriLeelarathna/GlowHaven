@@ -56,7 +56,7 @@ export default function MyAppointments() {
       try {
         setLoading(true);
         const res = await API.get("/appointments");
-        
+
         // Filter appointments that belong to this logged in customer
         const allAppointments: Appointment[] = res.data.appointments || [];
         const userApps = allAppointments.filter((app) => {
@@ -83,12 +83,12 @@ export default function MyAppointments() {
     try {
       // Backend put status route: router.put("/:id/status", updateAppointmentStatus)
       await API.put(`/appointments/${id}/status`, { status: "cancelled" });
-      
+
       // Update state
       setAppointments((prev) =>
         prev.map((app) => (app._id === id ? { ...app, status: "cancelled" } : app))
       );
-      
+
       alert("Appointment cancelled successfully.");
     } catch (error) {
       console.error("Failed to cancel appointment", error);
@@ -127,7 +127,7 @@ export default function MyAppointments() {
       <Navbar />
       <div className="my-appointments-page animate-fade-up">
         <div className="appointments-container">
-          
+
           {/* Header Profile Area */}
           <div className="profile-header-card">
             <span className="profile-subtitle">CLIENT MEMBER CONCIERGE</span>
@@ -188,7 +188,7 @@ export default function MyAppointments() {
             <div className="appointments-list-grid">
               {filteredApps.map((app) => (
                 <div key={app._id} className="appointment-item-card">
-                  
+
                   {/* Status Indicator */}
                   <div className="appointment-card-header">
                     <span className={`status-badge ${(app.status === "pending" || app.status === "confirmed") ? "upcoming" : app.status.toLowerCase()}`}>
@@ -200,7 +200,7 @@ export default function MyAppointments() {
                   {/* Body details */}
                   <div className="appointment-card-body">
                     <h4>{app.serviceId?.name || "Premium Hair Service"}</h4>
-                    
+
                     <div className="app-detail-row">
                       <span className="detail-icon">👤</span>
                       <span>Stylist: <strong>{app.staffId?.name}</strong></span>

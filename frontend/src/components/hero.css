@@ -1,541 +1,275 @@
-/* =====================================
-   LUXE SALON HERO SECTION
-===================================== */
-
+/* =====================================================
+   GLOW HAVEN HERO SECTION
+===================================================== */
 
 .hero-section {
-
-    min-height: 100vh;
-
-    padding-top: 100px;
-
-    background:
-        linear-gradient(135deg,
-            #fff8fb 0%,
-            #ffffff 100%);
-
-    overflow: hidden;
-
-    display: flex;
-
-    align-items: center;
-
+  width: 100%;
+  height: 100vh;
+  padding-top: 90px;
+  background: linear-gradient(135deg,
+      #d9c8c8 0%,
+      #a19399ca 45%,
+      #9e7783 100%);
+  overflow: hidden;
 }
-
-
-
-/* MAIN CONTAINER */
 
 .hero-container {
+  width: 100%;
+  height: calc(100vh - 90px);
 
-    width: 100%;
-
-    max-width: 1400px;
-
-    margin: auto;
-
-    padding: 40px 80px;
-
-
-    display: grid;
-
-    grid-template-columns:
-        0.9fr 1.1fr;
-
-
-    align-items: center;
-
-    gap: 50px;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-
-
-/* =====================================
- LEFT CONTENT
-===================================== */
-
+/* =====================================================
+   LEFT SIDE
+===================================================== */
 
 .hero-content {
+  width: 100%;
+  height: 100%;
 
-    animation:
-        fadeUp .9s ease forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  text-align: center;
+
+  padding: 0 60px;
+  box-sizing: border-box;
 }
 
+.hero-label,
+.hero-title,
+.hero-description,
+.hero-sub-description,
+.hero-actions {
+  max-width: 550px;
+  width: 100%;
+}
 
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.hero-label {
+
+  margin-bottom: 22px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #431026;
+}
 
 .hero-title {
-
-
-    margin: 0 0 30px;
-
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-
-    font-size:
-        clamp(3rem, 5vw, 5rem);
-
-
-    line-height: 1.15;
-
-
-    letter-spacing: 1px;
-
-
-    color: #1F2937;
-
-
+  font-size: clamp(3.4rem, 6vw, 5.6rem);
+  line-height: 1.05;
+  font-weight: 300;
+  color: #2d1f24;
+  margin-bottom: 28px;
 }
-
-
 
 .hero-title span {
-
-
-    font-style: italic;
-
-
-    color: #EC4899;
-
-
-    font-weight: 400;
-
-
+  color: #d45689;
+  font-style: italic;
+  font-weight: 300;
 }
-
-
 
 .hero-description {
+  max-width: 500px;
 
+  font-size: 1.05rem;
+  line-height: 1.9;
 
-    max-width: 500px;
+  color: #555;
 
-
-    font-family:
-        "Poppins",
-        sans-serif;
-
-
-    font-size: 1.05rem;
-
-
-    line-height: 1.8;
-
-
-    color: #4B5563;
-
-
-    margin-bottom: 20px;
-
-
+  margin-bottom: 18px;
 }
-
-
 
 .hero-sub-description {
+  max-width: 470px;
 
+  font-size: .95rem;
+  line-height: 1.8;
 
-    max-width: 450px;
+  color: #777;
 
-
-    font-family:
-        "Poppins",
-        sans-serif;
-
-
-    font-size: .95rem;
-
-
-    line-height: 1.8;
-
-
-    color: #9CA3AF;
-
-
-    margin-bottom: 40px;
-
-
+  margin-bottom: 45px;
 }
 
-
-
-/* =====================================
- BUTTON
-===================================== */
-
+.hero-actions {
+  display: flex;
+  align-items: center;
+}
 
 .hero-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
+  padding: 16px 42px;
 
-    display: inline-flex;
+  text-decoration: none;
 
+  border-radius: 50px;
 
-    align-items: center;
+  background: linear-gradient(135deg,
+      #47182c,
+      #c74678);
 
+  color: white;
 
-    justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 
+  transition: .35s ease;
 
-    padding: 15px 38px;
-
-
-    border-radius: 50px;
-
-
-    background:
-        linear-gradient(135deg,
-            #EC4899,
-            #DB2777);
-
-
-    color: white;
-
-
-    text-decoration: none;
-
-
-    text-transform: uppercase;
-
-
-    letter-spacing: 2px;
-
-
-    font-size: 13px;
-
-
-    font-weight: 600;
-
-
-    box-shadow:
-
-        0 15px 30px rgba(236, 72, 153, .25);
-
-
-    transition: .4s ease;
-
-
+  box-shadow:
+    0 15px 35px rgba(199, 70, 120, .25);
 }
-
-
 
 .hero-button:hover {
 
+  transform: translateY(-5px);
 
-    transform:
-        translateY(-5px);
-
-
-    box-shadow:
-
-        0 20px 40px rgba(236, 72, 153, .35);
-
+  box-shadow:
+    0 22px 45px rgba(199, 70, 120, .35);
 
 }
 
-
-
-/* =====================================
- IMAGE SIDE
-===================================== */
-
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
 
 .hero-image-wrapper {
 
+  width: 100%;
+  height: 100%;
 
-    display: flex;
-
-
-    justify-content: center;
-
-
-    animation:
-        fadeRight 1s ease forwards;
-
+  overflow: hidden;
 
 }
 
+.hero-image {
 
+  width: 100%;
+  height: 100%;
 
-.image-frame {
+  object-fit: cover;
+  object-position: center;
 
-
-    width: 100%;
-
-
-    max-width: 600px;
-
-
-    height: 720px;
-
-
-    overflow: hidden;
-
-
-    border-radius:
-
-        220px 220px 30px 30px;
-
-
-    position: relative;
-
-
-    box-shadow:
-
-        0 30px 60px rgba(0, 0, 0, .12);
-
+  display: block;
 
 }
 
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
+@media (max-width:1024px) {
 
+  .hero-section {
 
-.image-frame::after {
+    height: auto;
+    padding-top: 80px;
 
+  }
 
-    content: "";
+  .hero-container {
 
+    grid-template-columns: 1fr;
+    height: auto;
 
-    position: absolute;
+  }
 
+  .hero-content {
 
-    inset: 0;
+    order: 2;
 
+    padding: 60px 35px;
 
-    background:
+    text-align: center;
+    align-items: center;
 
-        linear-gradient(180deg,
+  }
 
-            transparent 60%,
+  .hero-description,
+  .hero-sub-description {
 
-            rgba(0, 0, 0, .15));
+    max-width: 650px;
 
+  }
 
-}
+  .hero-image-wrapper {
 
+    order: 1;
 
+    height: 60vh;
 
-
-.image-frame img {
-
-
-    width: 100%;
-
-
-    height: 100%;
-
-
-    object-fit: cover;
-
-
-    transition:
-        transform .8s ease;
-
-
-}
-
-
-
-.image-frame:hover img {
-
-
-    transform:
-        scale(1.08);
-
+  }
 
 }
 
+@media (max-width:768px) {
 
+  .hero-content {
 
+    padding: 50px 25px;
 
-/* =====================================
- ANIMATIONS
-===================================== */
+  }
 
+  .hero-title {
 
-@keyframes fadeUp {
+    font-size: 3rem;
 
+  }
 
-    from {
+  .hero-image-wrapper {
 
-        opacity: 0;
+    height: 50vh;
 
-        transform:
-            translateY(40px);
+  }
 
-    }
+  .hero-button {
 
+    padding: 14px 34px;
 
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-
-    }
-
+  }
 
 }
 
+@media (max-width:480px) {
 
+  .hero-title {
 
-@keyframes fadeRight {
+    font-size: 2.5rem;
 
+  }
 
-    from {
+  .hero-description {
 
-        opacity: 0;
+    font-size: 15px;
 
-        transform:
-            translateX(50px);
+  }
 
-    }
+  .hero-sub-description {
 
+    font-size: 14px;
 
-    to {
+  }
 
-        opacity: 1;
+  .hero-image-wrapper {
 
-        transform:
-            translateX(0);
+    height: 42vh;
 
-    }
-
-
-}
-
-
-
-
-/* =====================================
- TABLET
-===================================== */
-
-
-@media(max-width:1000px) {
-
-
-    .hero-container {
-
-
-        grid-template-columns: 1fr;
-
-
-        padding: 50px 30px;
-
-
-        text-align: center;
-
-
-    }
-
-
-
-    .hero-content {
-
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-
-    }
-
-
-
-    .hero-description,
-    .hero-sub-description {
-
-
-        max-width: 90%;
-
-
-    }
-
-
-
-    .image-frame {
-
-
-        height: 600px;
-
-
-    }
-
-
-
-}
-
-
-
-
-/* =====================================
- MOBILE
-===================================== */
-
-
-@media(max-width:600px) {
-
-
-    .hero-section {
-
-
-        padding-top: 90px;
-
-
-    }
-
-
-
-    .hero-container {
-
-
-        padding: 30px 20px;
-
-
-    }
-
-
-
-    .hero-title {
-
-
-        font-size: 2.8rem;
-
-
-    }
-
-
-
-    .image-frame {
-
-
-        height: 450px;
-
-
-        border-radius:
-
-            150px 150px 25px 25px;
-
-
-    }
-
-
-
-    .hero-button {
-
-
-        padding: 13px 30px;
-
-
-    }
-
-
+  }
 
 }
