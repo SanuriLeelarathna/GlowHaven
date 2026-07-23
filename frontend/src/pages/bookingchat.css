@@ -1016,3 +1016,71 @@
     padding: 12px 14px;
   }
 }
+
+@media (max-width: 480px) {
+  .booking-chat-page {
+    padding: 100px 3% 20px;
+  }
+
+  .chat-container-card {
+    height: calc(100vh - 120px);
+    min-height: 520px;
+    border-radius: 16px;
+  }
+
+  .chat-header {
+    padding: 14px 16px;
+  }
+
+  .aria-avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .aria-text h3 {
+    font-size: 16px;
+  }
+
+  .back-to-booking-btn {
+    padding: 6px 12px;
+    font-size: 9px;
+  }
+
+  .chat-messages-area {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .chat-bubble-row {
+    max-width: 95%;
+  }
+
+  .msg-bubble {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .quick-replies-area {
+    padding: 12px 15px;
+  }
+
+  .chat-input-bar {
+    padding: 12px 15px;
+    gap: 10px;
+  }
+
+  .chat-input-bar input {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .chat-input-bar button {
+    padding: 9px 16px;
+    font-size: 11px;
+  }
+
+  .customer-select-list {
+    max-height: 280px;
+  }
+}

@@ -1163,47 +1163,148 @@ select {
   cursor: pointer;
 }
 
-/* =========================================
- RESPONSIVE DESIGN
-========================================= */
-@media (max-width: 1200px) {
-
-  .appointment-table-row,
-  .service-table-row,
-  .category-table-row {
-    display: block;
-  }
-
-  .table-row {
-    margin: 15px;
-    border-radius: 18px;
-    background: var(--pink-surface-row);
-  }
-
-  .table-head {
-    display: none;
-  }
-
-  .table-actions {
-    margin-top: 15px;
-  }
+/* ======================================= Scroll container wrapper */
+.admin-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(141, 41, 74, 0.12);
+  border: 1px solid var(--pink-border-soft);
+  background: white;
+  margin-top: 25px;
 }
 
-@media (max-width: 900px) {
-  .admin-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+.admin-table-container .admin-table {
+  border: none;
+  box-shadow: none;
+  margin-top: 0;
+  width: 100%;
+}
+
+/* Sidebar toggle button (hidden on desktop) */
+.sidebar-toggle-btn {
+  display: none;
+  background: var(--pink-surface);
+  border: 1px solid var(--pink-border-soft);
+  color: var(--pink-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.sidebar-toggle-btn:hover {
+  background: var(--pink-badge-bg);
+  color: var(--pink-dark);
+}
+
+.sidebar-mobile-header {
+  display: none;
+}
+
+/* Sidebar overlay backdrop */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =========================================
+ RESPONSIVE DESIGN
+ ========================================= */
+@media (max-width: 1024px) {
+  .admin-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1000;
   }
 
-  .admin-header h1 {
-    font-size: 28px;
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-mobile-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-close-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .sidebar-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .sidebar-toggle-btn {
+    display: flex;
+  }
+
+  .admin-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 24px;
+  }
+
+  .admin-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .admin-table-container .admin-table {
+    min-width: 900px; /* Force minimum table width on smaller screens to trigger clean scrolling */
   }
 }
 
 @media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .welcome-tag {
+    align-self: stretch;
+    text-align: center;
+    padding: 10px;
+    background: var(--pink-surface);
+    border-radius: 12px;
+  }
+
   .admin-main {
-    padding: 20px;
+    padding: 15px;
   }
 
   .admin-form {
@@ -1220,6 +1321,8 @@ select {
 
   .appointment-controls-bar {
     flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
   }
 
   .control-group {
@@ -1228,10 +1331,16 @@ select {
 
   .working-row {
     flex-direction: column;
+    gap: 10px;
   }
 
   .modal-footer {
     justify-content: center;
+    gap: 10px;
+  }
+  
+  .table-row {
+    padding: 14px;
   }
 }
 

@@ -249,7 +249,60 @@ export default function Navbar() {
 
           }
 
+          {/* Mobile Auth Section */}
+          <div className="mobile-auth-links">
+            {!token ? (
+              <>
+                <Link
+                  to="/signup"
+                  onClick={closeMenu}
+                  className="nav-right-link"
+                >
+                  Sign Up
+                </Link>
+                <Link
+                  to="/login"
+                  onClick={closeMenu}
+                  className="login-btn"
+                >
+                  Login
+                </Link>
+              </>
+            ) : (
+              <div className="nav-user-section-mobile">
+                <Link
+                  to="/account"
+                  onClick={closeMenu}
+                  className="nav-user-name-link"
+                >
+                  <User size={16} />
+                  Hi, {userName}
+                </Link>
 
+                {userRole === "admin" && (
+                  <Link
+                    to="/dashboard"
+                    onClick={closeMenu}
+                    className="nav-admin-link"
+                  >
+                    <LayoutDashboard size={16} />
+                    Dashboard
+                  </Link>
+                )}
+
+                <button
+                  className="nav-logout-button"
+                  onClick={() => {
+                    handleLogout();
+                    closeMenu();
+                  }}
+                >
+                  <LogOut size={16} />
+                  Logout
+                </button>
+              </div>
+            )}
+          </div>
 
         </div>
 

@@ -39,7 +39,9 @@
 
 .service-top-banner {
   position: relative;
-  min-height: 800px;
+  min-height: 600px;
+  max-height: 800px;
+  height: 70vh;
   display: flex;
   align-items: flex-end;
   padding: 64px 64px 56px;
@@ -89,7 +91,7 @@
 }
 
 .service-top-content h1 {
-  font-size: clamp(80px, 8vw, px);
+  font-size: clamp(40px, 8vw, 80px);
   line-height: 1.25;
   color: #f5f1ea;
 }

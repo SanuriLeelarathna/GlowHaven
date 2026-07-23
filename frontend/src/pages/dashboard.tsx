@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api/axios";
+import { Menu, X } from "lucide-react";
 
 import "./dashboard.css";
 
@@ -159,6 +160,12 @@ export default function Dashboard() {
   const userName = localStorage.getItem("userName");
 
   const [activeTab, setActiveTab] = useState<ActiveTab>("overview");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const selectTab = (tab: ActiveTab) => {
+    setActiveTab(tab);
+    setSidebarOpen(false);
+  };
 
   const [categories, setCategories] = useState<Category[]>([]);
   const [services, setServices] = useState<Service[]>([]);
@@ -825,13 +832,27 @@ export default function Dashboard() {
     });
 
   return (
-    <div className="admin-page">
+    <div className={`admin-page ${sidebarOpen ? "sidebar-open" : ""}`}>
+      {sidebarOpen && (
+        <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)}></div>
+      )}
 
-      <aside className="admin-sidebar">
+      <aside className={`admin-sidebar ${sidebarOpen ? "open" : ""}`}>
+        <div className="sidebar-mobile-header">
+          <button 
+            type="button" 
+            className="sidebar-close-btn"
+            onClick={() => setSidebarOpen(false)}
+            aria-label="Close Sidebar"
+          >
+            <X size={20} />
+          </button>
+        </div>
+
         <div
           className="admin-brand"
           style={{ cursor: "pointer" }}
-          onClick={() => navigate("/")}
+          onClick={() => { navigate("/"); setSidebarOpen(false); }}
           title="View Website Homepage"
         >
           <h2>GlowHaven.</h2>
@@ -840,42 +861,42 @@ export default function Dashboard() {
 
         <button
           className={activeTab === "overview" ? "active" : ""}
-          onClick={() => setActiveTab("overview")}
+          onClick={() => selectTab("overview")}
         >
           Overview
         </button>
 
         <button
           className={activeTab === "categories" ? "active" : ""}
-          onClick={() => setActiveTab("categories")}
+          onClick={() => selectTab("categories")}
         >
           Manage Categories
         </button>
 
         <button
           className={activeTab === "services" ? "active" : ""}
-          onClick={() => setActiveTab("services")}
+          onClick={() => selectTab("services")}
         >
           Manage Services
         </button>
 
         <button
           className={activeTab === "staff" ? "active" : ""}
-          onClick={() => setActiveTab("staff")}
+          onClick={() => selectTab("staff")}
         >
           Manage Staff
         </button>
 
         <button
           className={activeTab === "appointments" ? "active" : ""}
-          onClick={() => setActiveTab("appointments")}
+          onClick={() => selectTab("appointments")}
         >
           Appointments
         </button>
 
         <button
           className={activeTab === "reviews" ? "active" : ""}
-          onClick={() => setActiveTab("reviews")}
+          onClick={() => selectTab("reviews")}
         >
           Manage Reviews
         </button>
@@ -883,6 +904,7 @@ export default function Dashboard() {
           className="logout-btn"
           onClick={() => {
             localStorage.clear();
+            setSidebarOpen(false);
             navigate("/login");
           }}
         >
@@ -892,12 +914,21 @@ export default function Dashboard() {
 
       <main className="admin-main">
         <div className="admin-header">
-          <div>
+          <button
+            type="button"
+            className="sidebar-toggle-btn"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            aria-label="Toggle Sidebar Menu"
+          >
+            {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          <div className="header-title-section">
             <span className="admin-subtitle">Salon Management</span>
             <h1>Admin Dashboard</h1>
           </div>
 
-          <p>Welcome, {userName || "Admin"}</p>
+          <p className="welcome-tag">Welcome, {userName || "Admin"}</p>
         </div>
 
         {message && <div className="admin-message">{message}</div>}
@@ -980,47 +1011,49 @@ export default function Dashboard() {
               </div>
             </form>
 
-            <div className="admin-table">
-              <div className="table-row table-head category-table-row">
-                <span>Name</span>
-                <span>Description</span>
-                <span>Services</span>
-                <span>Actions</span>
-              </div>
-
-              {categories.length === 0 ? (
-                <div style={{ padding: "40px", textAlign: "center", color: "rgba(39, 53, 35, 0.6)" }}>
-                  No categories yet. Add one above to start grouping your services.
+            <div className="admin-table-container">
+              <div className="admin-table">
+                <div className="table-row table-head category-table-row">
+                  <span>Name</span>
+                  <span>Description</span>
+                  <span>Services</span>
+                  <span>Actions</span>
                 </div>
-              ) : (
-                categories.map((category) => {
-                  const serviceCount = services.filter(
-                    (service) => getServiceCategoryId(service) === category._id
-                  ).length;
 
-                  return (
-                    <div className="table-row category-table-row" key={category._id}>
-                      <span>{category.name}</span>
-                      <span>{category.description || "—"}</span>
-                      <span>{serviceCount}</span>
+                {categories.length === 0 ? (
+                  <div style={{ padding: "40px", textAlign: "center", color: "rgba(39, 53, 35, 0.6)" }}>
+                    No categories yet. Add one above to start grouping your services.
+                  </div>
+                ) : (
+                  categories.map((category) => {
+                    const serviceCount = services.filter(
+                      (service) => getServiceCategoryId(service) === category._id
+                    ).length;
 
-                      <span className="table-actions">
-                        <button type="button" onClick={() => editCategory(category)}>
-                          Edit
-                        </button>
+                    return (
+                      <div className="table-row category-table-row" key={category._id}>
+                        <span>{category.name}</span>
+                        <span>{category.description || "—"}</span>
+                        <span>{serviceCount}</span>
 
-                        <button
-                          type="button"
-                          className="danger"
-                          onClick={() => deleteCategory(category._id)}
-                        >
-                          Delete
-                        </button>
-                      </span>
-                    </div>
-                  );
-                })
-              )}
+                        <span className="table-actions">
+                          <button type="button" onClick={() => editCategory(category)}>
+                            Edit
+                          </button>
+
+                          <button
+                            type="button"
+                            className="danger"
+                            onClick={() => deleteCategory(category._id)}
+                          >
+                            Delete
+                          </button>
+                        </span>
+                      </div>
+                    );
+                  })
+                )}
+              </div>
             </div>
           </section>
         )}
@@ -1151,50 +1184,52 @@ export default function Dashboard() {
                     No services in this category yet.
                   </div>
                 ) : (
-                  <div className="admin-table">
-                    <div className="table-row table-head service-table-row">
-                      <span>Image</span>
-                      <span>Name</span>
-                      <span>Category</span>
-                      <span>Price</span>
-                      <span>Duration</span>
-                      <span>Actions</span>
-                    </div>
-
-                    {group.services.map((service) => (
-                      <div className="table-row service-table-row" key={service._id}>
-                        <span>
-                          {service.image ? (
-                            <img
-                              src={service.image}
-                              alt={service.name}
-                              className="table-image"
-                            />
-                          ) : (
-                            <div className="table-image empty-image">No Image</div>
-                          )}
-                        </span>
-
-                        <span>{service.name}</span>
-                        <span>{getCategoryName(service.category, categories)}</span>
-                        <span>Rs. {service.price}</span>
-                        <span>{service.duration} min</span>
-
-                        <span className="table-actions">
-                          <button type="button" onClick={() => editService(service)}>
-                            Edit
-                          </button>
-
-                          <button
-                            type="button"
-                            className="danger"
-                            onClick={() => deleteService(service._id)}
-                          >
-                            Delete
-                          </button>
-                        </span>
+                  <div className="admin-table-container">
+                    <div className="admin-table">
+                      <div className="table-row table-head service-table-row">
+                        <span>Image</span>
+                        <span>Name</span>
+                        <span>Category</span>
+                        <span>Price</span>
+                        <span>Duration</span>
+                        <span>Actions</span>
                       </div>
-                    ))}
+
+                      {group.services.map((service) => (
+                        <div className="table-row service-table-row" key={service._id}>
+                          <span>
+                            {service.image ? (
+                              <img
+                                src={service.image}
+                                alt={service.name}
+                                className="table-image"
+                              />
+                            ) : (
+                              <div className="table-image empty-image">No Image</div>
+                            )}
+                          </span>
+
+                          <span>{service.name}</span>
+                          <span>{getCategoryName(service.category, categories)}</span>
+                          <span>Rs. {service.price}</span>
+                          <span>{service.duration} min</span>
+
+                          <span className="table-actions">
+                            <button type="button" onClick={() => editService(service)}>
+                              Edit
+                            </button>
+
+                            <button
+                              type="button"
+                              className="danger"
+                              onClick={() => deleteService(service._id)}
+                            >
+                              Delete
+                            </button>
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -1434,7 +1469,6 @@ export default function Dashboard() {
                   <option value="all">All Statuses</option>
                 </select>
               </div>
-
               <div className="control-group">
                 <select
                   value={appFilterStylist}
@@ -1514,101 +1548,103 @@ export default function Dashboard() {
             </div>
 
             {/* Appointments Table */}
-            <div className="admin-table luxury-appointments-table">
-              <div className="table-row table-head appointment-table-row">
-                <span>Customer</span>
-                <span>Service</span>
-                <span>Stylist</span>
-                <span>Date & Time</span>
-                <span>Price</span>
-                <span>Status</span>
-                <span>Actions</span>
-              </div>
-
-              {filteredAppointments.length === 0 ? (
-                <div className="no-appointments-placeholder">
-                  No appointments match the selected criteria.
+            <div className="admin-table-container">
+              <div className="admin-table luxury-appointments-table">
+                <div className="table-row table-head appointment-table-row">
+                  <span>Customer</span>
+                  <span>Service</span>
+                  <span>Stylist</span>
+                  <span>Date & Time</span>
+                  <span>Price</span>
+                  <span>Status</span>
+                  <span>Actions</span>
                 </div>
-              ) : (
-                filteredAppointments.map((app) => {
-                  const customerObj = app.customerId && typeof app.customerId === "object" ? (app.customerId as Customer) : null;
-                  const custName = customerObj ? customerObj.name : "Guest";
-                  const custContact = customerObj ? `${customerObj.email}${customerObj.phone ? ` / ${customerObj.phone}` : ""}` : "";
 
-                  const serviceObj = app.serviceId && typeof app.serviceId === "object" ? (app.serviceId as Service) : null;
-                  const serviceName = serviceObj ? serviceObj.name : "Service";
+                {filteredAppointments.length === 0 ? (
+                  <div className="no-appointments-placeholder">
+                    No appointments match the selected criteria.
+                  </div>
+                ) : (
+                  filteredAppointments.map((app) => {
+                    const customerObj = app.customerId && typeof app.customerId === "object" ? (app.customerId as Customer) : null;
+                    const custName = customerObj ? customerObj.name : "Guest";
+                    const custContact = customerObj ? `${customerObj.email}${customerObj.phone ? ` / ${customerObj.phone}` : ""}` : "";
 
-                  const staffObj = app.staffId && typeof app.staffId === "object" ? (app.staffId as Staff) : null;
-                  const staffName = staffObj ? staffObj.name : "Stylist";
+                    const serviceObj = app.serviceId && typeof app.serviceId === "object" ? (app.serviceId as Service) : null;
+                    const serviceName = serviceObj ? serviceObj.name : "Service";
 
-                  const appointmentStatus = app.status || "pending";
+                    const staffObj = app.staffId && typeof app.staffId === "object" ? (app.staffId as Staff) : null;
+                    const staffName = staffObj ? staffObj.name : "Stylist";
 
-                  return (
-                    <div className="table-row appointment-table-row" key={app._id}>
-                      <span>
-                        <strong className="cust-name-cell">{custName}</strong>
-                        <span className="cust-contact-cell">{custContact}</span>
-                      </span>
+                    const appointmentStatus = app.status || "pending";
 
-                      <span>
-                        <span className="service-name-cell">{serviceName}</span>
-                      </span>
-                      <span>
-                        <span className="staff-name-cell">{staffName}</span>
-                      </span>
-                      <span>
-                        <strong className="date-cell">{app.date}</strong>
-                        <span className="time-cell">{app.time}</span>
-                      </span>
-                      <span className="amount-cell">Rs. {app.amount || (serviceObj ? serviceObj.price : "")}</span>
-                      <span>
-                        <span className={`status-badge ${(appointmentStatus === "pending" || appointmentStatus === "confirmed") ? "upcoming" : appointmentStatus.toLowerCase()}`}>
-                          {(appointmentStatus === "pending" || appointmentStatus === "confirmed") ? "Upcoming" : appointmentStatus.charAt(0).toUpperCase() + appointmentStatus.slice(1)}
+                    return (
+                      <div className="table-row appointment-table-row" key={app._id}>
+                        <span>
+                          <strong className="cust-name-cell">{custName}</strong>
+                          <span className="cust-contact-cell">{custContact}</span>
                         </span>
-                      </span>
 
-                      <span className="table-actions">
-                        <button
-                          type="button"
-                          className="luxury-action-btn view-btn"
-                          onClick={() => setSelectedApp(app)}
-                        >
-                          View
-                        </button>
+                        <span>
+                          <span className="service-name-cell">{serviceName}</span>
+                        </span>
+                        <span>
+                          <span className="staff-name-cell">{staffName}</span>
+                        </span>
+                        <span>
+                          <strong className="date-cell">{app.date}</strong>
+                          <span className="time-cell">{app.time}</span>
+                        </span>
+                        <span className="amount-cell">Rs. {app.amount || (serviceObj ? serviceObj.price : "")}</span>
+                        <span>
+                          <span className={`status-badge ${(appointmentStatus === "pending" || appointmentStatus === "confirmed") ? "upcoming" : appointmentStatus.toLowerCase()}`}>
+                            {(appointmentStatus === "pending" || appointmentStatus === "confirmed") ? "Upcoming" : appointmentStatus.charAt(0).toUpperCase() + appointmentStatus.slice(1)}
+                          </span>
+                        </span>
 
-                        {appointmentStatus === "pending" && (
+                        <span className="table-actions">
                           <button
                             type="button"
-                            className="luxury-action-btn confirm-btn"
-                            onClick={() => handleUpdateAppointmentStatus(app._id, "confirmed")}
+                            className="luxury-action-btn view-btn"
+                            onClick={() => setSelectedApp(app)}
                           >
-                            Confirm
+                            View
                           </button>
-                        )}
-                        {appointmentStatus === "confirmed" && (
-                          <button
-                            type="button"
-                            className="luxury-action-btn complete-btn"
-                            onClick={() => handleUpdateAppointmentStatus(app._id, "completed")}
-                          >
-                            Complete
-                          </button>
-                        )}
-                        {appointmentStatus !== "cancelled" && appointmentStatus !== "completed" && (
-                          <button
-                            type="button"
-                            className="luxury-action-btn cancel-btn"
-                            onClick={() => handleUpdateAppointmentStatus(app._id, "cancelled")}
-                          >
-                            Cancel
-                          </button>
-                        )}
 
-                      </span>
-                    </div>
-                  );
-                })
-              )}
+                          {appointmentStatus === "pending" && (
+                            <button
+                              type="button"
+                              className="luxury-action-btn confirm-btn"
+                              onClick={() => handleUpdateAppointmentStatus(app._id, "confirmed")}
+                            >
+                              Confirm
+                            </button>
+                          )}
+                          {appointmentStatus === "confirmed" && (
+                            <button
+                              type="button"
+                              className="luxury-action-btn complete-btn"
+                              onClick={() => handleUpdateAppointmentStatus(app._id, "completed")}
+                            >
+                              Complete
+                            </button>
+                          )}
+                          {appointmentStatus !== "cancelled" && appointmentStatus !== "completed" && (
+                            <button
+                              type="button"
+                              className="luxury-action-btn cancel-btn"
+                              onClick={() => handleUpdateAppointmentStatus(app._id, "cancelled")}
+                            >
+                              Cancel
+                            </button>
+                          )}
+
+                        </span>
+                      </div>
+                    );
+                  })
+                )}
+              </div>
             </div>
 
             {/* View Details Modal */}

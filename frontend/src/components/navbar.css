@@ -580,6 +580,9 @@
 
 
 
+.mobile-auth-links {
+  display: none;
+}
 
 
 /* ================= RESPONSIVE ================= */
@@ -668,6 +671,7 @@
 
     border:
 
+
       1px solid rgba(224, 90, 141, .25);
 
 
@@ -723,7 +727,54 @@
 
   }
 
+  .mobile-auth-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(224, 90, 141, 0.2);
+  }
 
+  .nav-user-section-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-user-section-mobile .nav-user-name-link,
+  .nav-user-section-mobile .nav-admin-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #e05a8d;
+    padding: 12px;
+  }
+
+  .nav-user-section-mobile .nav-logout-button {
+    background: rgba(224, 90, 141, 0.12);
+    border: 1px solid rgba(224, 90, 141, 0.25);
+    padding: 12px 26px;
+    border-radius: 30px;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+  }
 
 
 

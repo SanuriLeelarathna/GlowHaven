@@ -262,7 +262,7 @@
   width: 100%;
   max-width: 400px;
   border: 1px solid var(--accent-gold);
-  height: 400px;
+  aspect-ratio: 1 / 1;
   border-radius: 0px;
   padding: 10px;
   background: var(--white);
@@ -272,7 +272,7 @@
 
 .image-frame img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
   border-radius: 0px;
   display: block;
@@ -283,6 +283,7 @@
   width: 100%;
   max-width: 500px;
   border: 1px solid var(--accent-gold);
+  aspect-ratio: 1 / 1.1;
   border-radius: 0px;
   padding: 10px;
   background: var(--white);
@@ -292,7 +293,7 @@
 
 .square-image img {
   width: 100%;
-  height: 550px;
+  height: 100%;
   object-fit: cover;
   border-radius: 0px;
   display: block;
@@ -396,11 +397,5 @@
     width: 16px;
   }
 
-  .image-frame img {
-    height: 380px;
-  }
-
-  .square-image img {
-    height: 320px;
-  }
+  /* aspect-ratio handles height automatically, no overrides needed */
 }
