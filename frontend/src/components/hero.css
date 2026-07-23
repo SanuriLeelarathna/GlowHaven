@@ -174,102 +174,91 @@
    RESPONSIVE
 ===================================================== */
 
-@media (max-width:1024px) {
-
+@media (max-width: 1024px) {
   .hero-section {
-
-    height: auto;
+    height: 100vh;
     padding-top: 80px;
-
+    position: relative;
+    overflow: hidden;
   }
 
   .hero-container {
-
-    grid-template-columns: 1fr;
-    height: auto;
-
-  }
-
-  .hero-content {
-
-    order: 2;
-
-    padding: 60px 35px;
-
-    text-align: center;
-    align-items: center;
-
-  }
-
-  .hero-description,
-  .hero-sub-description {
-
-    max-width: 650px;
-
+    display: block;
+    height: calc(100vh - 80px);
+    position: relative;
   }
 
   .hero-image-wrapper {
-
-    order: 1;
-
-    height: 60vh;
-
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
 
-}
-
-@media (max-width:768px) {
+  .hero-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(34, 10, 20, 0.75) 100%);
+    z-index: 2;
+  }
 
   .hero-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+  }
 
-    padding: 50px 25px;
-
+  .hero-label {
+    color: var(--accent-gold-light);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 16px;
   }
 
   .hero-title {
-
-    font-size: 3rem;
-
+    color: #ffffff;
+    font-size: clamp(2.6rem, 7vw, 4.4rem);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 24px;
   }
 
-  .hero-image-wrapper {
-
-    height: 50vh;
-
+  .hero-title span {
+    color: var(--light-pink);
+    text-shadow: none;
   }
 
   .hero-button {
-
-    padding: 14px 34px;
-
+    background: var(--pink-gradient);
+    box-shadow: 0 10px 25px rgba(220, 90, 141, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
+  .hero-button:hover {
+    box-shadow: 0 15px 30px rgba(220, 90, 141, 0.5);
+    transform: translateY(-3px);
+  }
 }
 
-@media (max-width:480px) {
-
+@media (max-width: 768px) {
   .hero-title {
-
-    font-size: 2.5rem;
-
+    font-size: 3rem;
   }
 
-  .hero-description {
-
-    font-size: 15px;
-
+  .hero-button {
+    padding: 14px 34px;
   }
+}
 
-  .hero-sub-description {
-
-    font-size: 14px;
-
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.4rem;
   }
-
-  .hero-image-wrapper {
-
-    height: 42vh;
-
-  }
-
 }
